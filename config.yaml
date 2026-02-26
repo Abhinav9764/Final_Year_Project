@@ -1,0 +1,44 @@
+# =============================================================================
+# RAD-ML Configuration File
+# =============================================================================
+
+# --- Kaggle API Credentials ---
+kaggle:
+  username: "Abhinava1234"   # Replace with your Kaggle username
+  key: "KGAT_2cad8b871e59768414614245b4f62730"         # Replace with your Kaggle API key
+
+# --- Data Collection Settings ---
+collection:
+  max_ddg_results: 10         # Max web results per DuckDuckGo query
+  max_kaggle_datasets: 5      # Max Kaggle datasets to list per query
+  download_kaggle: true       # Set false to only list, not download datasets
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+
+# --- Reinforcement Learning Hyperparameters ---
+rl:
+  learning_rate: 0.1          # Alpha — how fast the agent updates Q-values
+  discount_factor: 0.9        # Gamma — importance of future rewards
+  epsilon_start: 1.0          # Initial exploration rate (100% random)
+  epsilon_min: 0.05           # Minimum exploration rate
+  epsilon_decay: 0.98         # Decay per episode (epsilon *= decay each ep)
+  num_episodes: 20            # Number of RL training episodes per session
+  qtable_path: "data/qtable.json"  # Where to persist the Q-table
+
+# --- Data Verification Thresholds ---
+verification:
+  min_text_length: 100        # Min character length for DDG snippet to be valid
+  min_keyword_coverage: 0.2   # Min fraction of keywords that must appear in data
+  min_cosine_similarity: 0.1  # Min TF-IDF cosine similarity to award reward
+
+# --- NLP Settings ---
+nlp:
+  spacy_model: "en_core_web_sm"
+  top_keywords: 5             # Maximum keywords to extract from a prompt
+  language: "en"
+
+# --- Logging ---
+logging:
+  log_file: "logs/rad_ml.log"
+  console_level: "INFO"       # DEBUG / INFO / WARNING / ERROR
+  file_level: "DEBUG"
