@@ -100,6 +100,7 @@ def run_agent(prompt: str, config: dict, num_episodes: int) -> None:
         from core.environment import Environment  # noqa: PLC0415
         from core.evolution_engine import EvolutionEngine  # noqa: PLC0415
         from utils.data_cleaner import DataVerifier  # noqa: PLC0415
+        from utils.data_store import DataStore  # noqa: PLC0415
     except ImportError as exc:
         raise RuntimeError(
             f"Failed to import a required module: {exc}\n"
@@ -113,7 +114,13 @@ def run_agent(prompt: str, config: dict, num_episodes: int) -> None:
     kaggle_client = KaggleClient(config)
     verifier = DataVerifier(config.get("verification", {}))
     agent = RLAgent(config.get("rl", {}))
-    env = Environment(ddg_client, kaggle_client, verifier, config)
+
+    # Initialise SQLite DataStore
+    db_path = config.get("storage", {}).get("db_path", "data/rad_ml.db")
+    store = DataStore(db_path)
+    session_id = store.start_session(prompt, num_episodes)
+
+    env = Environment(ddg_client, kaggle_client, verifier, config, store=store)
     evolution = EvolutionEngine(agent, config.get("rl", {}))
 
     # --- Keyword extraction ---
@@ -154,31 +161,77 @@ def run_agent(prompt: str, config: dict, num_episodes: int) -> None:
 
         evolution.record_episode(episode_reward, episode)
 
-    # --- Persist Q-table ---
+        # Log episode summary to DB
+        store.log_episode(
+            episode=episode,
+            total_reward=episode_reward,
+            epsilon_after=agent.epsilon,
+            q_states_after=agent.num_states,
+        )
+
+    # Persist Q-table
     try:
         agent.save_qtable()
     except OSError as exc:
         logger.warning("Could not save Q-table: %s", exc)
 
-    # --- Session Summary ---
+    # Close SQLite session
+    store.close_session(
+        final_epsilon=agent.epsilon,
+        q_states=agent.num_states,
+    )
+
+    # DB session summary
+    db_summary = store.get_session_summary(session_id)
+    top_results = store.get_top_ddg_results(session_id, limit=5)
+
+    # RL summary
     summary = evolution.summary()
     logger.info("━━━ Session Summary ━━━")
     for key, value in summary.items():
         logger.info("  %-22s: %s", key, value)
+    logger.info("  %-22s: %s", "db_path", db_path)
+    logger.info("  %-22s: %d", "ddg_results_saved", db_summary.get("ddg_total", 0))
+    logger.info("  %-22s: %d", "ddg_verified", db_summary.get("ddg_verified", 0))
+    logger.info("  %-22s: %d", "kaggle_results_saved", db_summary.get("kaggle_total", 0))
 
     try:
         from rich.console import Console  # noqa: PLC0415
         from rich.table import Table  # noqa: PLC0415
+        from rich.panel import Panel  # noqa: PLC0415
 
         console = Console()
-        table = Table(title="RAD-ML Session Summary", border_style="cyan")
-        table.add_column("Metric", style="bold")
-        table.add_column("Value")
+
+        # RL Summary table
+        rl_table = Table(title="[bold cyan]RAD-ML Session Summary[/bold cyan]",
+                         border_style="cyan")
+        rl_table.add_column("Metric", style="bold")
+        rl_table.add_column("Value")
         for k, v in summary.items():
-            table.add_row(k.replace("_", " ").title(), str(v))
-        console.print(table)
+            rl_table.add_row(k.replace("_", " ").title(), str(v))
+        rl_table.add_row("Database Path", str(db_path))
+        rl_table.add_row("DDG Results Saved", str(db_summary.get("ddg_total", 0)))
+        rl_table.add_row("DDG Verified", str(db_summary.get("ddg_verified", 0)))
+        rl_table.add_row("Kaggle Results Saved", str(db_summary.get("kaggle_total", 0)))
+        console.print(rl_table)
+
+        # Top DDG results
+        if top_results:
+            top_table = Table(title="[bold green]Top Verified DDG Results[/bold green]",
+                              border_style="green")
+            top_table.add_column("Score", style="cyan", width=6)
+            top_table.add_column("Title", style="bold", max_width=40)
+            top_table.add_column("URL", max_width=50)
+            for r in top_results:
+                top_table.add_row(
+                    f"{r.get('cosine_sim', 0):.3f}",
+                    (r.get("title") or "N/A")[:40],
+                    (r.get("url") or "N/A")[:50],
+                )
+            console.print(top_table)
+
     except ImportError:
-        pass  # Summary already logged above
+        pass   # Already logged above
 
 
 # ---------------------------------------------------------------------------

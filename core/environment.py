@@ -22,6 +22,7 @@ if TYPE_CHECKING:
     from collectors.ddg_search import DDGSearchClient
     from collectors.kaggle_client import KaggleClient
     from utils.data_cleaner import DataVerifier
+    from utils.data_store import DataStore
 
 logger = logging.getLogger(__name__)
 
@@ -55,17 +56,20 @@ class Environment:
         kaggle_client: "KaggleClient",
         verifier: "DataVerifier",
         config: dict,
+        store: Optional["DataStore"] = None,
     ) -> None:
         self._ddg = ddg_client
         self._kaggle = kaggle_client
         self._verifier = verifier
         self._cfg = config
+        self._store = store   # SQLite DataStore — optional but highly recommended
 
         # Episode state
         self._current_keywords: list[str] = []
         self._last_action: int = -1
         self._quality_score: float = 0.0
         self._step_count: int = 0
+        self._episode: int = 0
         self._collected_texts: list[str] = []
 
     # ------------------------------------------------------------------
@@ -90,6 +94,7 @@ class Environment:
         self._last_action = -1
         self._quality_score = 0.0
         self._step_count = 0
+        self._episode += 1
         self._collected_texts = []
         logger.debug("Environment reset with keywords: %s", self._current_keywords)
         return self._state_hash()
@@ -123,16 +128,19 @@ class Environment:
                 f"Invalid action {action}. Must be 0, 1, or 2."
             )
 
+        state_before = self._state_hash()
         self._last_action = action
         self._step_count += 1
         reward = 0.0
         collected_text = ""
+        raw_results: list = []
+        report: dict = {}
 
         try:
             if action == ACTION_DDG:
-                collected_text = self._run_ddg()
+                collected_text, raw_results = self._run_ddg()
             elif action == ACTION_KAGGLE:
-                collected_text = self._run_kaggle()
+                collected_text, raw_results = self._run_kaggle()
             elif action == ACTION_REFINE:
                 collected_text = self._run_refine()
 
@@ -157,37 +165,73 @@ class Environment:
                     coverage = float(
                         report.get("keyword_coverage", {}).get("value", 0.0)  # type: ignore[union-attr]
                     )
-                    # Reward: average of similarity and coverage, clipped to [-1, 1]
                     reward = min(1.0, max(-1.0, (similarity + coverage) / 2.0))
                     self._quality_score = reward
                     self._collected_texts.append(cleaned)
                     logger.info(
                         "Step %d — Action %d → reward=%.4f (sim=%.4f, cov=%.4f)",
-                        self._step_count,
-                        action,
-                        reward,
-                        similarity,
-                        coverage,
+                        self._step_count, action, reward, similarity, coverage,
                     )
                 else:
-                    reward = -0.2   # Data failed verification — mild penalty
+                    reward = -0.2
+                    cleaned = collected_text   # Still save even failed data for analysis
                     logger.info(
                         "Step %d — Action %d → reward=%.4f (verification failed)",
-                        self._step_count,
-                        action,
-                        reward,
+                        self._step_count, action, reward,
                     )
             else:
-                reward = -0.3   # No data collected at all
+                cleaned = ""
+                reward = -0.3
                 logger.info(
                     "Step %d — Action %d → reward=%.4f (no data returned)",
-                    self._step_count,
-                    action,
-                    reward,
+                    self._step_count, action, reward,
                 )
 
+            # ------------------------------------------------------------------
+            # Persist results to SQLite (non-blocking — errors are logged only)
+            # ------------------------------------------------------------------
+            if self._store is not None:
+                try:
+                    query = " ".join(self._current_keywords)
+                    if action == ACTION_DDG:
+                        self._store.save_ddg_results(
+                            episode=self._episode,
+                            step=self._step_count,
+                            query=query,
+                            results=raw_results,
+                            verification_report=report or None,
+                            cleaned_text=cleaned,
+                        )
+                    elif action == ACTION_KAGGLE:
+                        self._store.save_kaggle_results(
+                            episode=self._episode,
+                            step=self._step_count,
+                            results=raw_results,
+                            verification_report=report or None,
+                        )
+                except Exception as exc:  # noqa: BLE001
+                    logger.warning("DataStore write failed (non-fatal): %s", exc)
+
         done = self._step_count >= 10
-        return self._state_hash(), reward, done
+        next_state = self._state_hash()
+
+        # Always log the step transition
+        if self._store is not None:
+            try:
+                self._store.log_step(
+                    episode=self._episode,
+                    step=self._step_count,
+                    state=state_before,
+                    action=action,
+                    reward=reward,
+                    next_state=next_state,
+                    keywords=list(self._current_keywords),
+                    done=done,
+                )
+            except Exception as exc:  # noqa: BLE001
+                logger.warning("Step log failed (non-fatal): %s", exc)
+
+        return next_state, reward, done
 
     def get_collected_texts(self) -> list[str]:
         """Return all verified text collected so far in this episode."""
@@ -197,34 +241,34 @@ class Environment:
     # Action implementations
     # ------------------------------------------------------------------
 
-    def _run_ddg(self) -> str:
-        """Execute a DuckDuckGo search and return combined snippet text."""
+    def _run_ddg(self) -> tuple[str, list]:
+        """Execute a DuckDuckGo search; return (combined text, raw results)."""
         query = " ".join(self._current_keywords)
         results = self._ddg.search(query, fetch_text=False)
 
         if not results:
             logger.debug("DDG returned zero results for '%s'.", query)
-            return ""
+            return "", []
 
         combined = " ".join(
             r.get("snippet", "") + " " + r.get("text", "")
             for r in results
         )
-        return combined.strip()
+        return combined.strip(), results
 
-    def _run_kaggle(self) -> str:
-        """Execute a Kaggle search, return concatenated title + tag text."""
+    def _run_kaggle(self) -> tuple[str, list]:
+        """Execute a Kaggle search; return (combined text, raw results)."""
         results = self._kaggle.search_datasets(self._current_keywords)
 
         if not results:
             logger.debug("Kaggle returned zero datasets.")
-            return ""
+            return "", []
 
         combined = " ".join(
             r.get("title", "") + " " + " ".join(r.get("tags", []))
             for r in results
         )
-        return combined.strip()
+        return combined.strip(), results
 
     def _run_refine(self) -> str:
         """

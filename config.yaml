@@ -15,6 +15,10 @@ collection:
   raw_data_dir: "data/raw"
   processed_data_dir: "data/processed"
 
+# --- Storage (SQLite — built-in Python, zero extra dependencies) ---
+storage:
+  db_path: "data/rad_ml.db"   # All collected results, episodes, step logs
+
 # --- Reinforcement Learning Hyperparameters ---
 rl:
   learning_rate: 0.1          # Alpha — how fast the agent updates Q-values
