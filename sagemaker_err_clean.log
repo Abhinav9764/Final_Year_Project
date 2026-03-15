@@ -1,0 +1,80 @@
+﻿python.exe : Traceback 
+(most recent call last):
+At line:1 char:42
++ ... or/RAD-ML"; & c:/User
+s/sabhi/OneDrive/Documents/
+Final_Year_Project/.v ...
++                 ~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (Tra  
+  ceback (most recent ca   
+ ll last)::String) [],     
+RemoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+  File "C:\Users\sabhi\OneD
+rive\Documents\Final_Year_P
+roject\test_sagemaker.py", 
+line 14, in test_sagemaker
+    sm_meta = 
+sagemaker.run_autopilot(
+              
+^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sabhi\OneD
+rive\Documents\Final_Year_P
+roject\Code_Generator\RAD-M
+L\engines\ml_engine\sagemak
+er_handler.py", line 74, 
+in run_autopilot
+    sm.create_auto_ml_job(
+  File "C:\Users\sabhi\OneD
+rive\Documents\Final_Year_P
+roject\.venv\Lib\site-packa
+ges\botocore\client.py", 
+line 602, in _api_call
+    return self._make_api_c
+all(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sabhi\OneD
+rive\Documents\Final_Year_P
+roject\.venv\Lib\site-packa
+ges\botocore\context.py", 
+line 123, in wrapper
+    return func(*args, 
+**kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sabhi\OneD
+rive\Documents\Final_Year_P
+roject\.venv\Lib\site-packa
+ges\botocore\client.py", 
+line 1078, in 
+_make_api_call
+    raise error_class(parse
+d_response, operation_name)
+botocore.exceptions.ClientE
+rror: An error occurred 
+(ValidationException) when 
+calling the 
+CreateAutoMLJob operation: 
+No S3 objects found under 
+S3 URL "s3://rad-ml-dataset
+s/collected_data/datasets/m
+ock.csv" given in input 
+data source. Please ensure 
+that the bucket exists in 
+the selected region 
+(us-east-1), that objects 
+exist under that S3 
+prefix, and that the role "
+arn:aws:iam::820648834328:r
+ole/raduser" has 
+"s3:ListBucket" 
+permissions on bucket 
+"rad-ml-datasets".
+Testing SageMaker with real AWS credentials...
+SageMaker Error: An error occurred (ValidationException) when calling the CreateAutoMLJob operation: No S3 objects found under S3 URL "s3://rad-ml-datasets/collected_data/datasets/mock.csv" given in input data source. Please ensure that the bucket exists in the selected region (us-east-1), that objects exist under that S3 prefix, and that the role "arn:aws:iam::820648834328:role/raduser" has "s3:ListBucket" permissions on bucket "rad-ml-datasets".

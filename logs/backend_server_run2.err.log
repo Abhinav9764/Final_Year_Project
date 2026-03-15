@@ -1,0 +1,994 @@
+INFO:     Started server process [4520]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5001 (Press CTRL+C to quit)
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\collectors\ddg_search.py:144: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS(timeout=self._timeout) as ddgs:
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\generator\code_verifier.py:25: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai                                  # type: ignore
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-56: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 77, in run
+    log.info("\u2550\u2550\u2550 RAD-ML V2 Refinement Loop — Starting \u2550\u2550\u2550")
+Message: '\u2550\u2550\u2550 RAD-ML V2 Refinement Loop — Starting \u2550\u2550\u2550'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 80, in run
+    log.info("\u2500\u2500 Phase 1: Project Planning \u2500\u2500")
+Message: '\u2500\u2500 Phase 1: Project Planning \u2500\u2500'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 82, in run
+    decision: RouteDecision = router.classify(user_prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\router.py", line 81, in classify
+    log.info("Route \u2192 %s (conf=%.2f) | keywords=%s", mode, confidence, keywords)
+Message: 'Route \u2192 %s (conf=%.2f) | keywords=%s'
+Arguments: ('chatbot', 1.0, ['chatbot', 'chat', 'answer'])
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 69: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 83, in run
+    log.info("Route decision \u2192 mode=%s (confidence=%.2f)",
+Message: 'Route decision \u2192 mode=%s (confidence=%.2f)'
+Arguments: ('chatbot', 1.0)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 87, in run
+    log.info("\u2500\u2500 Phase 2: Infrastructure Setup \u2500\u2500")
+Message: '\u2500\u2500 Phase 2: Infrastructure Setup \u2500\u2500'
+Arguments: ()
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\engines\chatbot_engine\rag_builder.py:98: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
+  return HuggingFaceEmbeddings(model_name=self.emb_model)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:   1%|          | 1/103 [00:00<00:00, 885.06it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   1%|          | 1/103 [00:00<00:00, 249.38it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   2%|1         | 2/103 [00:00<00:00, 222.26it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   2%|1         | 2/103 [00:00<00:00, 153.83it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 176.18it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 142.84it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 166.67it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 148.15it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   5%|4         | 5/103 [00:00<00:00, 166.61it/s, Materializing param=embeddings.word_embeddings.weight]      Loading weights:   5%|4         | 5/103 [00:00<00:00, 161.26it/s, Materializing param=embeddings.word_embeddings.weight]Loading weights:   6%|5         | 6/103 [00:00<00:00, 176.47it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   6%|5         | 6/103 [00:00<00:00, 162.12it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   7%|6         | 7/103 [00:00<00:00, 170.74it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   7%|6         | 7/103 [00:00<00:00, 145.83it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   8%|7         | 8/103 [00:00<00:00, 163.23it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      Loading weights:   8%|7         | 8/103 [00:00<00:00, 160.00it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]Loading weights:   9%|8         | 9/103 [00:00<00:00, 166.61it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:   9%|8         | 9/103 [00:00<00:00, 160.68it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:  10%|9         | 10/103 [00:00<00:00, 172.42it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     Loading weights:  10%|9         | 10/103 [00:00<00:00, 166.67it/s, Materializing param=encoder.layer.0.attention.self.key.bias]Loading weights:  11%|#         | 11/103 [00:00<00:00, 171.87it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  11%|#         | 11/103 [00:00<00:00, 169.23it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 179.11it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 173.88it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 183.03it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 180.45it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  14%|#3        | 14/103 [00:00<00:00, 189.16it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  Loading weights:  14%|#3        | 14/103 [00:00<00:00, 186.58it/s, Materializing param=encoder.layer.0.attention.self.value.bias]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 194.72it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 192.29it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  16%|#5        | 16/103 [00:00<00:00, 197.44it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    Loading weights:  16%|#5        | 16/103 [00:00<00:00, 197.44it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 205.85it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 203.35it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#7        | 18/103 [00:00<00:00, 207.85it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    Loading weights:  17%|#7        | 18/103 [00:00<00:00, 203.16it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 207.42it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 207.42it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  19%|#9        | 20/103 [00:00<00:00, 211.41it/s, Materializing param=encoder.layer.0.output.dense.bias]      Loading weights:  19%|#9        | 20/103 [00:00<00:00, 211.41it/s, Materializing param=encoder.layer.0.output.dense.bias]Loading weights:  20%|##        | 21/103 [00:00<00:00, 219.59it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  20%|##        | 21/103 [00:00<00:00, 217.32it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 225.40it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 225.40it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 233.20it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 233.20it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  23%|##3       | 24/103 [00:00<00:00, 240.90it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      Loading weights:  23%|##3       | 24/103 [00:00<00:00, 240.90it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  25%|##5       | 26/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      Loading weights:  25%|##5       | 26/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.key.bias]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  29%|##9       | 30/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  Loading weights:  29%|##9       | 30/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.value.bias]Loading weights:  30%|###       | 31/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  30%|###       | 31/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  31%|###1      | 32/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    Loading weights:  31%|###1      | 32/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  33%|###3      | 34/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    Loading weights:  33%|###3      | 34/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  35%|###4      | 36/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.dense.bias]      Loading weights:  35%|###4      | 36/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.dense.bias]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  39%|###8      | 40/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      Loading weights:  39%|###8      | 40/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  41%|####      | 42/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      Loading weights:  41%|####      | 42/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.key.bias]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  45%|####4     | 46/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  Loading weights:  45%|####4     | 46/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.value.bias]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  47%|####6     | 48/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    Loading weights:  47%|####6     | 48/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  49%|####8     | 50/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    Loading weights:  49%|####8     | 50/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|#####     | 52/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.dense.bias]      Loading weights:  50%|#####     | 52/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.dense.bias]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.key.bias]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  60%|######    | 62/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  Loading weights:  60%|######    | 62/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.value.bias]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  62%|######2   | 64/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    Loading weights:  62%|######2   | 64/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  64%|######4   | 66/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    Loading weights:  64%|######4   | 66/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  66%|######6   | 68/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.dense.bias]      Loading weights:  66%|######6   | 68/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.dense.bias]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  70%|######9   | 72/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      Loading weights:  70%|######9   | 72/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.key.bias]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 248.44it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.attention.self.value.bias]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]    Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]    Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]Loading weights:  81%|########  | 83/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  81%|########  | 83/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  82%|########1 | 84/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.dense.bias]      Loading weights:  82%|########1 | 84/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.dense.bias]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  85%|########5 | 88/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]      Loading weights:  85%|########5 | 88/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  87%|########7 | 90/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.key.bias]      Loading weights:  87%|########7 | 90/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.key.bias]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  90%|######### | 93/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  90%|######### | 93/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  91%|#########1| 94/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.value.bias]  Loading weights:  91%|#########1| 94/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.value.bias]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  93%|#########3| 96/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]    Loading weights:  93%|#########3| 96/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  95%|#########5| 98/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]    Loading weights:  95%|#########5| 98/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  97%|#########7| 100/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.dense.bias]     Loading weights:  97%|#########7| 100/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.dense.bias]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 405.07it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  99%|#########9| 102/103 [00:00<00:00, 405.07it/s, Materializing param=pooler.dense.bias]                  Loading weights:  99%|#########9| 102/103 [00:00<00:00, 405.07it/s, Materializing param=pooler.dense.bias]Loading weights: 100%|##########| 103/103 [00:00<00:00, 405.07it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 405.07it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 386.85it/s, Materializing param=pooler.dense.weight]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 86: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 88, in run
+    data_source_info, engine_meta = self._build_infrastructure(
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 204, in _build_infrastructure
+    data_source_info, engine_meta = self._build_chatbot_engine(
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 234, in _build_chatbot_engine
+    rag.build(documents)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\engines\chatbot_engine\rag_builder.py", line 59, in build
+    self._build_faiss(texts, metadatas, embedder)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\engines\chatbot_engine\rag_builder.py", line 107, in _build_faiss
+    log.info("FAISS index saved \u2192 %s", self.index_path)
+Message: 'FAISS index saved \u2192 %s'
+Arguments: (WindowsPath('data/vector_store/index'),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-56: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 116, in run
+    log.info("\u2550\u2550\u2550 Attempt %d / %d \u2550\u2550\u2550", attempt, self.max_retries)
+Message: '\u2550\u2550\u2550 Attempt %d / %d \u2550\u2550\u2550'
+Arguments: (1, 5)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 120, in run
+    log.info("\u2500\u2500 Phase 3: Code Generation (attempt %d) \u2500\u2500", attempt)
+Message: '\u2500\u2500 Phase 3: Code Generation (attempt %d) \u2500\u2500'
+Arguments: (1,)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 122: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 134, in run
+    gen.write_to_workspace(code_bundle, self.app_dir)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\generator\code_gen_factory.py", line 100, in write_to_workspace
+    log.info("Workspace written: app.py, test_app.py, index.html, style.css \u2192 %s", app_dir)
+Message: 'Workspace written: app.py, test_app.py, index.html, style.css \u2192 %s'
+Arguments: (WindowsPath('workspace/current_app'),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 138, in run
+    log.info("\u2500\u2500 Phase 4: Automated Testing \u2500\u2500")
+Message: '\u2500\u2500 Phase 4: Automated Testing \u2500\u2500'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 54: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 139, in run
+    test_passed, test_error = self._run_tests()
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 428, in _run_tests
+    log.info("\u2713 Unit tests passed!")
+Message: '\u2713 Unit tests passed!'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 54: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 163, in run
+    log.info("\u2713 Generation succeeded on attempt %d!", attempt)
+Message: '\u2713 Generation succeeded on attempt %d!'
+Arguments: (1,)
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\collectors\ddg_search.py:144: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS(timeout=self._timeout) as ddgs:
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\collectors\ddg_search.py:144: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS(timeout=self._timeout) as ddgs:
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-56: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 77, in run
+    log.info("\u2550\u2550\u2550 RAD-ML V2 Refinement Loop — Starting \u2550\u2550\u2550")
+Message: '\u2550\u2550\u2550 RAD-ML V2 Refinement Loop — Starting \u2550\u2550\u2550'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 80, in run
+    log.info("\u2500\u2500 Phase 1: Project Planning \u2500\u2500")
+Message: '\u2500\u2500 Phase 1: Project Planning \u2500\u2500'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 82, in run
+    decision: RouteDecision = router.classify(user_prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\router.py", line 81, in classify
+    log.info("Route \u2192 %s (conf=%.2f) | keywords=%s", mode, confidence, keywords)
+Message: 'Route \u2192 %s (conf=%.2f) | keywords=%s'
+Arguments: ('chatbot', 1.0, ['chatbot', 'chat', 'answer'])
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 69: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 83, in run
+    log.info("Route decision \u2192 mode=%s (confidence=%.2f)",
+Message: 'Route decision \u2192 mode=%s (confidence=%.2f)'
+Arguments: ('chatbot', 1.0)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 87, in run
+    log.info("\u2500\u2500 Phase 2: Infrastructure Setup \u2500\u2500")
+Message: '\u2500\u2500 Phase 2: Infrastructure Setup \u2500\u2500'
+Arguments: ()
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:   1%|          | 1/103 [00:00<00:00, 317.51it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   1%|          | 1/103 [00:00<00:00, 166.90it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   2%|1         | 2/103 [00:00<00:00, 200.07it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   2%|1         | 2/103 [00:00<00:00, 166.78it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 199.98it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 187.44it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 235.30it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 210.56it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   5%|4         | 5/103 [00:00<00:00, 250.04it/s, Materializing param=embeddings.word_embeddings.weight]      Loading weights:   5%|4         | 5/103 [00:00<00:00, 238.11it/s, Materializing param=embeddings.word_embeddings.weight]Loading weights:   6%|5         | 6/103 [00:00<00:00, 260.99it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   6%|5         | 6/103 [00:00<00:00, 239.63it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   7%|6         | 7/103 [00:00<00:00, 254.79it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   7%|6         | 7/103 [00:00<00:00, 237.58it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   8%|7         | 8/103 [00:00<00:00, 239.08it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      Loading weights:   8%|7         | 8/103 [00:00<00:00, 232.11it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]Loading weights:   9%|8         | 9/103 [00:00<00:00, 253.75it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:   9%|8         | 9/103 [00:00<00:00, 233.98it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:  10%|9         | 10/103 [00:00<00:00, 253.40it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     Loading weights:  10%|9         | 10/103 [00:00<00:00, 247.12it/s, Materializing param=encoder.layer.0.attention.self.key.bias]Loading weights:  11%|#         | 11/103 [00:00<00:00, 259.04it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  11%|#         | 11/103 [00:00<00:00, 253.09it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 269.87it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 252.61it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 257.42it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 247.60it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  14%|#3        | 14/103 [00:00<00:00, 252.24it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  Loading weights:  14%|#3        | 14/103 [00:00<00:00, 247.77it/s, Materializing param=encoder.layer.0.attention.self.value.bias]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 255.92it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 252.05it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  16%|#5        | 16/103 [00:00<00:00, 246.82it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    Loading weights:  16%|#5        | 16/103 [00:00<00:00, 243.08it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 254.24it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 250.45it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#7        | 18/103 [00:00<00:00, 261.55it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    Loading weights:  17%|#7        | 18/103 [00:00<00:00, 257.80it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 264.54it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 260.86it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  19%|#9        | 20/103 [00:00<00:00, 267.27it/s, Materializing param=encoder.layer.0.output.dense.bias]      Loading weights:  19%|#9        | 20/103 [00:00<00:00, 263.79it/s, Materializing param=encoder.layer.0.output.dense.bias]Loading weights:  20%|##        | 21/103 [00:00<00:00, 273.33it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  20%|##        | 21/103 [00:00<00:00, 269.85it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 282.70it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 279.11it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 288.14it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 284.55it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  23%|##3       | 24/103 [00:00<00:00, 289.79it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      Loading weights:  23%|##3       | 24/103 [00:00<00:00, 279.57it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 284.67it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 281.47it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  25%|##5       | 26/103 [00:00<00:00, 289.47it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      Loading weights:  25%|##5       | 26/103 [00:00<00:00, 283.16it/s, Materializing param=encoder.layer.1.attention.self.key.bias]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 290.88it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 287.76it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 295.26it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 292.19it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 296.44it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 296.44it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  29%|##9       | 30/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  29%|##9       | 30/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  Loading weights:  29%|##9       | 30/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.attention.self.value.bias]Loading weights:  30%|###       | 31/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  30%|###       | 31/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  31%|###1      | 32/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    Loading weights:  31%|###1      | 32/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  33%|###3      | 34/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    Loading weights:  33%|###3      | 34/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  35%|###4      | 36/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.dense.bias]      Loading weights:  35%|###4      | 36/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.dense.bias]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  39%|###8      | 40/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      Loading weights:  39%|###8      | 40/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  41%|####      | 42/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      Loading weights:  41%|####      | 42/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.key.bias]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  45%|####4     | 46/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  Loading weights:  45%|####4     | 46/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.value.bias]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  47%|####6     | 48/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    Loading weights:  47%|####6     | 48/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  49%|####8     | 50/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    Loading weights:  49%|####8     | 50/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|#####     | 52/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.dense.bias]      Loading weights:  50%|#####     | 52/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.dense.bias]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.self.key.bias]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 297.17it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  60%|######    | 62/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  Loading weights:  60%|######    | 62/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.attention.self.value.bias]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  62%|######2   | 64/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    Loading weights:  62%|######2   | 64/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  64%|######4   | 66/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    Loading weights:  64%|######4   | 66/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  66%|######6   | 68/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.dense.bias]      Loading weights:  66%|######6   | 68/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.dense.bias]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  70%|######9   | 72/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      Loading weights:  70%|######9   | 72/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.key.bias]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.value.bias]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]    Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]    Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]Loading weights:  81%|########  | 83/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  81%|########  | 83/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  82%|########1 | 84/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.dense.bias]      Loading weights:  82%|########1 | 84/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.dense.bias]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  85%|########5 | 88/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]      Loading weights:  85%|########5 | 88/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  87%|########7 | 90/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.key.bias]      Loading weights:  87%|########7 | 90/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.key.bias]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  90%|######### | 93/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  90%|######### | 93/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  91%|#########1| 94/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.value.bias]  Loading weights:  91%|#########1| 94/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.value.bias]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  93%|#########3| 96/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]    Loading weights:  93%|#########3| 96/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  95%|#########5| 98/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]    Loading weights:  95%|#########5| 98/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  97%|#########7| 100/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.dense.bias]     Loading weights:  97%|#########7| 100/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.dense.bias]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 303.72it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  99%|#########9| 102/103 [00:00<00:00, 349.62it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  99%|#########9| 102/103 [00:00<00:00, 349.62it/s, Materializing param=pooler.dense.bias]                  Loading weights:  99%|#########9| 102/103 [00:00<00:00, 349.62it/s, Materializing param=pooler.dense.bias]Loading weights: 100%|##########| 103/103 [00:00<00:00, 349.62it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 349.62it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 322.70it/s, Materializing param=pooler.dense.weight]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 86: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 88, in run
+    data_source_info, engine_meta = self._build_infrastructure(
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 204, in _build_infrastructure
+    data_source_info, engine_meta = self._build_chatbot_engine(
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 234, in _build_chatbot_engine
+    rag.build(documents)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\engines\chatbot_engine\rag_builder.py", line 59, in build
+    self._build_faiss(texts, metadatas, embedder)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\engines\chatbot_engine\rag_builder.py", line 107, in _build_faiss
+    log.info("FAISS index saved \u2192 %s", self.index_path)
+Message: 'FAISS index saved \u2192 %s'
+Arguments: (WindowsPath('data/vector_store/index'),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-56: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 116, in run
+    log.info("\u2550\u2550\u2550 Attempt %d / %d \u2550\u2550\u2550", attempt, self.max_retries)
+Message: '\u2550\u2550\u2550 Attempt %d / %d \u2550\u2550\u2550'
+Arguments: (1, 5)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 120, in run
+    log.info("\u2500\u2500 Phase 3: Code Generation (attempt %d) \u2500\u2500", attempt)
+Message: '\u2500\u2500 Phase 3: Code Generation (attempt %d) \u2500\u2500'
+Arguments: (1,)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 122: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 134, in run
+    gen.write_to_workspace(code_bundle, self.app_dir)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\generator\code_gen_factory.py", line 100, in write_to_workspace
+    log.info("Workspace written: app.py, test_app.py, index.html, style.css \u2192 %s", app_dir)
+Message: 'Workspace written: app.py, test_app.py, index.html, style.css \u2192 %s'
+Arguments: (WindowsPath('workspace/current_app'),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 138, in run
+    log.info("\u2500\u2500 Phase 4: Automated Testing \u2500\u2500")
+Message: '\u2500\u2500 Phase 4: Automated Testing \u2500\u2500'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 54: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 139, in run
+    test_passed, test_error = self._run_tests()
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 428, in _run_tests
+    log.info("\u2713 Unit tests passed!")
+Message: '\u2713 Unit tests passed!'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 54: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 163, in run
+    log.info("\u2713 Generation succeeded on attempt %d!", attempt)
+Message: '\u2713 Generation succeeded on attempt %d!'
+Arguments: (1,)
+C:\Program Files\Python312\Lib\subprocess.py:1127: ResourceWarning: subprocess 1808 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-56: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 77, in run
+    log.info("\u2550\u2550\u2550 RAD-ML V2 Refinement Loop — Starting \u2550\u2550\u2550")
+Message: '\u2550\u2550\u2550 RAD-ML V2 Refinement Loop — Starting \u2550\u2550\u2550'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 80, in run
+    log.info("\u2500\u2500 Phase 1: Project Planning \u2500\u2500")
+Message: '\u2500\u2500 Phase 1: Project Planning \u2500\u2500'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 82, in run
+    decision: RouteDecision = router.classify(user_prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\router.py", line 81, in classify
+    log.info("Route \u2192 %s (conf=%.2f) | keywords=%s", mode, confidence, keywords)
+Message: 'Route \u2192 %s (conf=%.2f) | keywords=%s'
+Arguments: ('chatbot', 1.0, ['chatbot', 'chat', 'answer'])
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 69: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 83, in run
+    log.info("Route decision \u2192 mode=%s (confidence=%.2f)",
+Message: 'Route decision \u2192 mode=%s (confidence=%.2f)'
+Arguments: ('chatbot', 1.0)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 87, in run
+    log.info("\u2500\u2500 Phase 2: Infrastructure Setup \u2500\u2500")
+Message: '\u2500\u2500 Phase 2: Infrastructure Setup \u2500\u2500'
+Arguments: ()
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:   1%|          | 1/103 [00:00<00:00, 986.20it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   1%|          | 1/103 [00:00<00:00, 463.15it/s, Materializing param=embeddings.LayerNorm.bias]Loading weights:   2%|1         | 2/103 [00:00<00:00, 291.96it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   2%|1         | 2/103 [00:00<00:00, 222.59it/s, Materializing param=embeddings.LayerNorm.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 276.00it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   3%|2         | 3/103 [00:00<00:00, 252.68it/s, Materializing param=embeddings.position_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 223.76it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   4%|3         | 4/103 [00:00<00:00, 211.91it/s, Materializing param=embeddings.token_type_embeddings.weight]Loading weights:   5%|4         | 5/103 [00:00<00:00, 217.98it/s, Materializing param=embeddings.word_embeddings.weight]      Loading weights:   5%|4         | 5/103 [00:00<00:00, 192.16it/s, Materializing param=embeddings.word_embeddings.weight]Loading weights:   6%|5         | 6/103 [00:00<00:00, 222.85it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   6%|5         | 6/103 [00:00<00:00, 193.94it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   7%|6         | 7/103 [00:00<00:00, 203.96it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   7%|6         | 7/103 [00:00<00:00, 198.11it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   8%|7         | 8/103 [00:00<00:00, 198.42it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      Loading weights:   8%|7         | 8/103 [00:00<00:00, 187.11it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]Loading weights:   9%|8         | 9/103 [00:00<00:00, 192.42it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:   9%|8         | 9/103 [00:00<00:00, 180.72it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]Loading weights:  10%|9         | 10/103 [00:00<00:00, 193.22it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     Loading weights:  10%|9         | 10/103 [00:00<00:00, 182.66it/s, Materializing param=encoder.layer.0.attention.self.key.bias]Loading weights:  11%|#         | 11/103 [00:00<00:00, 192.53it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  11%|#         | 11/103 [00:00<00:00, 185.30it/s, Materializing param=encoder.layer.0.attention.self.key.weight]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 186.40it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  12%|#1        | 12/103 [00:00<00:00, 180.68it/s, Materializing param=encoder.layer.0.attention.self.query.bias]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 178.48it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  13%|#2        | 13/103 [00:00<00:00, 175.00it/s, Materializing param=encoder.layer.0.attention.self.query.weight]Loading weights:  14%|#3        | 14/103 [00:00<00:00, 180.78it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  Loading weights:  14%|#3        | 14/103 [00:00<00:00, 178.44it/s, Materializing param=encoder.layer.0.attention.self.value.bias]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 184.15it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  15%|#4        | 15/103 [00:00<00:00, 179.73it/s, Materializing param=encoder.layer.0.attention.self.value.weight]Loading weights:  16%|#5        | 16/103 [00:00<00:00, 189.44it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    Loading weights:  16%|#5        | 16/103 [00:00<00:00, 187.19it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 194.30it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#6        | 17/103 [00:00<00:00, 192.11it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]Loading weights:  17%|#7        | 18/103 [00:00<00:00, 201.21it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    Loading weights:  17%|#7        | 18/103 [00:00<00:00, 196.81it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 205.48it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  18%|#8        | 19/103 [00:00<00:00, 203.15it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]Loading weights:  19%|#9        | 20/103 [00:00<00:00, 207.35it/s, Materializing param=encoder.layer.0.output.dense.bias]      Loading weights:  19%|#9        | 20/103 [00:00<00:00, 205.22it/s, Materializing param=encoder.layer.0.output.dense.bias]Loading weights:  20%|##        | 21/103 [00:00<00:00, 211.16it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  20%|##        | 21/103 [00:00<00:00, 211.16it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.0.output.dense.weight]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  21%|##1       | 22/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  22%|##2       | 23/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  23%|##3       | 24/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      Loading weights:  23%|##3       | 24/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  24%|##4       | 25/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]Loading weights:  25%|##5       | 26/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      Loading weights:  25%|##5       | 26/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.key.bias]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  26%|##6       | 27/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.key.weight]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  27%|##7       | 28/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.query.bias]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  28%|##8       | 29/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.query.weight]Loading weights:  29%|##9       | 30/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  Loading weights:  29%|##9       | 30/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.value.bias]Loading weights:  30%|###       | 31/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  30%|###       | 31/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.attention.self.value.weight]Loading weights:  31%|###1      | 32/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    Loading weights:  31%|###1      | 32/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  32%|###2      | 33/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]Loading weights:  33%|###3      | 34/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    Loading weights:  33%|###3      | 34/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  34%|###3      | 35/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]Loading weights:  35%|###4      | 36/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.dense.bias]      Loading weights:  35%|###4      | 36/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.dense.bias]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  36%|###5      | 37/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.1.output.dense.weight]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  37%|###6      | 38/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  38%|###7      | 39/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  39%|###8      | 40/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      Loading weights:  39%|###8      | 40/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  40%|###9      | 41/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]Loading weights:  41%|####      | 42/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      Loading weights:  41%|####      | 42/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.key.bias]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  42%|####1     | 43/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.key.weight]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.query.bias]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  44%|####3     | 45/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.query.weight]Loading weights:  45%|####4     | 46/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  Loading weights:  45%|####4     | 46/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.value.bias]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  46%|####5     | 47/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.attention.self.value.weight]Loading weights:  47%|####6     | 48/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    Loading weights:  47%|####6     | 48/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  48%|####7     | 49/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]Loading weights:  49%|####8     | 50/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    Loading weights:  49%|####8     | 50/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|####9     | 51/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]Loading weights:  50%|#####     | 52/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.dense.bias]      Loading weights:  50%|#####     | 52/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.dense.bias]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  51%|#####1    | 53/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.2.output.dense.weight]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  52%|#####2    | 54/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  53%|#####3    | 55/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      Loading weights:  54%|#####4    | 56/103 [00:00<00:00, 216.85it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  55%|#####5    | 57/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      Loading weights:  56%|#####6    | 58/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.key.bias]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  57%|#####7    | 59/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.key.weight]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  58%|#####8    | 60/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.query.bias]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  59%|#####9    | 61/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.query.weight]Loading weights:  60%|######    | 62/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  Loading weights:  60%|######    | 62/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.value.bias]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  61%|######1   | 63/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.attention.self.value.weight]Loading weights:  62%|######2   | 64/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    Loading weights:  62%|######2   | 64/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  63%|######3   | 65/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]Loading weights:  64%|######4   | 66/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    Loading weights:  64%|######4   | 66/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  65%|######5   | 67/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]Loading weights:  66%|######6   | 68/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.dense.bias]      Loading weights:  66%|######6   | 68/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.dense.bias]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  67%|######6   | 69/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.3.output.dense.weight]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  68%|######7   | 70/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  69%|######8   | 71/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  70%|######9   | 72/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      Loading weights:  70%|######9   | 72/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  71%|#######   | 73/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      Loading weights:  72%|#######1  | 74/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.key.bias]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  73%|#######2  | 75/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.key.weight]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  74%|#######3  | 76/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.query.bias]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  75%|#######4  | 77/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.query.weight]Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.value.bias]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  77%|#######6  | 79/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.attention.self.value.weight]Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]    Loading weights:  78%|#######7  | 80/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.intermediate.dense.bias]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  79%|#######8  | 81/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.intermediate.dense.weight]Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]    Loading weights:  80%|#######9  | 82/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.LayerNorm.bias]Loading weights:  81%|########  | 83/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  81%|########  | 83/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.LayerNorm.weight]Loading weights:  82%|########1 | 84/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.dense.bias]      Loading weights:  82%|########1 | 84/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.dense.bias]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########2 | 85/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.4.output.dense.weight]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  83%|########3 | 86/103 [00:00<00:00, 290.96it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  84%|########4 | 87/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  85%|########5 | 88/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]      Loading weights:  85%|########5 | 88/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.output.dense.bias]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  86%|########6 | 89/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.output.dense.weight]Loading weights:  87%|########7 | 90/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.key.bias]      Loading weights:  87%|########7 | 90/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.key.bias]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  88%|########8 | 91/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.key.weight]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  89%|########9 | 92/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.query.bias]Loading weights:  90%|######### | 93/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  90%|######### | 93/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.query.weight]Loading weights:  91%|#########1| 94/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.value.bias]  Loading weights:  91%|#########1| 94/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.value.bias]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  92%|#########2| 95/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.attention.self.value.weight]Loading weights:  93%|#########3| 96/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]    Loading weights:  93%|#########3| 96/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.intermediate.dense.bias]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  94%|#########4| 97/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.intermediate.dense.weight]Loading weights:  95%|#########5| 98/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]    Loading weights:  95%|#########5| 98/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.LayerNorm.bias]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  96%|#########6| 99/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.LayerNorm.weight]Loading weights:  97%|#########7| 100/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.dense.bias]     Loading weights:  97%|#########7| 100/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.dense.bias]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  98%|#########8| 101/103 [00:00<00:00, 292.44it/s, Materializing param=encoder.layer.5.output.dense.weight]Loading weights:  99%|#########9| 102/103 [00:00<00:00, 292.44it/s, Materializing param=pooler.dense.bias]                  Loading weights:  99%|#########9| 102/103 [00:00<00:00, 292.44it/s, Materializing param=pooler.dense.bias]Loading weights: 100%|##########| 103/103 [00:00<00:00, 292.44it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 292.44it/s, Materializing param=pooler.dense.weight]Loading weights: 100%|##########| 103/103 [00:00<00:00, 275.93it/s, Materializing param=pooler.dense.weight]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 86: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 88, in run
+    data_source_info, engine_meta = self._build_infrastructure(
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 204, in _build_infrastructure
+    data_source_info, engine_meta = self._build_chatbot_engine(
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 234, in _build_chatbot_engine
+    rag.build(documents)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\engines\chatbot_engine\rag_builder.py", line 59, in build
+    self._build_faiss(texts, metadatas, embedder)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\engines\chatbot_engine\rag_builder.py", line 107, in _build_faiss
+    log.info("FAISS index saved \u2192 %s", self.index_path)
+Message: 'FAISS index saved \u2192 %s'
+Arguments: (WindowsPath('data/vector_store/index'),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-56: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 116, in run
+    log.info("\u2550\u2550\u2550 Attempt %d / %d \u2550\u2550\u2550", attempt, self.max_retries)
+Message: '\u2550\u2550\u2550 Attempt %d / %d \u2550\u2550\u2550'
+Arguments: (1, 5)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 120, in run
+    log.info("\u2500\u2500 Phase 3: Code Generation (attempt %d) \u2500\u2500", attempt)
+Message: '\u2500\u2500 Phase 3: Code Generation (attempt %d) \u2500\u2500'
+Arguments: (1,)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 122: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 134, in run
+    gen.write_to_workspace(code_bundle, self.app_dir)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\generator\code_gen_factory.py", line 100, in write_to_workspace
+    log.info("Workspace written: app.py, test_app.py, index.html, style.css \u2192 %s", app_dir)
+Message: 'Workspace written: app.py, test_app.py, index.html, style.css \u2192 %s'
+Arguments: (WindowsPath('workspace/current_app'),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 54-55: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 138, in run
+    log.info("\u2500\u2500 Phase 4: Automated Testing \u2500\u2500")
+Message: '\u2500\u2500 Phase 4: Automated Testing \u2500\u2500'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 54: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 139, in run
+    test_passed, test_error = self._run_tests()
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 428, in _run_tests
+    log.info("\u2713 Unit tests passed!")
+Message: '\u2713 Unit tests passed!'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 54: character maps to <undefined>
+Call stack:
+  File "C:\Program Files\Python312\Lib\threading.py", line 1009, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1052, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 989, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 92, in _worker
+    work_item.run()
+  File "C:\Program Files\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Chatbot_Interface\backend\orchestrator.py", line 348, in _code_generator_sync
+    result = loop_obj.run(prompt)
+  File "C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\core\refinement_loop.py", line 163, in run
+    log.info("\u2713 Generation succeeded on attempt %d!", attempt)
+Message: '\u2713 Generation succeeded on attempt %d!'
+Arguments: (1,)

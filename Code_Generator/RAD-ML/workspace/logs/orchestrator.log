@@ -1,0 +1,369 @@
+2026-03-02 10:46:15,114 [INFO] Orchestrator — Config loaded from C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\config.yaml
+2026-03-02 10:46:15,164 [INFO] core.refinement_loop — ═══ RAD-ML V2 Refinement Loop — Starting ═══
+2026-03-02 10:46:15,165 [INFO] core.refinement_loop — ── Phase 1: Project Planning ──
+2026-03-02 10:46:15,167 [INFO] core.router — Route → chatbot (conf=1.00) | keywords=['chatbot', 'chat']
+2026-03-02 10:46:15,168 [INFO] core.refinement_loop — Route decision → mode=chatbot (confidence=1.00)
+2026-03-02 10:46:15,169 [INFO] core.refinement_loop — ── Phase 2: Infrastructure Setup ──
+2026-03-02 10:46:15,195 [INFO] core.refinement_loop — Loaded 5 DDG results from Data Collection Agent.
+2026-03-02 10:46:15,197 [INFO] core.refinement_loop — Building RAG index with 5 documents...
+2026-03-02 10:48:49,740 [INFO] sentence_transformers.SentenceTransformer — Use pytorch device_name: cpu
+2026-03-02 10:48:49,756 [INFO] sentence_transformers.SentenceTransformer — Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-02 10:49:30,415 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:30,421 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-02 10:49:30,539 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:30,835 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:30,876 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:31,193 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:31,238 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-02 10:49:31,568 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:31,644 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:32,429 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:32,501 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:32,791 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-02 10:49:33,047 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:33,077 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:34,379 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:34,423 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:34,703 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:34,732 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:35,042 [INFO] httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-02 10:49:35,322 [INFO] httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-02 10:49:35,731 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:49:35,763 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-02 10:49:36,040 [INFO] httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-03-02 10:52:07,588 [INFO] Orchestrator — Config loaded from C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\config.yaml
+2026-03-02 10:52:07,645 [INFO] core.refinement_loop — ═══ RAD-ML V2 Refinement Loop — Starting ═══
+2026-03-02 10:52:07,647 [INFO] core.refinement_loop — ── Phase 1: Project Planning ──
+2026-03-02 10:52:07,648 [INFO] core.router — Route → chatbot (conf=1.00) | keywords=['chatbot', 'chat']
+2026-03-02 10:52:07,649 [INFO] core.refinement_loop — Route decision → mode=chatbot (confidence=1.00)
+2026-03-02 10:52:07,650 [INFO] core.refinement_loop — ── Phase 2: Infrastructure Setup ──
+2026-03-02 10:52:07,744 [INFO] core.refinement_loop — Loaded 5 DDG results from Data Collection Agent.
+2026-03-02 10:52:07,745 [INFO] core.refinement_loop — Building RAG index with 5 documents...
+2026-03-02 10:54:34,753 [INFO] sentence_transformers.SentenceTransformer — Use pytorch device_name: cpu
+2026-03-02 10:54:34,771 [INFO] sentence_transformers.SentenceTransformer — Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-02 10:54:36,894 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:37,110 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:37,524 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:37,573 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:37,829 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:37,854 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:38,362 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:38,364 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-02 10:54:38,385 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-02 10:54:38,694 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:38,720 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:38,971 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:39,003 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:39,707 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-02 10:54:39,962 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:39,981 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:41,302 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:41,335 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:41,584 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:41,612 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:41,900 [INFO] httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-02 10:54:42,151 [INFO] httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-02 10:54:45,090 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-02 10:54:45,110 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-02 10:54:45,371 [INFO] httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-03-02 10:54:50,835 [INFO] faiss.loader — Loading faiss with AVX2 support.
+2026-03-02 10:54:52,530 [INFO] faiss.loader — Successfully loaded faiss with AVX2 support.
+2026-03-02 10:54:52,749 [INFO] engines.chatbot_engine.rag_builder — FAISS index saved → data\vector_store\index
+2026-03-02 10:54:52,758 [INFO] engines.chatbot_engine.rag_builder — RAG index built (faiss backend) — 5 documents.
+2026-03-02 10:54:52,764 [INFO] core.refinement_loop — RAG index built at data\vector_store\index
+2026-03-02 10:54:53,105 [WARNING] generator.code_verifier — google-generativeai not installed — CodeVerifier will skip API verification.
+2026-03-02 10:54:53,108 [INFO] core.refinement_loop — ═══ Attempt 1 / 5 ═══
+2026-03-02 10:54:53,117 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 1) ──
+2026-03-02 10:54:53,139 [ERROR] core.refinement_loop — Attempt 1 failed: No module named 'openai'
+2026-03-02 10:54:53,141 [INFO] core.refinement_loop — ═══ Attempt 2 / 5 ═══
+2026-03-02 10:54:53,149 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 2) ──
+2026-03-02 10:54:53,171 [ERROR] core.refinement_loop — Attempt 2 failed: No module named 'openai'
+2026-03-02 10:54:53,176 [INFO] core.refinement_loop — ═══ Attempt 3 / 5 ═══
+2026-03-02 10:54:53,184 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 3) ──
+2026-03-02 10:54:53,201 [ERROR] core.refinement_loop — Attempt 3 failed: No module named 'openai'
+2026-03-02 10:54:53,204 [INFO] core.refinement_loop — ═══ Attempt 4 / 5 ═══
+2026-03-02 10:54:53,209 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 4) ──
+2026-03-02 10:54:53,229 [ERROR] core.refinement_loop — Attempt 4 failed: No module named 'openai'
+2026-03-02 10:54:53,234 [INFO] core.refinement_loop — ═══ Attempt 5 / 5 ═══
+2026-03-02 10:54:53,264 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 5) ──
+2026-03-02 10:54:53,309 [ERROR] core.refinement_loop — Attempt 5 failed: No module named 'openai'
+2026-03-02 10:54:53,320 [ERROR] core.refinement_loop — All 5 attempts exhausted.
+2026-03-02 10:54:53,344 [ERROR] Orchestrator — RAD-ML V2 build failed after 5 attempt(s). Error: No module named 'openai'
+2026-03-02 22:48:34,787 [INFO] Orchestrator — Config loaded from C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\config.yaml
+2026-03-02 22:49:15,381 [INFO] core.refinement_loop — ═══ RAD-ML V2 Refinement Loop — Starting ═══
+2026-03-02 22:49:15,384 [INFO] core.refinement_loop — ── Phase 1: Project Planning ──
+2026-03-02 22:49:15,385 [INFO] core.router — Route → ml (conf=1.00) | keywords=['predict', 'prediction', 'model', 'price']
+2026-03-02 22:49:15,386 [INFO] core.refinement_loop — Route decision → mode=ml (confidence=1.00)
+2026-03-02 22:49:15,386 [INFO] core.refinement_loop — ── Phase 2: Infrastructure Setup ──
+2026-03-02 22:49:15,389 [INFO] core.refinement_loop — No pre-collected dataset found. Falling back to S3/Kaggle...
+2026-03-02 22:49:17,461 [INFO] botocore.credentials — Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-02 22:49:35,071 [INFO] core.refinement_loop — Found collected data in S3 → s3://rad-ml-datasets/collected_data/db_results.json
+2026-03-02 22:49:35,662 [INFO] collectors.kaggle_client — Kaggle credentials loaded from config.
+2026-03-02 22:49:35,664 [INFO] core.refinement_loop — Resolving local dataset from Kaggle ref: data-collection-agent/output
+2026-03-02 22:49:43,824 [WARNING] collectors.kaggle_client — Kaggle unavailable (Kaggle import failed: cannot import name 'KaggleApiExtended' from 'kaggle.api.kaggle_api_extended' (C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\.venv\Lib\site-packages\kaggle\api\kaggle_api_extended.py)). Using mock dataset.
+2026-03-02 22:49:43,834 [INFO] collectors.kaggle_client — Using mock dataset at data\datasets\mock_dataset.csv
+2026-03-02 22:49:56,560 [INFO] engines.ml_engine.data_preprocessor — Loaded CSV data\datasets\mock_dataset.csv — shape (100, 4)
+2026-03-02 22:50:07,163 [INFO] engines.ml_engine.data_preprocessor — Target column: 'target' | Features: ['feature_1', 'feature_2', 'feature_3']
+2026-03-02 22:50:07,227 [INFO] engines.ml_engine.data_preprocessor — Clean CSV saved → data\datasets\cleaned\mock_dataset.csv
+2026-03-02 22:50:09,684 [INFO] engines.ml_engine.data_preprocessor — Uploaded mock_dataset.csv → s3://rad-ml-datasets/datasets/mock_dataset.csv
+2026-03-02 22:50:09,793 [INFO] core.refinement_loop — Dataset preprocessed — features: ['feature_1', 'feature_2', 'feature_3']
+2026-03-02 22:50:12,537 [INFO] engines.ml_engine.sagemaker_handler — Creating Autopilot job: rad-ml-autopilot-1772472012
+2026-03-05 13:44:52,366 [WARNING] Orchestrator — No prompt supplied — using default: 'Build me a chatbot that answers questions about climate change using the latest web articles.'
+2026-03-05 13:44:52,390 [INFO] Orchestrator — Config loaded from C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\config.yaml
+2026-03-05 13:45:14,059 [INFO] core.refinement_loop — ═══ RAD-ML V2 Refinement Loop — Starting ═══
+2026-03-05 13:45:14,248 [INFO] core.refinement_loop — ── Phase 1: Project Planning ──
+2026-03-05 13:45:14,250 [INFO] core.router — Route → chatbot (conf=1.00) | keywords=['chatbot', 'chat', 'answer', 'question', 'articles']
+2026-03-05 13:45:14,255 [INFO] core.refinement_loop — Route decision → mode=chatbot (confidence=1.00)
+2026-03-05 13:45:14,255 [INFO] core.refinement_loop — ── Phase 2: Infrastructure Setup ──
+2026-03-05 13:45:17,310 [INFO] collectors.ddg_scraper — DDG search -> 'chatbot site:wikipedia.org OR site:medium.com OR site:towardsdatascience.com OR site:geeksforgeeks.org OR site:docs.python.org'
+2026-03-05 13:45:22,069 [INFO] primp — response: https://www.bing.com/search?q=chatbot+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org 200
+2026-03-05 13:45:25,077 [INFO] primp — response: https://www.bing.com/search?q=chatbot+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=11&FORM=PERE 200
+2026-03-05 13:45:26,942 [INFO] primp — response: https://www.bing.com/search?q=chatbot+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=21&FORM=PERE1 200
+2026-03-05 13:45:29,902 [INFO] primp — response: https://www.bing.com/search?q=chatbot+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=31&FORM=PERE2 200
+2026-03-05 13:45:32,121 [INFO] primp — response: https://www.bing.com/search?q=chatbot+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=41&FORM=PERE3 200
+2026-03-05 13:45:32,161 [INFO] collectors.ddg_scraper — DDG search -> 'chat site:wikipedia.org OR site:medium.com OR site:towardsdatascience.com OR site:geeksforgeeks.org OR site:docs.python.org'
+2026-03-05 13:45:35,513 [INFO] primp — response: https://www.bing.com/search?q=chat+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org 200
+2026-03-05 13:45:41,210 [INFO] primp — response: https://www.bing.com/search?q=chat+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=11&FORM=PERE 200
+2026-03-05 13:45:48,479 [INFO] primp — response: https://www.bing.com/search?q=chat+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=21&FORM=PERE1 200
+2026-03-05 13:45:50,848 [INFO] primp — response: https://www.bing.com/search?q=chat+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=31&FORM=PERE2 200
+2026-03-05 13:45:53,637 [INFO] primp — response: https://www.bing.com/search?q=chat+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=41&FORM=PERE3 200
+2026-03-05 13:45:53,744 [INFO] collectors.ddg_scraper — DDG search -> 'answer site:wikipedia.org OR site:medium.com OR site:towardsdatascience.com OR site:geeksforgeeks.org OR site:docs.python.org'
+2026-03-05 13:46:03,758 [INFO] duckduckgo_search.DDGS — Error to search using bing backend: https://www.bing.com/search TimeoutError: ('error sending request for url (https://www.bing.com/search?q=answer+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org)', 'https://www.bing.com/search?q=answer+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org')
+2026-03-05 13:46:03,759 [ERROR] collectors.ddg_scraper — DDG search failed: https://www.bing.com/search TimeoutError: ('error sending request for url (https://www.bing.com/search?q=answer+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org)', 'https://www.bing.com/search?q=answer+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org')
+2026-03-05 13:46:03,760 [INFO] collectors.ddg_scraper — DDG search -> 'question site:wikipedia.org OR site:medium.com OR site:towardsdatascience.com OR site:geeksforgeeks.org OR site:docs.python.org'
+2026-03-05 13:46:07,122 [INFO] primp — response: https://www.bing.com/search?q=question+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org 200
+2026-03-05 13:46:14,250 [INFO] primp — response: https://www.bing.com/search?q=question+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=11&FORM=PERE 200
+2026-03-05 13:46:15,934 [INFO] primp — response: https://www.bing.com/search?q=question+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=21&FORM=PERE1 200
+2026-03-05 13:46:26,358 [INFO] primp — response: https://www.bing.com/search?q=question+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=31&FORM=PERE2 200
+2026-03-05 13:46:28,095 [INFO] primp — response: https://www.bing.com/search?q=question+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=41&FORM=PERE3 200
+2026-03-05 13:46:28,377 [INFO] collectors.ddg_scraper — DDG search -> 'articles site:wikipedia.org OR site:medium.com OR site:towardsdatascience.com OR site:geeksforgeeks.org OR site:docs.python.org'
+2026-03-05 13:46:29,339 [INFO] primp — response: https://www.bing.com/search?q=articles+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org 200
+2026-03-05 13:46:30,890 [INFO] primp — response: https://www.bing.com/search?q=articles+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=11&FORM=PERE 200
+2026-03-05 13:46:32,517 [INFO] primp — response: https://www.bing.com/search?q=articles+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=21&FORM=PERE1 200
+2026-03-05 13:46:33,872 [INFO] primp — response: https://www.bing.com/search?q=articles+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=31&FORM=PERE2 200
+2026-03-05 13:46:35,277 [INFO] primp — response: https://www.bing.com/search?q=articles+site%3Awikipedia.org+OR+site%3Amedium.com+OR+site%3Atowardsdatascience.com+OR+site%3Ageeksforgeeks.org+OR+site%3Adocs.python.org&first=41&FORM=PERE3 200
+2026-03-05 13:46:35,325 [INFO] collectors.ddg_scraper — DDGScraper finished -> 0 documents collected.
+2026-03-05 13:46:35,329 [INFO] collectors.ddg_scraper — Corpus saved -> data\vector_store\corpus.txt
+2026-03-05 13:46:35,330 [INFO] core.refinement_loop — RAG documents after DDG scrape augmentation: 0
+2026-03-05 13:46:35,331 [WARNING] core.refinement_loop — No documents could be extracted. Using dummy RAG document to prevent pipeline failure.
+2026-03-05 13:46:35,331 [INFO] core.refinement_loop — Building RAG index with 1 documents...
+2026-03-05 13:47:22,046 [INFO] sentence_transformers.SentenceTransformer — Use pytorch device_name: cpu
+2026-03-05 13:47:22,046 [INFO] sentence_transformers.SentenceTransformer — Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-05 13:48:45,355 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-05 13:48:45,684 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-05 13:48:46,276 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-05 13:48:46,277 [WARNING] huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-05 13:48:46,685 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-05 13:48:47,141 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-05 13:48:47,403 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-05 13:48:48,015 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-05 13:48:48,677 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-05 13:48:51,804 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-05 13:48:52,008 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-05 13:48:52,372 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-05 13:48:52,470 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-05 13:48:52,906 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-05 13:48:53,255 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-05 13:48:53,524 [INFO] httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-05 13:48:53,754 [WARNING] engines.chatbot_engine.rag_builder — Falling back to deterministic hash embeddings because HF init failed: [Errno 22] Invalid argument
+2026-03-05 13:48:54,609 [INFO] faiss.loader — Loading faiss with AVX2 support.
+2026-03-05 13:48:55,992 [INFO] faiss.loader — Successfully loaded faiss with AVX2 support.
+2026-03-05 13:48:56,019 [WARNING] langchain_community.vectorstores.faiss — `embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+2026-03-05 13:48:56,034 [INFO] engines.chatbot_engine.rag_builder — FAISS index saved → data\vector_store\index
+2026-03-05 13:48:56,035 [INFO] engines.chatbot_engine.rag_builder — RAG index built (faiss backend) -> 1 documents, 1 chunks.
+2026-03-05 13:48:56,035 [INFO] core.refinement_loop — RAG index built at data\vector_store\index
+2026-03-05 13:48:56,035 [INFO] core.refinement_loop — ═══ Attempt 1 / 5 ═══
+2026-03-05 13:48:56,036 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 1) ──
+2026-03-05 13:49:14,879 [INFO] httpx — HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 402 Payment Required"
+2026-03-05 13:49:14,884 [WARNING] generator.code_gen_factory — DeepSeek call failed: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to Qwen/stub.
+2026-03-05 13:50:42,727 [INFO] httpx — HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2026-03-05 13:50:42,729 [WARNING] generator.code_gen_factory — HuggingFace Hub call failed: (Request ID: Root=1-69a93cd9-73e439e70e72763f36979d5a;0e66035e-3e4a-4a1b-8b4b-e1a8d3f912f2)
+
+403 Forbidden: This authentication method does not have sufficient permissions to call Inference Providers on behalf of user AbhiSai1.
+Cannot access content at: https://router.huggingface.co/v1/chat/completions.
+Make sure your token has the correct permissions.
+2026-03-05 13:50:42,731 [WARNING] generator.code_gen_factory — HuggingFace Hub unavailable — trying Ollama.
+2026-03-05 13:50:44,956 [INFO] httpx — HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-05 13:50:46,042 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+2026-03-05 13:50:46,044 [WARNING] generator.code_gen_factory — Ollama call failed for model 'deepseek-coder:6.7b': model requires more system memory (11.5 GiB) than is available (8.6 GiB) (status code: 500)
+2026-03-05 13:50:48,398 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+2026-03-05 13:50:48,399 [WARNING] generator.code_gen_factory — Ollama call failed for model 'qwen:7b': model requires more system memory (19.9 GiB) than is available (8.6 GiB) (status code: 500)
+2026-03-05 13:50:48,420 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2026-03-05 13:50:48,421 [WARNING] generator.code_gen_factory — Ollama call failed for model 'qwen3-coder': model 'qwen3-coder' not found (status code: 404)
+2026-03-05 13:50:48,439 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2026-03-05 13:50:48,440 [WARNING] generator.code_gen_factory — Ollama call failed for model 'qwen2.5-coder': model 'qwen2.5-coder' not found (status code: 404)
+2026-03-05 13:50:48,461 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2026-03-05 13:50:48,462 [WARNING] generator.code_gen_factory — Ollama call failed for model 'llama3.2:3b': model 'llama3.2:3b' not found (status code: 404)
+2026-03-05 13:50:48,481 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2026-03-05 13:50:48,483 [WARNING] generator.code_gen_factory — Ollama call failed for model 'phi3.5:3.8b': model 'phi3.5:3.8b' not found (status code: 404)
+2026-03-05 13:50:48,497 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2026-03-05 13:50:48,498 [WARNING] generator.code_gen_factory — Ollama call failed for model 'qwen3': model 'qwen3' not found (status code: 404)
+2026-03-05 13:50:48,515 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2026-03-05 13:50:48,517 [WARNING] generator.code_gen_factory — Ollama call failed for model 'deepseek-coder': model 'deepseek-coder' not found (status code: 404)
+2026-03-05 13:50:48,533 [INFO] httpx — HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2026-03-05 13:50:48,535 [WARNING] generator.code_gen_factory — Ollama call failed for model 'codellama:7b': model 'codellama:7b' not found (status code: 404)
+2026-03-05 13:50:48,535 [WARNING] generator.code_gen_factory — Ollama available models (first 10): qwen:7b, deepseek-coder:6.7b
+2026-03-05 13:50:48,536 [WARNING] generator.code_gen_factory — All Ollama model attempts failed. Last error: model 'codellama:7b' not found (status code: 404)
+2026-03-05 13:50:48,539 [WARNING] generator.code_gen_factory — Ollama unavailable — falling back to offline stub.
+2026-03-05 13:50:48,539 [WARNING] generator.code_gen_factory — Qwen using offline stub (no HF or Ollama available).
+2026-03-05 13:50:48,555 [INFO] generator.code_gen_factory — Code bundle generated — py=3188 chars  tests=128 chars  html=0 chars  css=0 chars
+2026-03-05 13:51:19,169 [WARNING] generator.code_verifier — Gemini verification failed: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.. Disabling verifier for this run.
+2026-03-05 13:51:19,183 [INFO] generator.code_gen_factory — Workspace written: app.py, test_app.py, index.html, style.css → workspace\current_app
+2026-03-05 13:51:19,183 [INFO] core.refinement_loop — Code written to workspace.
+2026-03-05 13:51:19,184 [INFO] core.refinement_loop — ── Phase 4: Automated Testing ──
+2026-03-05 13:51:38,117 [WARNING] core.refinement_loop — Tests failed:
+
+
+=================================== ERRORS ====================================
+__ ERROR collecting Code_Generator/RAD-ML/workspace/current_app/test_app.py ___
+ImportError while importing test module 'C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\workspace\current_app\test_app.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_app.py:1: in <module>
+    import app as app_module
+app.py:9: in <module>
+    import streamlit as st
+E   ModuleNotFoundError: No module named 'streamlit'
+=========================== short test summary info ===========================
+ERROR test_app.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.78s
+
+2026-03-05 13:51:38,120 [INFO] core.refinement_loop — ── Phase 5: Self-Refinement — feeding error back to LLM ──
+2026-03-05 13:51:38,122 [INFO] core.refinement_loop — ═══ Attempt 2 / 5 ═══
+2026-03-05 13:51:38,125 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 2) ──
+2026-03-05 13:51:52,168 [INFO] httpx — HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 402 Payment Required"
+2026-03-05 13:51:52,175 [WARNING] generator.code_gen_factory — DeepSeek call failed: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to Qwen/stub.
+2026-03-05 13:51:52,176 [WARNING] generator.code_gen_factory — Qwen using offline stub (no HF or Ollama available).
+2026-03-05 13:51:52,179 [INFO] generator.code_gen_factory — Code bundle generated — py=3188 chars  tests=128 chars  html=0 chars  css=0 chars
+2026-03-05 13:51:52,215 [INFO] generator.code_gen_factory — Workspace written: app.py, test_app.py, index.html, style.css → workspace\current_app
+2026-03-05 13:51:52,217 [INFO] core.refinement_loop — Code written to workspace.
+2026-03-05 13:51:52,218 [INFO] core.refinement_loop — ── Phase 4: Automated Testing ──
+2026-03-05 13:52:26,344 [WARNING] core.refinement_loop — Tests failed:
+
+
+=================================== ERRORS ====================================
+__ ERROR collecting Code_Generator/RAD-ML/workspace/current_app/test_app.py ___
+ImportError while importing test module 'C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\workspace\current_app\test_app.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_app.py:1: in <module>
+    import app as app_module
+app.py:9: in <module>
+    import streamlit as st
+E   ModuleNotFoundError: No module named 'streamlit'
+=========================== short test summary info ===========================
+ERROR test_app.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 9.64s
+
+2026-03-05 13:52:26,345 [INFO] core.refinement_loop — ── Phase 5: Self-Refinement — feeding error back to LLM ──
+2026-03-05 13:52:26,346 [INFO] core.refinement_loop — ═══ Attempt 3 / 5 ═══
+2026-03-05 13:52:26,346 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 3) ──
+2026-03-05 13:52:38,971 [INFO] httpx — HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 402 Payment Required"
+2026-03-05 13:52:38,973 [WARNING] generator.code_gen_factory — DeepSeek call failed: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to Qwen/stub.
+2026-03-05 13:52:38,974 [WARNING] generator.code_gen_factory — Qwen using offline stub (no HF or Ollama available).
+2026-03-05 13:52:39,019 [INFO] generator.code_gen_factory — Code bundle generated — py=3188 chars  tests=128 chars  html=0 chars  css=0 chars
+2026-03-05 13:52:39,035 [INFO] generator.code_gen_factory — Workspace written: app.py, test_app.py, index.html, style.css → workspace\current_app
+2026-03-05 13:52:39,038 [INFO] core.refinement_loop — Code written to workspace.
+2026-03-05 13:52:39,038 [INFO] core.refinement_loop — ── Phase 4: Automated Testing ──
+2026-03-05 13:52:48,662 [WARNING] core.refinement_loop — Tests failed:
+
+
+=================================== ERRORS ====================================
+__ ERROR collecting Code_Generator/RAD-ML/workspace/current_app/test_app.py ___
+ImportError while importing test module 'C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\workspace\current_app\test_app.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_app.py:1: in <module>
+    import app as app_module
+app.py:9: in <module>
+    import streamlit as st
+E   ModuleNotFoundError: No module named 'streamlit'
+=========================== short test summary info ===========================
+ERROR test_app.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 1.11s
+
+2026-03-05 13:52:48,662 [INFO] core.refinement_loop — ── Phase 5: Self-Refinement — feeding error back to LLM ──
+2026-03-05 13:52:48,663 [INFO] core.refinement_loop — ═══ Attempt 4 / 5 ═══
+2026-03-05 13:52:48,663 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 4) ──
+2026-03-05 13:53:02,726 [INFO] openai._base_client — Retrying request to /chat/completions in 0.409093 seconds
+2026-03-05 13:53:13,160 [INFO] openai._base_client — Retrying request to /chat/completions in 0.818091 seconds
+2026-03-05 13:53:24,201 [INFO] httpx — HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 402 Payment Required"
+2026-03-05 13:53:24,209 [WARNING] generator.code_gen_factory — DeepSeek call failed: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to Qwen/stub.
+2026-03-05 13:53:24,216 [WARNING] generator.code_gen_factory — Qwen using offline stub (no HF or Ollama available).
+2026-03-05 13:53:24,235 [INFO] generator.code_gen_factory — Code bundle generated — py=3188 chars  tests=128 chars  html=0 chars  css=0 chars
+2026-03-05 13:53:24,335 [INFO] generator.code_gen_factory — Workspace written: app.py, test_app.py, index.html, style.css → workspace\current_app
+2026-03-05 13:53:24,336 [INFO] core.refinement_loop — Code written to workspace.
+2026-03-05 13:53:24,337 [INFO] core.refinement_loop — ── Phase 4: Automated Testing ──
+2026-03-05 13:54:02,319 [WARNING] core.refinement_loop — Tests failed:
+
+
+=================================== ERRORS ====================================
+__ ERROR collecting Code_Generator/RAD-ML/workspace/current_app/test_app.py ___
+ImportError while importing test module 'C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\workspace\current_app\test_app.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_app.py:1: in <module>
+    import app as app_module
+app.py:9: in <module>
+    import streamlit as st
+E   ModuleNotFoundError: No module named 'streamlit'
+=========================== short test summary info ===========================
+ERROR test_app.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 6.48s
+
+2026-03-05 13:54:02,322 [INFO] core.refinement_loop — ── Phase 5: Self-Refinement — feeding error back to LLM ──
+2026-03-05 13:54:02,323 [INFO] core.refinement_loop — ═══ Attempt 5 / 5 ═══
+2026-03-05 13:54:02,323 [INFO] core.refinement_loop — ── Phase 3: Code Generation (attempt 5) ──
+2026-03-05 13:54:22,142 [INFO] openai._base_client — Retrying request to /chat/completions in 0.381435 seconds
+2026-03-05 13:54:38,042 [INFO] httpx — HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 402 Payment Required"
+2026-03-05 13:54:38,044 [WARNING] generator.code_gen_factory — DeepSeek call failed: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}. Falling back to Qwen/stub.
+2026-03-05 13:54:38,045 [WARNING] generator.code_gen_factory — Qwen using offline stub (no HF or Ollama available).
+2026-03-05 13:54:38,047 [INFO] generator.code_gen_factory — Code bundle generated — py=3188 chars  tests=128 chars  html=0 chars  css=0 chars
+2026-03-05 13:54:38,061 [INFO] generator.code_gen_factory — Workspace written: app.py, test_app.py, index.html, style.css → workspace\current_app
+2026-03-05 13:54:38,062 [INFO] core.refinement_loop — Code written to workspace.
+2026-03-05 13:54:38,062 [INFO] core.refinement_loop — ── Phase 4: Automated Testing ──
+2026-03-05 13:54:42,053 [WARNING] core.refinement_loop — Tests failed:
+
+
+=================================== ERRORS ====================================
+__ ERROR collecting Code_Generator/RAD-ML/workspace/current_app/test_app.py ___
+ImportError while importing test module 'C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\workspace\current_app\test_app.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_app.py:1: in <module>
+    import app as app_module
+app.py:9: in <module>
+    import streamlit as st
+E   ModuleNotFoundError: No module named 'streamlit'
+=========================== short test summary info ===========================
+ERROR test_app.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.62s
+
+2026-03-05 13:54:42,054 [WARNING] core.refinement_loop — Max retries (5) reached. Proceeding with last code.
+2026-03-05 13:54:42,065 [INFO] core.refinement_loop — Launching Streamlit app from workspace\current_app\app.py
+2026-03-05 13:54:44,854 [ERROR] core.refinement_loop — Attempt 5 failed: Streamlit app crashed on start. See workspace\logs\generated_app_stderr.log. Last lines:
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\.venv\Scripts\python.exe: No module named streamlit
+2026-03-05 13:54:44,859 [ERROR] core.refinement_loop — All 5 attempts exhausted.
+2026-03-05 13:54:44,863 [ERROR] Orchestrator — RAD-ML V2 build failed after 5 attempt(s). Error: Streamlit app crashed on start. See workspace\logs\generated_app_stderr.log. Last lines:
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\.venv\Scripts\python.exe: No module named streamlit
+2026-03-05 14:25:28,953 [INFO] Orchestrator — Config loaded from C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\config.yaml

@@ -1,0 +1,115 @@
+# config.yaml — RAD-ML Configuration
+# Fill in your actual API keys before running the system.
+
+# ── AWS ───────────────────────────────────────────────────────────────────────
+aws:
+  access_key_id:     "YOUR_AWS_ACCESS_KEY_ID"
+  secret_access_key: "YOUR_AWS_SECRET_ACCESS_KEY"
+  region:            "us-east-1"
+  s3_bucket:         "rad-ml-datasets"          # bucket name only (not ARN)
+  sagemaker_role:    "arn:aws:iam::820648834328:role/raduser"
+  training_instance_type: "ml.m5.large"         # fixed single training job instance
+  endpoint_instance_type: "ml.m5.large"         # endpoint instance for one deployed model
+  sagemaker_training_job_name: "rad-ml-train-once"
+  sagemaker_model_name: "rad-ml-model"
+  sagemaker_endpoint_name: "rad-ml-endpoint"    # reused endpoint name (single endpoint)
+
+# ── Google Gemini ─────────────────────────────────────────────────────────────
+gemini:
+  api_key:  "YOUR_GEMINI_API_KEY"
+  model:    "gemini-1.5-pro-latest"             # used for code verification
+
+# ── DeepSeek ─────────────────────────────────────────────────────────────────
+deepseek:
+  api_key:      "YOUR_DEEPSEEK_API_KEY"
+  model:        "deepseek-coder"
+  temperature:  0.3
+  max_tokens:   4096
+
+# ── Qwen & Llama (Local/fallback generators) ─────────────────────────────────
+# Backend priority: HuggingFace Hub → Ollama → offline stub
+qwen:
+  # ── HuggingFace Hub Inference (free serverless API) ──────────────────────
+  hf_model: "Qwen/Qwen2.5-Coder-3B-Instruct"   # lighter public model
+  hf_token: "YOUR_HF_TOKEN"                                   # optional HF token — leave blank for anonymous
+
+  # ── Ollama local server (fully offline, no internet) ─────────────────────
+  # Prerequisites: install Ollama (https://ollama.com/download)
+  #   then run:  ollama pull qwen2.5-coder:3b
+  #              ollama serve
+  ollama_model: "qwen2.5-coder:3b"
+  ollama_model_candidates:
+    - "qwen2.5-coder:3b"
+    - "deepseek-coder"
+    - "llama3.2:3b"
+
+  # ── Shared settings ───────────────────────────────────────────────────────
+  temperature: 0.3
+  max_tokens:  4096
+
+# ── Primary Code Generator Preference ────────────────────────────────────────
+# Options: "deepseek" | "qwen" | "llama"
+# Use "llama" if you don't have a DeepSeek key — it's fully free via local Ollama
+primary_llm: "qwen"
+
+# ── Kaggle ────────────────────────────────────────────────────────────────────
+kaggle:
+  username: "YOUR_KAGGLE_USERNAME"
+  key:      "YOUR_KAGGLE_KEY"
+  max_results: 5                                # number of datasets to evaluate
+
+# ── DuckDuckGo Scraper ────────────────────────────────────────────────────────
+ddg:
+  max_results:    10    # search results per keyword query
+  timeout_secs:   8
+  min_doc_length: 100   # minimum characters per scraped document
+  max_doc_chars:  8000  # truncate long scraped pages before indexing
+  max_snippet_chars: 1200
+
+ddg_max_pages: 10       # total pages to scrape for RAG knowledge base
+
+# ── SLM (local chatbot model) ─────────────────────────────────────────────────
+slm_model: "qwen:7b"  # Local Ollama model
+
+
+# ── Vector Store ──────────────────────────────────────────────────────────────
+vector_store:
+  backend: "chroma"                              # "faiss" | "chroma"
+  embedding_model: "all-MiniLM-L6-v2"
+  chunk_size: 1200
+  chunk_overlap: 150
+  min_chunk_chars: 120
+  persist_dir: "data/vector_store"
+
+chatbot_runtime:
+  use_slm: false
+  fallback_context_chars: 1200
+  fallback_max_sentences: 4
+  fallback_min_sentence_chars: 40
+  min_ddg_relevance: 0.12
+  min_docs_for_rag: 6
+  max_docs_for_rag: 24
+
+# ── Self-Refinement Loop (V2 — replaces DQN) ─────────────────────────────────
+refinement:
+  max_retries: 5                              # maximum generate-test-refine cycles
+  test_timeout_secs: 60                       # max time for unit tests to run
+  app_start_timeout_secs: 300                 # allow slower first-time model/index warm-up
+  flask_start_timeout_secs: 300               # backward-compatible alias
+
+# ── Cost Control & Monitoring ─────────────────────────────────────────────────
+cost_control:
+  auto_shutdown_mins: 30                      # shut down idle SageMaker endpoints after N mins
+  max_runtime_mins: 120                       # abort pipeline if total runtime exceeds this
+  preferred_instance: "ml.m5.large"           # default supported instance type
+  enable_budget_alerts: true                  # CloudWatch budget alarms
+
+# ── Flask ──────────────────────────────────────────────────────────────────────
+streamlit:
+  host: "127.0.0.1"
+  port: 5000
+
+flask:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false

@@ -1,0 +1,108 @@
+# RAD-ML: Comprehensive Project Structure & Implementation Info
+
+The **RAD-ML** (Reinforcement-Assisted Development for Machine Learning) project is an end-to-end automated AI software engineering system. It takes a natural language prompt from a user ("build me a chatbot" or "build me a housing prediction model") and fully develops, tests, and deploys it.
+
+The architecture is divided into three distinct, decoupled subsystems:
+
+1.  **Chatbot Interface** (Frontend & Orchestrator API)
+2.  **Data Collection Agent** (Information Gathering & RL Pipeline)
+3.  **Code Generator Agent** (App Synthesis, Compilation, & ML Engine)
+
+---
+
+## 1. 🖥️ Chatbot Interface (`Chatbot_Interface/`)
+This is the user-facing command center where the user types their system prompt. It acts as the orchestrator that triggers the backend AI agents.
+
+### File Structure
+```text
+Chatbot_Interface/
+├── frontend/                 # React + Vite UI
+│   ├── src/                  # React Components (Chat window, Progress bars)
+│   ├── package.json          # Node dependencies
+│   ├── tailwind.config.js    # UI Styling
+│   └── vite.config.js        # Build configuration
+└── backend/                  # Python API Gateway
+    ├── app.py                # Main Flask/FastAPI server exposing endpoints to the React UI
+    ├── agent_runner.py       # Subprocess manager that executes the Data & Code agents
+    ├── rag_service.py        # Logic to handle RAG queries if the final generated app is a Chatbot
+    ├── config.yaml           # API keys and routing configuration
+    └── requirements.txt      # Python dependencies
+```
+
+### Implementation Details
+*   **The Flow**: When a user types a prompt in the React frontend, the request hits [backend/app.py](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Chatbot_Interface/backend/app.py). The backend then uses [agent_runner.py](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Chatbot_Interface/backend/agent_runner.py) to trigger the `Data_Collection_Agent` first. Once data collection finishes, it triggers the `Code_Generator`.
+*   The frontend streams live logs (like "Searching Kaggle..." or "Generating Flask App...") back to the user via WebSockets or Server-Sent Events from the backend.
+
+---
+
+## 2. 📡 Data Collection Agent (`Data_Collection_Agent/`)
+This agent runs first. Its job is to figure out what data the user's prompt requires, search the internet or Kaggle for it, verify its quality, and store it for the next agent.
+
+### File Structure
+```text
+Data_Collection_Agent/
+├── main.py                   # Entry point; runs the Deep Q-Network data gathering loop
+├── app_ui.py                 # (Optional) Streamlit UI for testing the collector in isolation
+├── config.yaml               # Agent configuration (RL hyperparameters, S3 settings)
+├── db_results.json           # Output payload containing the collected URLs or Dataset References
+├── brain/
+│   └── extractor.py          # NLP tool to pull keywords ("climate change", "housing prices") from the prompt
+├── collectors/               
+│   ├── ddg_search.py         # DuckDuckGo client for finding web articles (for Chatbots)
+│   └── kaggle_client.py      # Kaggle API wrapper for finding CSV datasets (for ML models)
+├── core/                     # The Reinforcement Learning Brain
+│   ├── dqn_agent.py          # PyTorch model that learns the best search strategies
+│   ├── environment.py        # The RL Environment (actions=search Kaggle/DDG, state=found data)
+│   └── evolution_engine.py   # Tracks episode rewards and performance
+└── utils/
+    ├── data_cleaner.py       # Verifies data quality (removes PII, checks text length/relevance)
+    ├── data_store.py         # SQLite database interface to log RL sessions
+    └── s3_handler.py         # Uploads collected data metadata to Amazon S3
+```
+
+### Implementation Details
+*   **Intent Routing**: Uses NLP (`extractor.py`) to decide if the user wants text data (Chatbot) or tabular data (ML model).
+*   **Reinforcement Learning**: If a search yields poor results (e.g., empty Kaggle datasets or irrelevant web pages), the `dqn_agent.py` penalizes the action and learns to refine the search keywords on the next episode.
+*   **Handoff**: Once high-quality data targets are found, they are written to [db_results.json](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Data_Collection_Agent/db_results.json) and optionally synchronized to AWS S3 via [s3_handler.py](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Data_Collection_Agent/utils/s3_handler.py).
+
+---
+
+## 3. ⚙️ Code Generator Agent (`Code_Generator/`)
+Also known as **RAD-ML Core**, this is the "AI Software Engineer". It takes the raw data targets provided by the Data Collection Agent, builds the backend infrastructure (RAG or SageMaker), writes the Python/Flask application code, tests it, and deploys it.
+
+### File Structure
+```text
+Code_Generator/RAD-ML/
+├── main.py                   # Master loop: Data Extraction -> Engine Build -> Code Generation -> Test
+├── config.yaml               # LLM API keys (DeepSeek, Gemini, Qwen), AWS credentials
+├── core/
+│   ├── router.py             # Re-verifies user intent
+│   ├── dqn_agent.py          # RL Agent that learns how to write better code based on compiler errors
+│   └── reward_system.py      # Grades the generated app (Did tests pass? Did Flask crash?)
+├── collectors/               # Physical Downloader tools (Driven by Data Collection Agent's db_results.json)
+│   ├── ddg_scraper.py        # Downloads full web page text from specified URLs
+│   └── kaggle_client.py      # Downloads and unzips the specific dataset CSV from Kaggle
+├── engines/                  # Backend Infrastructure Setup
+│   ├── chatbot_engine/
+│   │   ├── rag_builder.py    # Converts downloaded web text into a FAISS/Chroma Vector Database
+│   │   └── prompt_engineer.py# Sets up the System Prompts for the SLM (Phi-3)
+│   └── ml_engine/
+│       ├── data_preprocessor.py # Cleans the CSV data
+│       └── sagemaker_handler.py # Uploads CSV to S3 & triggers an AWS SageMaker Autopilot training job
+├── generator/                # Code Synthesis
+│   ├── code_gen_factory.py   # Prompts DeepSeek/Qwen to write the actual `app.py`, `templates/index.html`, etc.
+│   └── code_verifier.py      # Uses Google Gemini to statically analyze and fix the generated code before running
+└── workspace/                # Execution Environment
+    └── current_app/          # This is where the AI permanently saves the generated codebase it just wrote
+```
+
+### Implementation Details
+*   **Data Extraction Phase**: [main.py](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Code_Generator/RAD-ML/main.py) reads [db_results.json](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Data_Collection_Agent/db_results.json) from the Data Collection Agent. If the app is a Chatbot, it uses [collectors/ddg_scraper.py](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Code_Generator/RAD-ML/collectors/ddg_scraper.py) to physically download the text from the URLs found. If it's an ML App, it uses [collectors/kaggle_client.py](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Code_Generator/RAD-ML/collectors/kaggle_client.py) to download the specific dataset reference.
+*   **Engine Building Phase**: 
+    *   For *Chatbots*: It chunks the downloaded text and builds a local Retrieval-Augmented Generation (RAG) vector index ([rag_builder.py](file:///c:/Users/sabhi/OneDrive/Documents/Final_Year_Project/Code_Generator/RAD-ML/engines/chatbot_engine/rag_builder.py)).
+    *   For *ML Models*: It pushes the CSV to AWS and triggers SageMaker Autopilot (`sagemaker_handler.py`), returning an endpoint name.
+*   **Code Generation (DQN Loop)**: 
+    *   The `code_gen_factory.py` asks an LLM (like DeepSeek) to write a Flask app that hooks into the newly created RAG database or SageMaker endpoint. 
+    *   `code_verifier.py` (powered by Gemini) acts as the Code Reviewer, fixing syntax errors automatically.
+    *   The app is saved to `workspace/current_app/` and launched in a subprocess. 
+    *   If it crashes, the internal `dqn_agent.py` tweaks the strategy and tries generating the app again (up to 5 times) until it works perfectly.

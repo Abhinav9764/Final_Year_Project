@@ -1,0 +1,10 @@
+﻿C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\.venv\Lib\site-packages\chromadb_rust_bindings\chromadb_rust_bindings.pyd
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\.venv\Lib\site-packages\torch\lib\torch_cpu.dll
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\data\datasets\cleaned\aggregated_hourly_data.csv
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Code_Generator\RAD-ML\data\datasets\cleaned\ratings.csv
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\data\raw\advaithsrao_enron-fraud-email-dataset\enron_data_fraud_labeled.csv
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\data\raw\asaniczka_tmdb-movies-dataset-2023-930k-movies\tmdb-movies-dataset-2023-930k-movies.zip
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\data\raw\asaniczka_tmdb-movies-dataset-2023-930k-movies\TMDB_movie_dataset_v11.csv
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\data\raw\dariasvasileva_hourly-weather-data-in-ireland-from-24-stations\aggregated_hourly_data.csv
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\data\raw\parasharmanas_movie-recommendation-system\movie-recommendation-system.zip
+C:\Users\sabhi\OneDrive\Documents\Final_Year_Project\Data_Collection_Agent\data\raw\parasharmanas_movie-recommendation-system\ratings.csv

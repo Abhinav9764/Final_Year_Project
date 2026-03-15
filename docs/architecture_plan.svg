@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4efe6"/>
+      <stop offset="100%" stop-color="#dce9e2"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f3f7f5"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#305252"/>
+    </marker>
+    <style>
+      .title { font: 700 30px 'Segoe UI', Arial, sans-serif; fill: #143434; }
+      .subtitle { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #3b5a5a; }
+      .section { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #173f3f; }
+      .label { font: 600 16px 'Segoe UI', Arial, sans-serif; fill: #163535; }
+      .small { font: 500 13px 'Segoe UI', Arial, sans-serif; fill: #4a6666; }
+      .box { fill: url(#panel); stroke: #7aa3a3; stroke-width: 2; rx: 22; ry: 22; }
+      .core { fill: #fffaf2; stroke: #c58c52; }
+      .data { fill: #f3fbf8; stroke: #64a489; }
+      .ml { fill: #f8f6ff; stroke: #7f7ac8; }
+      .ui { fill: #fff6f1; stroke: #d08a60; }
+      .line { stroke: #305252; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .softline { stroke: #5f7a7a; stroke-width: 2; fill: none; marker-end: url(#arrow); stroke-dasharray: 8 6; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="920" fill="url(#bg)"/>
+
+  <text x="64" y="64" class="title">RAD-ML Architecture Plan</text>
+  <text x="64" y="92" class="subtitle">Prompt-driven multi-agent system for dataset collection, SageMaker training, deployment, and chatbot-style delivery</text>
+
+  <rect x="60" y="140" width="280" height="120" class="box ui"/>
+  <text x="85" y="182" class="section">Presentation Layer</text>
+  <text x="85" y="214" class="label">Chatbot Interface Frontend</text>
+  <text x="85" y="238" class="small">Centered composer -> bottom composer</text>
+  <text x="85" y="258" class="small">Upload button, chat history, dataset preview</text>
+
+  <rect x="420" y="140" width="320" height="160" class="box core"/>
+  <text x="446" y="182" class="section">API and Orchestration</text>
+  <text x="446" y="214" class="label">FastAPI Backend + Orchestrator</text>
+  <text x="446" y="238" class="small">Starts jobs, streams progress, stores history</text>
+  <text x="446" y="258" class="small">Aggregates deploy URL, training metadata,</text>
+  <text x="446" y="278" class="small">and first 10 rows of the combined dataset</text>
+
+  <rect x="830" y="120" width="500" height="220" class="box data"/>
+  <text x="856" y="160" class="section">Data Collection Agent</text>
+  <text x="856" y="194" class="label">Keyword extraction + dataset retrieval</text>
+  <text x="856" y="220" class="small">Kaggle / uploaded datasets / optional DDG docs</text>
+  <text x="856" y="244" class="small">Normalize schemas, detect shared columns, combine 2+ datasets</text>
+  <text x="856" y="268" class="small">Persist combined CSV, preview rows, and metadata JSON</text>
+  <text x="856" y="292" class="small">Upload raw and combined artifacts to S3 when enabled</text>
+
+  <rect x="830" y="410" width="500" height="250" class="box ml"/>
+  <text x="856" y="450" class="section">Code Generator / ML Layer</text>
+  <text x="856" y="484" class="label">Intent-aware code generation</text>
+  <text x="856" y="510" class="small">Loads combined dataset first</text>
+  <text x="856" y="534" class="small">Preprocesses features, infers task type, splits train/validation</text>
+  <text x="856" y="558" class="small">Applies benchmark quality gate and regularization strategy</text>
+  <text x="856" y="582" class="small">Trains via AWS SageMaker and generates final app</text>
+  <text x="856" y="606" class="small">Returns endpoint, model, job name, metrics, and app URL</text>
+
+  <rect x="90" y="430" width="290" height="180" class="box data"/>
+  <text x="116" y="470" class="section">Storage Layer</text>
+  <text x="116" y="504" class="label">Local + Cloud Persistence</text>
+  <text x="116" y="530" class="small">SQLite history</text>
+  <text x="116" y="554" class="small">Processed combined CSV</text>
+  <text x="116" y="578" class="small">S3 dataset artifacts</text>
+  <text x="116" y="602" class="small">SageMaker model artifacts and endpoints</text>
+
+  <rect x="430" y="430" width="310" height="180" class="box ui"/>
+  <text x="456" y="470" class="section">Response Layer</text>
+  <text x="456" y="504" class="label">Structured Final Payload</text>
+  <text x="456" y="530" class="small">Deploy URL</text>
+  <text x="456" y="554" class="small">Training metadata</text>
+  <text x="456" y="578" class="small">Combined dataset columns + first 10 rows</text>
+  <text x="456" y="602" class="small">Generated code artifacts preview</text>
+
+  <path d="M340 200 L420 200" class="line"/>
+  <path d="M740 210 L830 210" class="line"/>
+  <path d="M1080 340 L1080 410" class="line"/>
+  <path d="M830 560 L740 560" class="line"/>
+  <path d="M430 520 L380 520" class="line"/>
+  <path d="M240 430 L240 260" class="softline"/>
+  <path d="M580 300 L580 430" class="softline"/>
+  <path d="M980 660 L980 760 L230 760 L230 610" class="softline"/>
+
+  <rect x="60" y="700" width="1270" height="150" rx="24" ry="24" fill="#ffffff" opacity="0.82" stroke="#9ab6ae" stroke-width="2"/>
+  <text x="90" y="740" class="section">Execution Sequence</text>
+  <text x="90" y="774" class="small">1. User submits prompt and optional files from the chatbot UI.</text>
+  <text x="90" y="798" class="small">2. Backend orchestrator launches the Data Collection Agent and waits for the combined dataset plus preview metadata.</text>
+  <text x="90" y="822" class="small">3. Code Generator preprocesses the combined dataset, benchmarks quality, trains through SageMaker, then launches the generated prediction app.</text>
+  <text x="90" y="846" class="small">4. Backend returns deployment details and dataset preview to the frontend, which renders them in the final chat response and history.</text>
+</svg>

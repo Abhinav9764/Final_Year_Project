@@ -1,0 +1,56 @@
+# RAD-ML Requirements
+# Install with: pip install -r requirements.txt
+
+# ── Core ──────────────────────────────────────────────────────────────────────
+flask>=3.0.0
+streamlit>=1.36.0
+pyyaml>=6.0.1
+requests>=2.31.0
+numpy>=1.26.0
+
+# ── NLP & Routing ─────────────────────────────────────────────────────────────
+sentence-transformers>=2.7.0
+
+# ── Web Scraping ──────────────────────────────────────────────────────────────
+duckduckgo-search>=5.3.0
+beautifulsoup4>=4.12.3
+
+# ── Kaggle Data ───────────────────────────────────────────────────────────────
+kaggle>=1.6.0
+
+# ── Vector Store & RAG ────────────────────────────────────────────────────────
+llama-index>=0.10.0
+llama-index-vector-stores-chroma>=0.1.0
+llama-index-embeddings-huggingface>=0.1.0
+llama-index-llms-ollama>=0.1.0
+llama-index-postprocessor-flag-embedding-reranker>=0.1.0
+chromadb>=0.5.0
+
+# ── SLM (Local Language Model) ────────────────────────────────────────────────
+transformers>=4.40.0
+accelerate>=0.29.0
+# llama-cpp-python>=0.2.0   # optional: only for GGUF/llama.cpp models
+
+# ── Code Generation LLMs ─────────────────────────────────────────────────────
+# DeepSeek (paid, optional — primary LLM if you have an API key)
+openai>=1.23.0
+
+# Qwen — free backends (no API key required, choose one or both):
+# Option A: HuggingFace Hub Serverless Inference (online, free tier)
+huggingface_hub>=0.22.0
+# Option B: Ollama local server (offline, requires: ollama pull llama3.2:3b)
+openai>=1.23.0                 # also used by the Ollama OpenAI-compat endpoint
+ollama>=0.3.0                  # pip install ollama
+
+# ── Gemini Verifier ───────────────────────────────────────────────────────────
+google-generativeai>=0.5.0
+
+# ── AWS / SageMaker ───────────────────────────────────────────────────────────
+boto3>=1.34.0
+
+# ── Reinforcement Learning ────────────────────────────────────────────────────
+torch>=2.2.0               # optional: falls back to random-action if not installed
+
+# ── ML Preprocessing ─────────────────────────────────────────────────────────
+pandas>=2.2.0
+scikit-learn>=1.4.0

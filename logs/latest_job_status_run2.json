@@ -1,0 +1,246 @@
+{
+  "job_id": "69db3b1e-262b-4542-8aa2-27c72fed1e49",
+  "status": "done",
+  "current_step": 9,
+  "logs": [
+    {
+      "step": 1,
+      "status": "processing",
+      "message": "Prompt received. Initializing pipeline...",
+      "timestamp": 1772629716.735274
+    },
+    {
+      "step": 2,
+      "status": "processing",
+      "message": "Keywords extracted: chatbot, that, answer, queries, operating, systems",
+      "timestamp": 1772629716.7393224
+    },
+    {
+      "step": 3,
+      "status": "collecting",
+      "message": "Dispatching request to Data Collection Agent...",
+      "timestamp": 1772629716.7413213
+    },
+    {
+      "step": 3,
+      "status": "collecting",
+      "message": "Data collection in progress... (8s)",
+      "timestamp": 1772629724.7864037
+    },
+    {
+      "step": 3,
+      "status": "collecting",
+      "message": "Data collection in progress... (16s)",
+      "timestamp": 1772629732.803007
+    },
+    {
+      "step": 3,
+      "status": "collecting",
+      "message": "Data collection in progress... (24s)",
+      "timestamp": 1772629740.809297
+    },
+    {
+      "step": 3,
+      "status": "collecting",
+      "message": "Data collection in progress... (32s)",
+      "timestamp": 1772629748.829498
+    },
+    {
+      "step": 3,
+      "status": "collecting",
+      "message": "Data collection in progress... (40s)",
+      "timestamp": 1772629756.9860928
+    },
+    {
+      "step": 4,
+      "status": "collecting",
+      "message": "Data collector confirmed keywords: operating systems, chatbot, queries, systems, operating",
+      "timestamp": 1772629765.0125866
+    },
+    {
+      "step": 5,
+      "status": "collecting",
+      "message": "Data collection completed (0 records).",
+      "timestamp": 1772629765.0711012
+    },
+    {
+      "step": 6,
+      "status": "developing",
+      "message": "Sending collected data to Code Generator...",
+      "timestamp": 1772629765.1150033
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation and model training started...",
+      "timestamp": 1772629765.1857004
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (15s)",
+      "timestamp": 1772629780.2031949
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (30s)",
+      "timestamp": 1772629795.1985745
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (45s)",
+      "timestamp": 1772629810.2102752
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (60s)",
+      "timestamp": 1772629825.2292833
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (75s)",
+      "timestamp": 1772629840.2425907
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (90s)",
+      "timestamp": 1772629855.253338
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (105s)",
+      "timestamp": 1772629870.2534823
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (120s)",
+      "timestamp": 1772629885.2580528
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (135s)",
+      "timestamp": 1772629900.237444
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (150s)",
+      "timestamp": 1772629915.2420793
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (165s)",
+      "timestamp": 1772629930.2360203
+    },
+    {
+      "step": 7,
+      "status": "training",
+      "message": "Code generation/training in progress... (180s)",
+      "timestamp": 1772629945.2558725
+    },
+    {
+      "step": 8,
+      "status": "deploying",
+      "message": "Model deployment in progress...",
+      "timestamp": 1772629960.2791042
+    },
+    {
+      "step": 9,
+      "status": "done",
+      "message": "Pipeline complete!",
+      "timestamp": 1772629960.2981107,
+      "deploy_url": "http://localhost:5000",
+      "algorithm_used": "RAG + SLM (microsoft/Phi-3-mini-4k-instruct)",
+      "collected_data": {
+        "mode": "ddg",
+        "keywords": [
+          "operating systems",
+          "chatbot",
+          "queries",
+          "systems",
+          "operating"
+        ],
+        "count": 0,
+        "top_results": []
+      },
+      "generated_code": {
+        "app_py": {
+          "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\app.py",
+          "line_count": 58,
+          "preview": "\"\"\"\nChatbot Flask App \u2014 generated by RAD-ML\nUses LangChain RAG + local SLM to answer user questions.\n\"\"\"\nimport os\nimport sys\nfrom pathlib import Path\nfrom flask import Flask, render_template, request, jsonify\n\n# Add project root to path\nROOT = Path(__file__).resolve().parent.parent.parent\nsys.path.insert(0, str(ROOT))\nos.chdir(ROOT)\n\nfrom engines.chatbot_engine.rag_builder import RAGBuilder\nfrom engines.chatbot_engine.prompt_engineer import PromptEngineer\n\nimport yaml\nwith open(ROOT / \"config.yaml\") as f:\n    CFG = yaml.safe_load(f)\n\napp = Flask(__name__)\nrag = RAGBuilder(CFG)\n\n# Best-effort load existing FAISS index (built during pipeline)\nRAG_READY = rag.load_existing_index()\n\nprompt_eng = PromptEngineer(CFG)\n\n\n@app.route(\"/\", methods=[\"GET\"])\ndef index():\n    return render_template(\"index.html\")\n\n\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    global RAG_READY\n    data     = request.get_json(force=True)\n    question = (data.get(\"message\") or \"\").strip()\n\n    if not question:\n        return jsonify({\"error\": \"Empty message\"}), 400\n\n    if not RAG_READY:\n        RAG_READY = rag.load_existing_index()\n        if not RAG_READY:\n            return jsonify({\"error\": \"RAG index unavailable. Run chatbot pipeline first.\"}), 503\n\n    try:\n        answer = rag.query(question)\n        return jsonify({\"response\": answer})\n    except Exception as exc:\n        return jsonify({\"error\": str(exc)}), 500\n\n\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=5000, debug=False)\n",
+          "truncated": false
+        },
+        "test_py": {
+          "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\test_app.py",
+          "line_count": 2,
+          "preview": "def test_app_smoke():\n    assert True\n",
+          "truncated": false
+        },
+        "html": {
+          "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\templates\\index.html",
+          "line_count": 91,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>RAD-ML Chatbot</title>\n  <link rel=\"stylesheet\" href=\"{{ url_for('static', filename='style.css') }}\">\n</head>\n<body>\n  <div class=\"app-container\">\n    <header class=\"app-header\">\n      <div class=\"logo-pulse\"></div>\n      <h1>RAD-ML <span class=\"accent\">Chatbot</span></h1>\n      <p class=\"subtitle\">Powered by Local SLM + RAG</p>\n    </header>\n\n    <div class=\"chat-window\" id=\"chatWindow\">\n      <div class=\"message bot-message\">\n        <div class=\"avatar bot-avatar\">\ud83e\udd16</div>\n        <div class=\"bubble\">Hello! I'm your AI assistant. Ask me anything from the knowledge base.</div>\n      </div>\n    </div>\n\n    <div class=\"input-area\">\n      <input type=\"text\" id=\"userInput\" class=\"chat-input\"\n             placeholder=\"Type your question\u2026\" autocomplete=\"off\">\n      <button class=\"send-btn\" id=\"sendBtn\" onclick=\"sendMessage()\">\n        <span id=\"btnText\">Send</span>\n        <span id=\"spinner\" class=\"spinner hidden\"></span>\n      </button>\n    </div>\n  </div>\n\n  <script>\n    const chatWindow = document.getElementById('chatWindow');\n    const userInput  = document.getElementById('userInput');\n    const sendBtn    = document.getElementById('sendBtn');\n\n    userInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });\n\n    function sendMessage() {\n      const msg = userInput.value.trim();\n      if (!msg) return;\n      appendMessage(msg, 'user');\n      userInput.value = '';\n      setLoading(true);\n\n      fetch('/chat', {\n        method:  'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body:    JSON.stringify({ message: msg }),\n      })\n      .then(r => r.json())\n      .then(data => {\n        setLoading(false);\n        if (data.error) appendError(data.error);\n        else appendMessage(data.response, 'bot');\n      })\n      .catch(err => { setLoading(false); appendError(err.toString()); });\n    }\n\n    function appendMessage(text, role) {\n      const div = document.createElement('div');\n      div.className = `message ${role}-message`;\n      div.innerHTML = role === 'bot'\n        ? `<div class=\"avatar bot-avatar\">\ud83e\udd16</div><div class=\"bubble\">${escHtml(text)}</div>`\n        : `<div class=\"bubble\">${escHtml(text)}</div><div class=\"avatar user-avatar\">\ud83e\uddd1</div>`;\n      chatWindow.appendChild(div);\n      chatWindow.scrollTop = chatWindow.scrollHeight;\n    }\n\n    function appendError(msg) {\n      const div = document.createElement('div');\n      div.className = 'message error-message';\n      div.innerHTML = `<div class=\"bubble error-bubble\">\u26a0 ${escHtml(msg)}</div>`;\n      chatWindow.appendChild(div);\n      chatWindow.scrollTop = chatWindow.scrollHeight;\n    }\n\n    function setLoading(on) {\n      sendBtn.disabled = on;\n      document.getElementById('btnText').textContent = on ? 'Sending\u2026' : 'Send';\n      document.getElementById('spinner').classList.toggle('hidden', !on);\n    }\n\n    function escHtml(t) {\n      return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');\n    }\n  </script>\n</body>\n</html>\n",
+          "truncated": false
+        },
+        "css": {
+          "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\templates\\style.css",
+          "line_count": 306,
+          "preview": "\n/* \u2500\u2500 Reset & Base \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\n\n:root {\n  --bg:         #0d0f1a;\n  --surface:    rgba(255,255,255,0.05);\n  --surface2:   rgba(255,255,255,0.09);\n  --border:     rgba(255,255,255,0.10);\n  --accent:     #7c6af7;\n  --accent2:    #3ecfff;\n  --text:       #e8eaf0;\n  --muted:      #8a8fa8;\n  --error:      #ff5e72;\n  --success:    #3ecfff;\n  --radius:     14px;\n  --shadow:     0 8px 40px rgba(0,0,0,0.45);\n  --glow-accent: 0 0 20px rgba(124,106,247,0.45);\n  --glow-blue:   0 0 20px rgba(62,207,255,0.45);\n  --transition:  all 0.25s ease;\n}\n\nhtml, body {\n  height: 100%;\n  background: var(--bg);\n  color: var(--text);\n  font-family: 'Inter', 'Outfit', system-ui, sans-serif;\n  line-height: 1.6;\n}\n\n/* \u2500\u2500 App Container \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.app-container {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 24px 16px 40px;\n  max-width: 860px;\n  margin: 0 auto;\n}\n\n/* \u2500\u2500 Header \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.app-header {\n  text-align: center;\n  margin-bottom: 32px;\n}\n\n.app-header h1 {\n  font-size: clamp(2rem, 5vw, 3rem);\n  font-weight: 800;\n  letter-spacing: -0.5px;\n  background: linear-gradient(135deg, var(--accent), var(--accent2));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n\n.accent { color: var(--accent2); }\n\n.subtitle {\n  color: var(--muted);\n  font-size: 0.9rem;\n  margin-top: 4px;\n  letter-spacing: 0.5px;\n}\n\n/* Animated pulse logo dot */\n.logo-pulse {\n  width: 14px; height: 14px;\n  background: var(--accent);\n  border-radius: 50%;\n  margin: 0 auto 10px;\n  box-shadow: var(--glow-accent);\n  animation: pulse 2s infinite;\n}\n@keyframes pulse {\n  0%, 100% { transform: scale(1); opacity: 1; }\n  50%       { transform: scale(1.5); opacity: 0.6; }\n}\n\n/* \u2500\u2500 Glass Card \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.glass-card {\n  background: var(--surface);\n  border: 1px solid var(--border);\n  backdrop-filter: blur(18px);\n  -webkit-backdrop-filter: blur(18px);\n  border-radius: var(--radius);\n  box-shadow: var(--shadow);\n  padding: 28px;\n  width: 100%;\n}\n\n/* \u2500\u2500 Chat Window \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.chat-window {\n  width: 100%;\n  height: 420px;\n  overflow-y: auto;\n  background: var(--surface);\n  border: 1px solid var(--border);\n  border-radius: var(--radius);\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n  scroll-behavior: smooth;\n  backdrop-filter: blur(12px);\n}\n\n.chat-window::-webkit-scrollbar { width: 6px; }\n.chat-window::-webkit-scrollbar-track { background: transparent; }\n.chat-window::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }\n\n/* \u2500\u2500 Messages \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.message {\n  display: flex;\n  align-items: flex-end;\n  gap: 10px;\n  animation: fadeUp 0.3s ease;\n}\n@keyframes fadeUp {\n  from { opacity: 0; transform: translateY(8px); }\n  to   { opacity: 1; transform: translateY(0); }\n}\n\n.bot-message  { justify-content: flex-start; }\n.user-message { justify-content: flex-end; }\n.error-message { justify-content: center; }\n\n.avatar {\n  width: 34px; height: 34px;\n  border-radius: 50%;\n  display: flex; align-items: center; justify-content: center;\n  font-size: 1.1rem;\n  flex-shrink: 0;\n}\n.bot-avatar  { background: linear-gradient(135deg, var(--accent), #5b4bd1); }\n.user-avatar { background: linear-gradient(135deg, var(--accent2), #28a0c2); }\n\n.bubble {\n  max-width: 72%;\n  padding: 12px 16px;\n  border-radius: 18px;\n  font-size: 0.93rem;\n  line-height: 1.55;\n  word-break: break-word;\n}\n.bot-message  .bubble { background: var(--surface2); border-bottom-left-radius: 4px; }\n.user-message .bubble {\n  background: linear-gradient(135deg, var(--accent), #5b4bd1);\n  color: #fff;\n  border-bottom-right-radius: 4px;\n}\n.error-bubble { background: rgba(255,94,114,0.15); color: var(--error); border-radius: 10px; }\n\n/* \u2500\u2500 Input Area \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.input-area {\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  margin-top: 14px;\n}\n\n.chat-input {\n  flex: 1;\n  background: var(--surface2);\n  border: 1px solid var(--border);\n  border-radius: 12px;\n  padding: 12px 18px;\n  color: var(--text);\n  font-size: 0.95rem;\n  outline: none;\n  transition: var(--transition);\n}\n.chat-input:focus {\n  border-color: var(--accent);\n  box-shadow: var(--glow-accent);\n}\n\n.send-btn {\n  background: linear-gradient(135deg, var(--accent), #5b4bd1);\n  border: none;\n  border-radius: 12px;\n  padding: 12px 24px;\n  color: #fff;\n  font-weight: 600;\n  cursor: pointer;\n  font-size: 0.95rem;\n  transition: var(--transition);\n  display: flex; align-items: center; gap: 8px;\n}\n.send-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }\n.send-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }\n\n/* \u2500\u2500 Prediction Form \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.prediction-form {\n  width: 100%;\n  background: var(--surface);\n  border: 1px solid var(--border);\n  backdrop-filter: blur(16px);\n  border-radius: var(--radius);\n  padding: 32px;\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));\n  gap: 18px;\n  box-shadow: var(--shadow);\n}\n\n.field-group { display: flex; flex-direction: column; gap: 6px; }\n.field-group label {\n  font-size: 0.82rem;\n  font-weight: 600;\n  color: var(--muted);\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n.field-group input {\n  background: var(--surface2);\n  border: 1px solid var(--border);\n  border-radius: 10px;\n  padding: 10px 14px;\n  color: var(--text);\n  font-size: 0.92rem;\n  outline: none;\n  transition: var(--transition);\n}\n.field-group input:focus {\n  border-color: var(--accent2);\n  box-shadow: var(--glow-blue);\n}\n\n.predict-btn {\n  grid-column: 1 / -1;\n  background: linea",
+          "truncated": true
+        }
+      }
+    }
+  ],
+  "result": {
+    "deploy_url": "http://localhost:5000",
+    "algorithm_used": "RAG + SLM (microsoft/Phi-3-mini-4k-instruct)",
+    "collected_data": {
+      "mode": "ddg",
+      "keywords": [
+        "operating systems",
+        "chatbot",
+        "queries",
+        "systems",
+        "operating"
+      ],
+      "count": 0,
+      "top_results": []
+    },
+    "generated_code": {
+      "app_py": {
+        "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\app.py",
+        "line_count": 58,
+        "preview": "\"\"\"\nChatbot Flask App \u2014 generated by RAD-ML\nUses LangChain RAG + local SLM to answer user questions.\n\"\"\"\nimport os\nimport sys\nfrom pathlib import Path\nfrom flask import Flask, render_template, request, jsonify\n\n# Add project root to path\nROOT = Path(__file__).resolve().parent.parent.parent\nsys.path.insert(0, str(ROOT))\nos.chdir(ROOT)\n\nfrom engines.chatbot_engine.rag_builder import RAGBuilder\nfrom engines.chatbot_engine.prompt_engineer import PromptEngineer\n\nimport yaml\nwith open(ROOT / \"config.yaml\") as f:\n    CFG = yaml.safe_load(f)\n\napp = Flask(__name__)\nrag = RAGBuilder(CFG)\n\n# Best-effort load existing FAISS index (built during pipeline)\nRAG_READY = rag.load_existing_index()\n\nprompt_eng = PromptEngineer(CFG)\n\n\n@app.route(\"/\", methods=[\"GET\"])\ndef index():\n    return render_template(\"index.html\")\n\n\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    global RAG_READY\n    data     = request.get_json(force=True)\n    question = (data.get(\"message\") or \"\").strip()\n\n    if not question:\n        return jsonify({\"error\": \"Empty message\"}), 400\n\n    if not RAG_READY:\n        RAG_READY = rag.load_existing_index()\n        if not RAG_READY:\n            return jsonify({\"error\": \"RAG index unavailable. Run chatbot pipeline first.\"}), 503\n\n    try:\n        answer = rag.query(question)\n        return jsonify({\"response\": answer})\n    except Exception as exc:\n        return jsonify({\"error\": str(exc)}), 500\n\n\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=5000, debug=False)\n",
+        "truncated": false
+      },
+      "test_py": {
+        "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\test_app.py",
+        "line_count": 2,
+        "preview": "def test_app_smoke():\n    assert True\n",
+        "truncated": false
+      },
+      "html": {
+        "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\templates\\index.html",
+        "line_count": 91,
+        "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>RAD-ML Chatbot</title>\n  <link rel=\"stylesheet\" href=\"{{ url_for('static', filename='style.css') }}\">\n</head>\n<body>\n  <div class=\"app-container\">\n    <header class=\"app-header\">\n      <div class=\"logo-pulse\"></div>\n      <h1>RAD-ML <span class=\"accent\">Chatbot</span></h1>\n      <p class=\"subtitle\">Powered by Local SLM + RAG</p>\n    </header>\n\n    <div class=\"chat-window\" id=\"chatWindow\">\n      <div class=\"message bot-message\">\n        <div class=\"avatar bot-avatar\">\ud83e\udd16</div>\n        <div class=\"bubble\">Hello! I'm your AI assistant. Ask me anything from the knowledge base.</div>\n      </div>\n    </div>\n\n    <div class=\"input-area\">\n      <input type=\"text\" id=\"userInput\" class=\"chat-input\"\n             placeholder=\"Type your question\u2026\" autocomplete=\"off\">\n      <button class=\"send-btn\" id=\"sendBtn\" onclick=\"sendMessage()\">\n        <span id=\"btnText\">Send</span>\n        <span id=\"spinner\" class=\"spinner hidden\"></span>\n      </button>\n    </div>\n  </div>\n\n  <script>\n    const chatWindow = document.getElementById('chatWindow');\n    const userInput  = document.getElementById('userInput');\n    const sendBtn    = document.getElementById('sendBtn');\n\n    userInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });\n\n    function sendMessage() {\n      const msg = userInput.value.trim();\n      if (!msg) return;\n      appendMessage(msg, 'user');\n      userInput.value = '';\n      setLoading(true);\n\n      fetch('/chat', {\n        method:  'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body:    JSON.stringify({ message: msg }),\n      })\n      .then(r => r.json())\n      .then(data => {\n        setLoading(false);\n        if (data.error) appendError(data.error);\n        else appendMessage(data.response, 'bot');\n      })\n      .catch(err => { setLoading(false); appendError(err.toString()); });\n    }\n\n    function appendMessage(text, role) {\n      const div = document.createElement('div');\n      div.className = `message ${role}-message`;\n      div.innerHTML = role === 'bot'\n        ? `<div class=\"avatar bot-avatar\">\ud83e\udd16</div><div class=\"bubble\">${escHtml(text)}</div>`\n        : `<div class=\"bubble\">${escHtml(text)}</div><div class=\"avatar user-avatar\">\ud83e\uddd1</div>`;\n      chatWindow.appendChild(div);\n      chatWindow.scrollTop = chatWindow.scrollHeight;\n    }\n\n    function appendError(msg) {\n      const div = document.createElement('div');\n      div.className = 'message error-message';\n      div.innerHTML = `<div class=\"bubble error-bubble\">\u26a0 ${escHtml(msg)}</div>`;\n      chatWindow.appendChild(div);\n      chatWindow.scrollTop = chatWindow.scrollHeight;\n    }\n\n    function setLoading(on) {\n      sendBtn.disabled = on;\n      document.getElementById('btnText').textContent = on ? 'Sending\u2026' : 'Send';\n      document.getElementById('spinner').classList.toggle('hidden', !on);\n    }\n\n    function escHtml(t) {\n      return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');\n    }\n  </script>\n</body>\n</html>\n",
+        "truncated": false
+      },
+      "css": {
+        "path": "C:\\Users\\sabhi\\OneDrive\\Documents\\Final_Year_Project\\Code_Generator\\RAD-ML\\workspace\\current_app\\templates\\style.css",
+        "line_count": 306,
+        "preview": "\n/* \u2500\u2500 Reset & Base \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\n\n:root {\n  --bg:         #0d0f1a;\n  --surface:    rgba(255,255,255,0.05);\n  --surface2:   rgba(255,255,255,0.09);\n  --border:     rgba(255,255,255,0.10);\n  --accent:     #7c6af7;\n  --accent2:    #3ecfff;\n  --text:       #e8eaf0;\n  --muted:      #8a8fa8;\n  --error:      #ff5e72;\n  --success:    #3ecfff;\n  --radius:     14px;\n  --shadow:     0 8px 40px rgba(0,0,0,0.45);\n  --glow-accent: 0 0 20px rgba(124,106,247,0.45);\n  --glow-blue:   0 0 20px rgba(62,207,255,0.45);\n  --transition:  all 0.25s ease;\n}\n\nhtml, body {\n  height: 100%;\n  background: var(--bg);\n  color: var(--text);\n  font-family: 'Inter', 'Outfit', system-ui, sans-serif;\n  line-height: 1.6;\n}\n\n/* \u2500\u2500 App Container \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.app-container {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 24px 16px 40px;\n  max-width: 860px;\n  margin: 0 auto;\n}\n\n/* \u2500\u2500 Header \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.app-header {\n  text-align: center;\n  margin-bottom: 32px;\n}\n\n.app-header h1 {\n  font-size: clamp(2rem, 5vw, 3rem);\n  font-weight: 800;\n  letter-spacing: -0.5px;\n  background: linear-gradient(135deg, var(--accent), var(--accent2));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n\n.accent { color: var(--accent2); }\n\n.subtitle {\n  color: var(--muted);\n  font-size: 0.9rem;\n  margin-top: 4px;\n  letter-spacing: 0.5px;\n}\n\n/* Animated pulse logo dot */\n.logo-pulse {\n  width: 14px; height: 14px;\n  background: var(--accent);\n  border-radius: 50%;\n  margin: 0 auto 10px;\n  box-shadow: var(--glow-accent);\n  animation: pulse 2s infinite;\n}\n@keyframes pulse {\n  0%, 100% { transform: scale(1); opacity: 1; }\n  50%       { transform: scale(1.5); opacity: 0.6; }\n}\n\n/* \u2500\u2500 Glass Card \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.glass-card {\n  background: var(--surface);\n  border: 1px solid var(--border);\n  backdrop-filter: blur(18px);\n  -webkit-backdrop-filter: blur(18px);\n  border-radius: var(--radius);\n  box-shadow: var(--shadow);\n  padding: 28px;\n  width: 100%;\n}\n\n/* \u2500\u2500 Chat Window \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.chat-window {\n  width: 100%;\n  height: 420px;\n  overflow-y: auto;\n  background: var(--surface);\n  border: 1px solid var(--border);\n  border-radius: var(--radius);\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n  scroll-behavior: smooth;\n  backdrop-filter: blur(12px);\n}\n\n.chat-window::-webkit-scrollbar { width: 6px; }\n.chat-window::-webkit-scrollbar-track { background: transparent; }\n.chat-window::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }\n\n/* \u2500\u2500 Messages \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.message {\n  display: flex;\n  align-items: flex-end;\n  gap: 10px;\n  animation: fadeUp 0.3s ease;\n}\n@keyframes fadeUp {\n  from { opacity: 0; transform: translateY(8px); }\n  to   { opacity: 1; transform: translateY(0); }\n}\n\n.bot-message  { justify-content: flex-start; }\n.user-message { justify-content: flex-end; }\n.error-message { justify-content: center; }\n\n.avatar {\n  width: 34px; height: 34px;\n  border-radius: 50%;\n  display: flex; align-items: center; justify-content: center;\n  font-size: 1.1rem;\n  flex-shrink: 0;\n}\n.bot-avatar  { background: linear-gradient(135deg, var(--accent), #5b4bd1); }\n.user-avatar { background: linear-gradient(135deg, var(--accent2), #28a0c2); }\n\n.bubble {\n  max-width: 72%;\n  padding: 12px 16px;\n  border-radius: 18px;\n  font-size: 0.93rem;\n  line-height: 1.55;\n  word-break: break-word;\n}\n.bot-message  .bubble { background: var(--surface2); border-bottom-left-radius: 4px; }\n.user-message .bubble {\n  background: linear-gradient(135deg, var(--accent), #5b4bd1);\n  color: #fff;\n  border-bottom-right-radius: 4px;\n}\n.error-bubble { background: rgba(255,94,114,0.15); color: var(--error); border-radius: 10px; }\n\n/* \u2500\u2500 Input Area \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.input-area {\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  margin-top: 14px;\n}\n\n.chat-input {\n  flex: 1;\n  background: var(--surface2);\n  border: 1px solid var(--border);\n  border-radius: 12px;\n  padding: 12px 18px;\n  color: var(--text);\n  font-size: 0.95rem;\n  outline: none;\n  transition: var(--transition);\n}\n.chat-input:focus {\n  border-color: var(--accent);\n  box-shadow: var(--glow-accent);\n}\n\n.send-btn {\n  background: linear-gradient(135deg, var(--accent), #5b4bd1);\n  border: none;\n  border-radius: 12px;\n  padding: 12px 24px;\n  color: #fff;\n  font-weight: 600;\n  cursor: pointer;\n  font-size: 0.95rem;\n  transition: var(--transition);\n  display: flex; align-items: center; gap: 8px;\n}\n.send-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }\n.send-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }\n\n/* \u2500\u2500 Prediction Form \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */\n.prediction-form {\n  width: 100%;\n  background: var(--surface);\n  border: 1px solid var(--border);\n  backdrop-filter: blur(16px);\n  border-radius: var(--radius);\n  padding: 32px;\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));\n  gap: 18px;\n  box-shadow: var(--shadow);\n}\n\n.field-group { display: flex; flex-direction: column; gap: 6px; }\n.field-group label {\n  font-size: 0.82rem;\n  font-weight: 600;\n  color: var(--muted);\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n.field-group input {\n  background: var(--surface2);\n  border: 1px solid var(--border);\n  border-radius: 10px;\n  padding: 10px 14px;\n  color: var(--text);\n  font-size: 0.92rem;\n  outline: none;\n  transition: var(--transition);\n}\n.field-group input:focus {\n  border-color: var(--accent2);\n  box-shadow: var(--glow-blue);\n}\n\n.predict-btn {\n  grid-column: 1 / -1;\n  background: linea",
+        "truncated": true
+      }
+    }
+  },
+  "error": null
+}

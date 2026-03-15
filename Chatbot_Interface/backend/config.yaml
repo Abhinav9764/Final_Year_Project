@@ -1,0 +1,12 @@
+# --- Shared Config for Chatbot Backend ---
+slm_model: "HuggingFaceH4/zephyr-7b-beta"  # Or another SLM model
+
+vector_store:
+  backend: "faiss"
+  embedding_model: "all-MiniLM-L6-v2"
+  persist_dir: "data/vector_store"
+
+# Agent paths (relative to project root or absolute)
+agents:
+  data_collector_dir: "../../Data_Collection_Agent"
+  code_generator_dir: "../../Code_Generator/RAD-ML"

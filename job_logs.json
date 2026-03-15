@@ -1,0 +1,62 @@
+{
+  "job_id": "511089c7-8bb9-4bac-b711-aa69c1e08ce3",
+  "status": "done",
+  "current_step": 7,
+  "logs": [
+    {
+      "step": 1,
+      "status": "collecting",
+      "message": "\ud83d\udd0d Starting Data Collection Agent..."
+    },
+    {
+      "step": 1,
+      "status": "collecting",
+      "message": "\ud83d\udd0d Analysing prompt and collecting data..."
+    },
+    {
+      "step": 2,
+      "status": "collecting",
+      "message": "\u2601\ufe0f  Data collected and stored."
+    },
+    {
+      "step": 2,
+      "status": "collecting",
+      "message": "\u2601\ufe0f  Data collection complete."
+    },
+    {
+      "step": 3,
+      "status": "developing",
+      "message": "\ud83e\udde0 Starting Code Generator Agent..."
+    },
+    {
+      "step": 3,
+      "status": "developing",
+      "message": "\ud83e\udde0 Routing intent and building engine..."
+    },
+    {
+      "step": 5,
+      "status": "developing",
+      "message": "\ud83e\udde0 Code generated and tested."
+    },
+    {
+      "step": 5,
+      "status": "developing",
+      "message": "\ud83e\udde0 Code generation complete."
+    },
+    {
+      "step": 6,
+      "status": "deploying",
+      "message": "\ud83d\ude80 Deploying application..."
+    },
+    {
+      "step": 7,
+      "status": "done",
+      "message": "\u2705 Pipeline complete!",
+      "deploy_url": "http://localhost:5000"
+    }
+  ],
+  "result": {
+    "deploy_url": "http://localhost:5000"
+  },
+  "error": null
+}
