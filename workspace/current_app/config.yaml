@@ -1,9 +1,0 @@
-aws:
-  region: us-east-1
-  sagemaker_endpoint_name: null
-ml_features:
-- bedrooms
-- bathrooms
-- sqft
-output_description: ''
-target_param: Prediction
