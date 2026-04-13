@@ -1,0 +1,101 @@
+movie_id,title,genre,language,user_rating,recommendation_score
+1,The Matrix,Sci-Fi,English,8.7,0.95
+2,Inception,Sci-Fi,English,8.8,0.96
+3,Interstellar,Sci-Fi,English,8.6,0.94
+4,The Shawshank Redemption,Drama,English,9.3,0.99
+5,The Godfather,Drama,English,9.2,0.98
+6,Pulp Fiction,Drama,English,8.9,0.96
+7,Forrest Gump,Drama,English,8.8,0.95
+8,The Dark Knight,Action,English,9.0,0.97
+9,John Wick,Action,English,7.4,0.85
+10,Mad Max Fury Road,Action,English,8.1,0.90
+11,The Avengers,Action,English,8.0,0.89
+12,Jurassic Park,Sci-Fi,English,8.1,0.90
+13,The Sixth Sense,Drama,English,8.1,0.90
+14,Saving Private Ryan,Drama,English,8.6,0.94
+15,The Lion King,Animation,English,8.5,0.93
+16,Toy Story,Animation,English,8.3,0.91
+17,Frozen,Animation,English,7.4,0.85
+18,Finding Nemo,Animation,English,8.1,0.90
+19,Spirited Away,Animation,English,8.6,0.94
+20,The Conjuring,Horror,English,7.5,0.82
+21,The Ring,Horror,English,7.0,0.78
+22,Insidious,Horror,English,6.8,0.76
+23,The Exorcist,Horror,English,8.0,0.89
+24,Jaws,Horror,English,8.0,0.89
+25,Titanic,Romance,English,7.8,0.87
+26,The Notebook,Romance,English,7.8,0.87
+27,La La Land,Romance,English,8.0,0.89
+28,Pride and Prejudice,Romance,English,7.8,0.87
+29,Eternal Sunshine,Romance,English,8.3,0.91
+30,The Pursuit of Happyness,Drama,English,8.2,0.90
+31,City of God,Drama,Portuguese,8.8,0.95
+32,Pan's Labyrinth,Fantasy,Spanish,8.3,0.91
+33,Amelie,Romance,French,8.3,0.91
+34,Il Cinéma Paradiso,Drama,Italian,8.5,0.93
+35,Tokyo Story,Drama,Japanese,8.6,0.94
+36,Rashomon,Drama,Japanese,8.4,0.92
+37,Seven Samurai,Action,Japanese,8.6,0.94
+38,Harakiri,Drama,Japanese,8.4,0.92
+39,Perfect Blue,Animation,Japanese,7.8,0.87
+40,Grave of the Fireflies,Animation,Japanese,8.5,0.93
+41,Akira,Sci-Fi,Japanese,8.0,0.89
+42,Love Exposure,Drama,Japanese,8.3,0.91
+43,Parasite,Drama,Korean,8.6,0.94
+44,The Handmaiden,Drama,Korean,8.0,0.89
+45,OldBoy,Action,Korean,8.5,0.93
+46,Burning,Drama,Korean,7.9,0.88
+47,A Tale of Two Sisters,Horror,Korean,6.8,0.76
+48,Monsoon,Drama,Hindi,8.0,0.89
+49,Rang De Basanti,Drama,Hindi,8.0,0.89
+50,3 Idiots,Comedy,Hindi,8.4,0.92
+51,Dirty Dancing,Romance,English,6.9,0.77
+52,Top Gun,Action,English,6.9,0.77
+53,Back to the Future,Sci-Fi,English,8.5,0.93
+54,The Breakfast Club,Comedy,English,7.9,0.88
+55,Singin' in the Rain,Comedy,English,8.3,0.91
+56,It's a Wonderful Life,Drama,English,8.7,0.95
+57,Chandni,Romance,Hindi,7.0,0.78
+58,Lagaan,Drama,Hindi,8.0,0.89
+59,Sholay,Action,Hindi,8.2,0.90
+60,Mughal-e-Azam,Romance,Hindi,8.2,0.90
+61,Mother India,Drama,Hindi,8.0,0.89
+62,Alaipayuthey,Romance,Tamil,8.0,0.89
+63,Natarang,Drama,Marathi,8.4,0.92
+64,Hey Ram,Drama,Tamil,7.1,0.80
+65,Dil Chahta Hai,Romance,Hindi,7.9,0.88
+66,Jab We Met,Romance,Hindi,7.7,0.86
+67,Pyaar Kiya Toh Darna Kya,Romance,Hindi,7.0,0.78
+68,Hera Pheri,Comedy,Hindi,7.5,0.82
+69,Chup Revenge of the Artist,Drama,Hindi,7.5,0.82
+70,Article 15,Drama,Hindi,8.0,0.89
+71,Piku,Comedy,Hindi,8.0,0.89
+72,Natarang,Drama,Marathi,8.4,0.92
+73,Kahaani,Drama,Hindi,8.2,0.90
+74,Queen,Comedy,Hindi,8.2,0.90
+75,NH10,Thriller,Hindi,7.1,0.80
+76,Pink,Drama,Hindi,7.9,0.88
+77,Raees,Action,Hindi,7.0,0.78
+78. Dangal,Sports,Hindi,8.4,0.92
+79,Sultan,Sports,Hindi,6.3,0.70
+80,PK,Comedy,Hindi,8.1,0.90
+81,Bajrangi Bhaijaan,Comedy,Hindi,8.1,0.90
+82,The Conjuring 2,Horror,English,7.3,0.81
+83,Annabelle,Horror,English,6.2,0.69
+84,Get Out,Horror,English,7.7,0.86
+85,A Quiet Place,Horror,English,7.4,0.85
+86,It Follows,Horror,English,6.8,0.76
+87,Hereditary,Horror,English,7.6,0.84
+88,The Lighthouse,Drama,English,7.4,0.85
+89,Parasite,Thriller,Korean,8.5,0.93
+90,Joker,Drama,English,8.4,0.92
+91,Once Upon a Time,Western,English,7.6,0.84
+92,Django Unchained,Western,English,8.4,0.92
+93,True Grit,Western,English,7.6,0.84
+94,Unforgiven,Western,English,8.2,0.90
+95,3:10 to Yuma,Western,English,7.6,0.84
+96,The Hateful Eight,Western,English,7.8,0.87
+97,Kill Bill Vol. 1,Action,English,8.0,0.89
+98,Kill Bill Vol. 2,Action,English,8.0,0.89
+99,Reservoir Dogs,Crime,English,8.3,0.91
+100,Jackie Brown,Crime,English,7.5,0.85

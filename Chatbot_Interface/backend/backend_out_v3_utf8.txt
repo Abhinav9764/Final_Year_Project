@@ -1,0 +1,3334 @@
+﻿python : 2026-03-24 
+10:26:11,217 [INFO] 
+auth_db: Auth DB path 
+resolved to C:\Users\sa
+bhi\OneDrive\Desktop\RA
+D-ML-v8\Chatbot_Interfa
+ce\backend\data\users.d
+b
+At line:1 char:57
++ ... d Chatbot_Interfa
+ce/backend ; python 
+app.py > 
+backend_out_v3.txt 2>&1
++                      
+             ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (2026-03-24 10   
+ :2...d\data\users.    
+db:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+2026-03-24 
+10:26:21,460 [WARNING] 
+chat_history_db: NoSQL 
+history unavailable 
+(Connect timeout on 
+endpoint URL: "http://l
+ocalhost:8000/") - 
+using in-memory 
+history store.
+2026-03-24 
+10:26:21,473 [INFO] 
+__main__: RAD-ML 
+backend on 
+http://0.0.0.0:5001
+ * Serving Flask app 'app'
+ * Debug mode: off
+2026-03-24 
+10:26:21,527 [INFO] 
+werkzeug: 
+[31m[1mWARNING: This 
+is a development 
+server. Do not use it 
+in a production 
+deployment. Use a 
+production WSGI server 
+instead.[0m
+ * Running on all 
+addresses (0.0.0.0)
+ * Running on 
+http://127.0.0.1:5001
+ * Running on http://17
+2.22.62.54:5001
+2026-03-24 
+10:26:21,527 [INFO] 
+werkzeug: [33mPress 
+CTRL+C to quit[0m
+2026-03-24 
+10:26:38,038 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:26:38] "GET 
+/api/health HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:37,880 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:37] "OPTIONS 
+/api/auth/me HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:37,897 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:37] "OPTIONS 
+/api/auth/me HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:38,157 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:38] "GET 
+/api/auth/me HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:38,499 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:38] "GET 
+/api/auth/me HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:38,924 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:38] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:38,940 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:38] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:39,175 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:39] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:39,305 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:39] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:43,992 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:43] "OPTIONS 
+/api/pipeline/run 
+HTTP/1.1" 200 -
+2026-03-24 
+10:28:44,940 [INFO] 
+__main__: User 19 
+started job 
+67a9c602-5a2: Build a 
+movie recommendation 
+system using genre and 
+rating
+2026-03-24 
+10:28:45,055 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:45] "POST 
+/api/pipeline/run 
+HTTP/1.1" 200 -
+2026-03-24 
+10:28:45,496 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:45] "GET /api/pip
+eline/stream/67a9c602-5
+a2?token=eyJhbGciOiJIUz
+I1NiIsInR5cCI6IkpXVCJ9.
+eyJmcmVzaCI6ZmFsc2UsIml
+hdCI6MTc3NDI4Nzg1MSwian
+RpIjoiYWZmMTNkZGYtYTc3N
+y00YjZmLThlOTYtMzRkZjg2
+ZTNkOGViIiwidHlwZSI6ImF
+jY2VzcyIsInN1YiI6IjE5Ii
+wibmJmIjoxNzc0Mjg3ODUxL
+CJleHAiOjE3NzQzNzQyNTF9
+.NV5uYI6Xq0nyxKNPISn4ER
+gda0xehSS93lkIAe7nigw 
+HTTP/1.1" 200 -
+2026-03-24 
+10:28:48,910 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:48] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:49,328 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:49] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:58,908 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:58] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:28:59,248 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:28:59] "GET 
+/api/history HTTP/1.1" 
+200 -
+C:\Users\sabhi\OneDrive
+\Desktop\RAD-ML-v8\Code
+_Generator\RAD-ML\core\
+llm_client.py:52: 
+FutureWarning: 
+
+All support for the 
+`google.generativeai` 
+package has ended. It 
+will no longer be 
+receiving 
+updates or bug fixes. 
+Please switch to the 
+`google.genai` package 
+as soon as possible.
+See README for more 
+details:
+
+https://github.com/goog
+le-gemini/deprecated-ge
+nerative-ai-python/blob
+/main/README.md
+
+  import 
+google.generativeai as 
+genai
+2026-03-24 
+10:29:05,560 [INFO] 
+core.llm_client: 
+LLMClient Gemini 
+ready: gemini-2.0-flash
+2026-03-24 
+10:29:06,796 [WARNING] 
+core.llm_client: 
+gemini attempt 1/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+50.43543502s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 50
+}
+]; retrying in 2s
+2026-03-24 
+10:29:08,977 [WARNING] 
+core.llm_client: 
+gemini attempt 2/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+48.24547403s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-03-24 
+10:29:09,611 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:09] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:09,936 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:09] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:18,922 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:18] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:19,247 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:19] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:20,994 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:29:20,999 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.483223 seconds
+2026-03-24 
+10:29:21,801 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:29:21,802 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.892856 seconds
+2026-03-24 
+10:29:23,416 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:29:23,425 [WARNING] 
+core.llm_client: 
+openai attempt 1/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}};
+ retrying in 2s
+2026-03-24 
+10:29:27,681 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:29:27,689 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.394213 seconds
+2026-03-24 
+10:29:28,388 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:29:28,390 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.958703 seconds
+2026-03-24 
+10:29:28,855 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:28] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:29,185 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:29] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:29,733 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:29:29,736 [WARNING] 
+core.llm_client: 
+openai attempt 2/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}}
+2026-03-24 
+10:29:32,425 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:29:32,427 [WARNING] 
+core.llm_client: 
+deepseek attempt 1/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}; retrying in 2s
+2026-03-24 
+10:29:36,739 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:29:36,746 [WARNING] 
+core.llm_client: 
+deepseek attempt 2/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}
+2026-03-24 
+10:29:36,747 [WARNING] 
+generator.prompt_spec_e
+xtractor: LLM spec 
+extraction failed (LLM 
+failed across 
+providers: gemini=429 
+You exceeded your 
+current quota, please 
+check your plan and 
+billing details. For 
+more information on 
+this error, head to: ht
+tps://ai.google.dev/gem
+ini-api/docs/rate-limit
+s. To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+48.24547403s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 48
+}
+] | openai=Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}} 
+| deepseek=Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}) ù using rule-based 
+fallback.
+2026-03-24 
+10:29:36,768 [INFO] gen
+erator.prompt_spec_extr
+actor: IntentSpec 
+saved \u2192 C:\Users\s
+abhi\OneDrive\Desktop\R
+AD-ML-v8\Code_Generator
+\RAD-ML\workspace\curre
+nt_app\intent_spec.json
+2026-03-24 
+10:29:36,773 [INFO] gen
+erator.prompt_spec_extr
+actor: IntentSpec 
+extracted: 
+task_type=web_app  
+inputs=1  outputs=1
+2026-03-24 
+10:29:36,773 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][extract] 
+IntentSpec extracted: 
+task_type=web_app  
+inputs=1  
+search_snippets=0
+2026-03-24 
+10:29:36,774 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][collection] 
+Starting data 
+collection à
+2026-03-24 
+10:29:38,901 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:38] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:39,317 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:39] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:47,929 [INFO] 
+dca_main: [parse] 
+Parsing prompt: Build 
+a movie recommendation 
+system using genre and 
+rating
+2026-03-24 
+10:29:47,931 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][parse] 
+Parsing prompt: Build 
+a movie recommendation 
+system using genre and 
+rating
+2026-03-24 
+10:29:47,952 [INFO] 
+brain.prompt_parser: 
+Parsed prompt \u2192 
+intent=ml_model  
+task=clustering  
+domain=movie 
+recommendation  
+keywords=['movies', 
+'film', 'ratings', 
+'genre']  
+fallback_refs=4  
+inputs=['genre', 
+'rating']  
+target=rating  
+scores={'regression': 
+0, 'classification': 
+0, 'clustering': 2, 
+'chatbot': 0}
+2026-03-24 
+10:29:47,953 [INFO] 
+dca_main: [parse] 
+Intent classified -> 
+intent=ML_MODEL  
+task=CLUSTERING  
+domain='movie 
+recommendation'
+2026-03-24 
+10:29:47,954 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][parse] 
+Intent classified -> 
+intent=ML_MODEL  
+task=CLUSTERING  
+domain='movie 
+recommendation'
+2026-03-24 
+10:29:47,954 [INFO] 
+dca_main: [parse] 
+Search keywords: 
+['movies', 'film', 
+'ratings', 'genre']  | 
+ Inputs: ['genre', 
+'rating']  |  Target: 
+rating
+2026-03-24 
+10:29:47,955 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][parse] 
+Search keywords: 
+['movies', 'film', 
+'ratings', 'genre']  | 
+ Inputs: ['genre', 
+'rating']  |  Target: 
+rating
+2026-03-24 
+10:29:47,957 [INFO] 
+dca_main: [parse] 
+Fallback datasets 
+ready: ['rounakbanik/th
+e-movies-dataset', 'tmd
+b/tmdb-movie-metadata',
+ 'netflix-inc/netflix-s
+hows']
+2026-03-24 
+10:29:47,958 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][parse] 
+Fallback datasets 
+ready: ['rounakbanik/th
+e-movies-dataset', 'tmd
+b/tmdb-movie-metadata',
+ 'netflix-inc/netflix-s
+hows']
+2026-03-24 
+10:29:48,269 [INFO] 
+dca_main: [search] 
+Tier 0 - found 1 
+matching local cached 
+dataset(s)
+2026-03-24 
+10:29:48,270 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search] Tier 
+0 - found 1 matching 
+local cached dataset(s)
+2026-03-24 
+10:29:48,270 [INFO] 
+dca_main: [search] 
+Tier 1 - searching 
+Kaggle + UCI + OpenML 
++ HuggingFace
+2026-03-24 
+10:29:48,271 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search] Tier 
+1 - searching Kaggle + 
+UCI + OpenML + 
+HuggingFace
+2026-03-24 
+10:29:48,272 [INFO] 
+dca_main: [search]   
+query: 'movies' 
+(parallel providers, 
+10s budget)
+2026-03-24 
+10:29:48,275 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search]   
+query: 'movies' 
+(parallel providers, 
+10s budget)
+2026-03-24 
+10:29:48,329 [INFO] 
+dca_main: [search]     
+kaggle: 0 result(s)
+2026-03-24 
+10:29:48,330 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search]     
+kaggle: 0 result(s)
+2026-03-24 
+10:29:48,947 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:48] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:49,295 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:49] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:51,053 [INFO] 
+openml.config: No 
+config file found at C:
+\Users\sabhi\.openml\co
+nfig, using default 
+configuration.
+2026-03-24 
+10:29:53,046 [WARNING] 
+collectors.uci_collecto
+r: UCI search failed 
+for 'movies': 404 
+Client Error: Not 
+Found for url: https://
+archive.ics.uci.edu/api
+/datasets?search=movies
+&take=10&skip=0
+2026-03-24 
+10:29:53,047 [INFO] 
+dca_main: [search]     
+uci: 0 result(s)
+2026-03-24 
+10:29:53,048 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search]     
+uci: 0 result(s)
+2026-03-24 
+10:29:53,631 [INFO] 
+httpx: HTTP Request: 
+GET https://huggingface
+.co/api/datasets?filter
+=task_categories%3Atabu
+lar-classification&sear
+ch=movies&limit=16 
+"HTTP/1.1 200 OK"
+2026-03-24 
+10:29:53,895 [INFO] 
+httpx: HTTP Request: 
+GET https://huggingface
+.co/api/datasets?filter
+=task_categories%3Atabu
+lar-classification&sear
+ch=movie&limit=16 
+"HTTP/1.1 200 OK"
+2026-03-24 
+10:29:54,166 [INFO] 
+httpx: HTTP Request: 
+GET https://huggingface
+.co/api/datasets?filter
+=task_categories%3Atabu
+lar-classification&sear
+ch=film&limit=16 
+"HTTP/1.1 200 OK"
+2026-03-24 
+10:29:54,606 [INFO] 
+httpx: HTTP Request: 
+GET https://huggingface
+.co/api/datasets?search
+=movies+movie&limit=24 
+"HTTP/1.1 200 OK"
+2026-03-24 
+10:29:54,609 [INFO] col
+lectors.huggingface_col
+lector: HuggingFace 
+search 'movies' \u2192 
+8 results
+2026-03-24 
+10:29:54,609 [INFO] 
+dca_main: [search]     
+huggingface: 8 
+result(s)
+2026-03-24 
+10:29:54,610 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search]     
+huggingface: 8 
+result(s)
+2026-03-24 
+10:29:56,321 [INFO] 
+root: Starting [get] 
+request for the URL htt
+ps://www.openml.org/api
+/v1/xml/data/list/tag/m
+ovies/limit/10000/offse
+t/0
+2026-03-24 
+10:29:58,377 [INFO] 
+dca_main: [search]     
+timeout: continuing 
+without waiting for 
+['openml']
+2026-03-24 
+10:29:58,424 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search]     
+timeout: continuing 
+without waiting for 
+['openml']
+2026-03-24 
+10:29:58,425 [INFO] 
+dca_main: [search]     
+kaggle note: Kaggle 
+credentials not 
+available at 
+~/.kaggle/kaggle.json. 
+Skipping Kaggle search.
+2026-03-24 
+10:29:58,425 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search]     
+kaggle note: Kaggle 
+credentials not 
+available at 
+~/.kaggle/kaggle.json. 
+Skipping Kaggle search.
+2026-03-24 
+10:29:58,425 [INFO] 
+dca_main: [search]   
+'movies' -> Kaggle:0  
+UCI:0  OpenML:0  
+HuggingFace:8
+2026-03-24 
+10:29:58,425 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][search]   
+'movies' -> Kaggle:0  
+UCI:0  OpenML:0  
+HuggingFace:8
+2026-03-24 
+10:29:58,426 [INFO] 
+dca_main: [score] Best 
+candidate: 
+'huggingface 
+ShubhamChoksi IMDB 
+Movies'  
+source=LOCAL_CACHE  
+score=0.400
+2026-03-24 
+10:29:58,590 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][score] Best 
+candidate: 
+'huggingface 
+ShubhamChoksi IMDB 
+Movies'  
+source=LOCAL_CACHE  
+score=0.400
+2026-03-24 
+10:29:58,590 [INFO] 
+dca_main: [download] 
+[LOCAL_CACHE] 
+huggingface 
+ShubhamChoksi IMDB 
+Movies
+2026-03-24 
+10:29:58,590 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][download] 
+[LOCAL_CACHE] 
+huggingface 
+ShubhamChoksi IMDB 
+Movies
+2026-03-24 
+10:29:58,593 [INFO] 
+root: Starting [get] 
+request for the URL htt
+ps://www.openml.org/api
+/v1/xml/data/list/tag/m
+ovie/limit/10000/offset
+/0
+2026-03-24 
+10:29:59,561 [INFO] 
+utils.dataset_scorer: 
+Scored data.csv \u2192 
+0.533  (kw=0.25 
+row=1.00 col=0.67 
+rec=0.00)
+2026-03-24 
+10:29:59,570 [INFO] uti
+ls.feature_verifier: 
+Feature verification 
+for data.csv: 1/2 
+matched (50%) ù PASS  
+matched=['rating']  
+missing=['genre']
+2026-03-24 
+10:29:59,570 [INFO] 
+dca_main: [download]   
+-> data.csv  
+rows=42776  
+score=0.533  
+features=50% matched
+2026-03-24 
+10:29:59,570 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][download]   
+-> data.csv  
+rows=42776  
+score=0.533  
+features=50% matched
+2026-03-24 
+10:29:59,570 [INFO] 
+dca_main: [download]   
+-> data.csv  
+rows=42776  score=0.533
+2026-03-24 
+10:29:59,570 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][download]   
+-> data.csv  
+rows=42776  score=0.533
+2026-03-24 
+10:29:59,570 [INFO] 
+dca_main: [download] 
+Local cached dataset 
+already meets the row 
+threshold - skipping 
+slower remote 
+downloads.
+2026-03-24 
+10:29:59,570 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][download] 
+Local cached dataset 
+already meets the row 
+threshold - skipping 
+slower remote 
+downloads.
+2026-03-24 
+10:29:59,570 [INFO] 
+dca_main: [merge] 
+Building final dataset
+2026-03-24 
+10:29:59,570 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][merge] 
+Building final dataset
+2026-03-24 
+10:29:59,609 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:59] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:59,760 [INFO] 
+utils.dataset_merger: 
+Best dataset has 6591 
+rows ù no merge needed.
+2026-03-24 
+10:29:59,941 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:29:59] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:29:59,985 [INFO] 
+utils.dataset_merger: 
+Final dataset: 6502 
+rows ╫ 6 cols \u2192 67
+a9c602-5a2_dataset.csv
+2026-03-24 
+10:29:59,991 [INFO] 
+dca_main: [merge] 
+Final dataset: 6,502 
+rows x 6 cols  
+merged=False
+2026-03-24 
+10:29:59,992 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][merge] Final 
+dataset: 6,502 rows x 
+6 cols  merged=False
+2026-03-24 
+10:29:59,992 [INFO] 
+dca_main: [upload] 
+Uploading to S3
+2026-03-24 
+10:29:59,992 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][upload] 
+Uploading to S3
+2026-03-24 
+10:30:00,078 [INFO] 
+utils.s3_uploader: 
+S3Uploader ready - 
+bucket=rad-ml-datasets 
+prefix=collected_data
+2026-03-24 
+10:30:00,078 [INFO] 
+utils.s3_uploader: 
+Uploading 67a9c602-5a2_
+dataset.csv to S3 with 
+put_object (10564270 
+bytes)
+2026-03-24 
+10:30:00,211 [INFO] 
+root: Starting [get] 
+request for the URL htt
+ps://www.openml.org/api
+/v1/xml/data/list/tag/f
+ilm/limit/10000/offset/
+0
+2026-03-24 
+10:30:01,552 [INFO] 
+root: 1.3407490s taken 
+for [get] request for 
+the URL https://www.ope
+nml.org/api/v1/xml/data
+/list/tag/film/limit/10
+000/offset/0
+2026-03-24 
+10:30:01,560 [INFO] 
+root: Starting [get] 
+request for the URL htt
+ps://www.openml.org/api
+/v1/xml/data/list/limit
+/500/offset/0
+2026-03-24 
+10:30:04,203 [INFO] 
+root: 2.6430454s taken 
+for [get] request for 
+the URL https://www.ope
+nml.org/api/v1/xml/data
+/list/limit/500/offset/
+0
+2026-03-24 
+10:30:04,284 [INFO] col
+lectors.openml_collecto
+r: OpenML search 
+'movies' \u2192 1 
+results
+2026-03-24 
+10:30:09,605 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:09] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:09,917 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:09] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:19,598 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:19] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:19,923 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:19] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:28,865 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:28] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:29,191 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:29] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:35,658 [ERROR] 
+utils.s3_uploader: 
+Upload failed for data\
+processed\67a9c602-5a2_
+dataset.csv: 
+Connection was closed 
+before we received a 
+valid response from 
+endpoint URL: "https://
+rad-ml-datasets.s3.amaz
+onaws.com/collected_dat
+a/datasets/67a9c602-5a2
+/67a9c602-5a2_dataset.c
+sv".
+2026-03-24 
+10:30:35,659 [INFO] 
+dca_main: [upload] S3 
+URI: (disabled/skipped)
+2026-03-24 
+10:30:35,659 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][upload] S3 
+URI: (disabled/skipped)
+2026-03-24 
+10:30:38,875 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:38] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:39,227 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:39] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:45,653 [INFO] 
+utils.s3_uploader: 
+Uploaded results JSON 
+-> s3://rad-ml-datasets
+/collected_data/67a9c60
+2-5a2/db_results.json
+2026-03-24 
+10:30:45,654 [INFO] 
+dca_main: [done] 
+Collection complete - 
+6,502 rows from 1 
+source(s)
+2026-03-24 
+10:30:45,655 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][done] 
+Collection complete - 
+6,502 rows from 1 
+source(s)
+2026-03-24 
+10:30:45,658 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][collection] 
+Dataset ready ù 6502 
+rows, 6 cols
+2026-03-24 
+10:30:45,659 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][codegen] 
+Starting code 
+generation à
+2026-03-24 
+10:30:46,209 [INFO] 
+cg_main: [preprocess] 
+Preprocessing 67a9c602-
+5a2_dataset.csv...
+2026-03-24 
+10:30:46,211 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][preprocess] 
+Preprocessing 67a9c602-
+5a2_dataset.csv...
+2026-03-24 
+10:30:48,045 [INFO] eng
+ines.ml_engine.data_pre
+processor: Loaded CSV: 
+6502 rows x 6 cols
+2026-03-24 
+10:30:48,056 [INFO] eng
+ines.ml_engine.data_pre
+processor: Target 
+column resolved to: 
+rating
+2026-03-24 
+10:30:48,057 [INFO] eng
+ines.ml_engine.data_pre
+processor: Feature 
+columns (1): 
+['no_of_ratings']
+2026-03-24 
+10:30:48,340 [INFO] eng
+ines.ml_engine.data_pre
+processor: Train: 4531 
+rows  Val: 1133 rows
+2026-03-24 
+10:30:48,342 [INFO] 
+cg_main: [preprocess] 
+Train: 4531 rows | 
+Features (1): 
+['no_of_ratings'] | 
+Target: rating
+2026-03-24 
+10:30:48,347 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][preprocess] 
+Train: 4531 rows | 
+Features (1): 
+['no_of_ratings'] | 
+Target: rating
+2026-03-24 
+10:30:48,348 [INFO] 
+cg_main: [sagemaker] 
+Uploading training and 
+validation data 
+derived from the 
+collected dataset to 
+S3...
+2026-03-24 
+10:30:48,349 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][sagemaker] 
+Uploading training and 
+validation data 
+derived from the 
+collected dataset to 
+S3...
+2026-03-24 
+10:30:48,865 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:48] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:49,213 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:49] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:56,598 [INFO] eng
+ines.ml_engine.sagemake
+r_handler: AWS caller 
+identity resolved: arn:
+aws:iam::820648834328:u
+ser/raduser
+2026-03-24 
+10:30:58,868 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:58] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:59,219 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:30:59] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:30:59,604 [INFO] eng
+ines.ml_engine.sagemake
+r_handler: Uploading 
+train CSV to s3://rad-m
+l-datasets/collected_da
+ta/67a9c602-5a2/train/6
+7a9c602-5a2_train.csv
+2026-03-24 
+10:31:04,413 [INFO] eng
+ines.ml_engine.sagemake
+r_handler: Uploading 
+validation CSV to s3://
+rad-ml-datasets/collect
+ed_data/67a9c602-5a2/va
+lidation/67a9c602-5a2_v
+al.csv
+2026-03-24 
+10:31:05,253 [INFO] 
+cg_main: [sagemaker] 
+Train data -> s3://rad-
+ml-datasets/collected_d
+ata/67a9c602-5a2/train/
+67a9c602-5a2_train.csv
+2026-03-24 
+10:31:05,254 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][sagemaker] 
+Train data -> s3://rad-
+ml-datasets/collected_d
+ata/67a9c602-5a2/train/
+67a9c602-5a2_train.csv
+2026-03-24 
+10:31:05,254 [INFO] 
+cg_main: [sagemaker] 
+Validation data -> s3:/
+/rad-ml-datasets/collec
+ted_data/67a9c602-5a2/v
+alidation/67a9c602-5a2_
+val.csv
+2026-03-24 
+10:31:05,255 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][sagemaker] 
+Validation data -> s3:/
+/rad-ml-datasets/collec
+ted_data/67a9c602-5a2/v
+alidation/67a9c602-5a2_
+val.csv
+2026-03-24 
+10:31:05,255 [INFO] 
+cg_main: [sagemaker] 
+Launching SageMaker 
+XGBoost training job 
+with S3-backed 
+collected data...
+2026-03-24 
+10:31:05,255 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][sagemaker] 
+Launching SageMaker 
+XGBoost training job 
+with S3-backed 
+collected data...
+2026-03-24 
+10:31:05,255 [INFO] 
+cg_main: [sagemaker] 
+Job: radml-1774328465 
+| Status: InService | 
+Endpoint: 
+rad-ml-endpoint
+2026-03-24 
+10:31:05,256 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][sagemaker] 
+Job: radml-1774328465 
+| Status: InService | 
+Endpoint: 
+rad-ml-endpoint
+2026-03-24 
+10:31:05,256 [INFO] 
+cg_main: [understand] 
+Building structured 
+ProjectSpec from 
+prompt...
+2026-03-24 
+10:31:05,256 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][understand] 
+Building structured 
+ProjectSpec from 
+prompt...
+2026-03-24 
+10:31:05,257 [INFO] 
+core.llm_client: 
+LLMClient Gemini 
+ready: gemini-2.0-flash
+2026-03-24 
+10:31:06,039 [WARNING] 
+core.llm_client: 
+gemini attempt 1/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+51.191644623s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 51
+}
+]; retrying in 2s
+2026-03-24 
+10:31:08,299 [WARNING] 
+core.llm_client: 
+gemini attempt 2/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+48.939323599s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-03-24 
+10:31:08,858 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:08] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:09,203 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:09] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:12,240 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:12,244 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.426525 seconds
+2026-03-24 
+10:31:12,964 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:12,965 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.994307 seconds
+2026-03-24 
+10:31:14,444 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:14,449 [WARNING] 
+core.llm_client: 
+openai attempt 1/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}};
+ retrying in 2s
+2026-03-24 
+10:31:18,751 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:18,752 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.428290 seconds
+2026-03-24 
+10:31:18,871 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:18] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:19,212 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:19] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:19,505 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:19,507 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.810946 seconds
+2026-03-24 
+10:31:20,689 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:20,692 [WARNING] 
+core.llm_client: 
+openai attempt 2/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}}
+2026-03-24 
+10:31:23,568 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:31:23,569 [WARNING] 
+core.llm_client: 
+deepseek attempt 1/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}; retrying in 2s
+2026-03-24 
+10:31:26,263 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:31:26,264 [WARNING] 
+core.llm_client: 
+deepseek attempt 2/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}
+2026-03-24 
+10:31:26,265 [WARNING] 
+generator.prompt_unders
+tanding: LLM spec 
+generation failed (LLM 
+failed across 
+providers: gemini=429 
+You exceeded your 
+current quota, please 
+check your plan and 
+billing details. For 
+more information on 
+this error, head to: ht
+tps://ai.google.dev/gem
+ini-api/docs/rate-limit
+s. To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+48.939323599s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 48
+}
+] | openai=Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}} 
+| deepseek=Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}) ù using rule-based 
+fallback
+2026-03-24 
+10:31:26,265 [INFO] 
+cg_main: [understand] 
+Spec: task='Build a 
+movie recommendation 
+system using genre and 
+rating' | 
+type=clustering | deliv
+erables=['app.py', 
+'train.py', 
+'predictor.py', 
+'requirements.txt', 
+'README.md', 
+'tests/test_app.py', 
+'templates/index.html']
+2026-03-24 
+10:31:26,266 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][understand] 
+Spec: task='Build a 
+movie recommendation 
+system using genre and 
+rating' | 
+type=clustering | deliv
+erables=['app.py', 
+'train.py', 
+'predictor.py', 
+'requirements.txt', 
+'README.md', 
+'tests/test_app.py', 
+'templates/index.html']
+2026-03-24 
+10:31:26,266 [INFO] 
+cg_main: [plan] 
+Producing architecture 
+plan (no code yet)...
+2026-03-24 
+10:31:26,266 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][plan] 
+Producing architecture 
+plan (no code yet)...
+2026-03-24 
+10:31:26,636 [WARNING] 
+core.llm_client: 
+gemini attempt 1/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+30.782131213s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 30
+}
+]; retrying in 2s
+2026-03-24 
+10:31:28,809 [WARNING] 
+core.llm_client: 
+gemini attempt 2/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+Please retry in 
+28.424364036s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 28
+}
+]
+2026-03-24 
+10:31:29,609 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:29] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:29,938 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:29] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:31,166 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:31,167 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.431938 seconds
+2026-03-24 
+10:31:32,662 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:32,663 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.919693 seconds
+2026-03-24 
+10:31:33,916 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:33,917 [WARNING] 
+core.llm_client: 
+openai attempt 1/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}};
+ retrying in 2s
+2026-03-24 
+10:31:37,885 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:37,886 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.484173 seconds
+2026-03-24 
+10:31:38,654 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:38,654 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.842833 seconds
+2026-03-24 
+10:31:39,604 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:39] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:39,930 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:39] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:40,036 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:40,041 [WARNING] 
+core.llm_client: 
+openai attempt 2/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}}
+2026-03-24 
+10:31:41,593 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:31:41,594 [WARNING] 
+core.llm_client: 
+deepseek attempt 1/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}; retrying in 2s
+2026-03-24 
+10:31:44,859 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:31:44,861 [WARNING] 
+core.llm_client: 
+deepseek attempt 2/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}
+2026-03-24 
+10:31:44,861 [WARNING] 
+generator.planner: 
+Planner LLM failed 
+(LLM failed across 
+providers: gemini=429 
+You exceeded your 
+current quota, please 
+check your plan and 
+billing details. For 
+more information on 
+this error, head to: ht
+tps://ai.google.dev/gem
+ini-api/docs/rate-limit
+s. To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+Please retry in 
+28.424364036s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 28
+}
+] | openai=Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}} 
+| deepseek=Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}) ù using default 
+plan
+2026-03-24 
+10:31:44,862 [INFO] 
+cg_main: [plan] Plan: 
+7 files | deps: 
+['flask', 'boto3', 
+'pandas', 'numpy']
+2026-03-24 
+10:31:44,862 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][plan] Plan: 
+7 files | deps: 
+['flask', 'boto3', 
+'pandas', 'numpy']
+2026-03-24 
+10:31:44,862 [INFO] 
+cg_main: [codegen] 
+Generating Streamlit 
+app bundle...
+2026-03-24 
+10:31:44,862 [INFO] 
+orchestrator: [job=67a9
+c602-5a2][codegen] 
+Generating Streamlit 
+app bundle...
+2026-03-24 
+10:31:45,123 [WARNING] 
+core.llm_client: 
+gemini attempt 1/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+12.105988433s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 12
+}
+]; retrying in 2s
+2026-03-24 
+10:31:47,398 [WARNING] 
+core.llm_client: 
+gemini attempt 2/2 
+failed: 429 You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, head to: https:/
+/ai.google.dev/gemini-a
+pi/docs/rate-limits. 
+To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+9.827335425s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2026-03-24 
+10:31:49,178 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:49] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:49,526 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:49] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:54,060 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:54,063 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.434380 seconds
+2026-03-24 
+10:31:54,983 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:54,987 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.764142 seconds
+2026-03-24 
+10:31:56,214 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:31:56,230 [WARNING] 
+core.llm_client: 
+openai attempt 1/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}};
+ retrying in 2s
+2026-03-24 
+10:31:58,865 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:58] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:31:59,198 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:31:59] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:32:01,127 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:32:01,129 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.462931 seconds
+2026-03-24 
+10:32:02,094 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:32:02,096 [INFO] 
+openai._base_client: 
+Retrying request to 
+/chat/completions in 
+0.832367 seconds
+2026-03-24 
+10:32:03,301 [INFO] 
+httpx: HTTP Request: 
+POST https://api.openai
+.com/v1/chat/completion
+s "HTTP/1.1 429 Too 
+Many Requests"
+2026-03-24 
+10:32:03,303 [WARNING] 
+core.llm_client: 
+openai attempt 2/2 
+failed: Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}}
+2026-03-24 
+10:32:07,395 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:32:07,413 [WARNING] 
+core.llm_client: 
+deepseek attempt 1/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}; retrying in 2s
+2026-03-24 
+10:32:08,866 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:32:08] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:32:09,212 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:32:09] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:32:14,496 [INFO] 
+httpx: HTTP Request: 
+POST https://api.deepse
+ek.com/chat/completions
+ "HTTP/1.1 401 
+Unauthorized"
+2026-03-24 
+10:32:14,499 [WARNING] 
+core.llm_client: 
+deepseek attempt 2/2 
+failed: Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}
+2026-03-24 
+10:32:14,500 [ERROR] 
+orchestrator: Pipeline 
+failed for job 
+67a9c602-5a2
+Traceback (most recent 
+call last):
+  File "C:\Users\sabhi\
+OneDrive\Desktop\RAD-ML
+-v8\Chatbot_Interface\b
+ackend\orchestrator.py"
+, line 203, in 
+_run_pipeline
+    cg_result = 
+run_codegen(
+        
+db_results=db_results, 
+config=self._config,
+        job_id=job.id, 
+log_fn=log_fn,
+    )
+  File "C:\Users\sabhi\
+OneDrive\Desktop\RAD-ML
+-v8\Code_Generator\RAD-
+ML\main.py", line 576, 
+in run_codegen
+    code_bundle = 
+factory.generate(
+        mode=mode,
+    ...<2 lines>...
+        user_prompt=db_
+results.get("prompt", 
+""),
+    )
+  File "C:\Users\sabhi\
+OneDrive\Desktop\RAD-ML
+-v8\Code_Generator\RAD-
+ML\generator\code_gen_f
+actory.py", line 91, 
+in generate
+    full_resp = self._c
+all_llm(llm_key, 
+system_prompt, 
+task_prompt, temp)
+  File "C:\Users\sabhi\
+OneDrive\Desktop\RAD-ML
+-v8\Code_Generator\RAD-
+ML\generator\code_gen_f
+actory.py", line 330, 
+in _call_llm
+    return self.llm.gen
+erate(system + "\n" + 
+task)
+           ~~~~~~~~~~~~
+~~~~~^^^^^^^^^^^^^^^^^^
+^^^^
+  File "C:\Users\sabhi\
+OneDrive\Desktop\RAD-ML
+-v8\Code_Generator\RAD-
+ML\core\llm_client.py",
+ line 105, in generate
+    raise 
+RuntimeError("LLM 
+failed across 
+providers: " + " | 
+".join(failures))
+RuntimeError: LLM 
+failed across 
+providers: gemini=429 
+You exceeded your 
+current quota, please 
+check your plan and 
+billing details. For 
+more information on 
+this error, head to: ht
+tps://ai.google.dev/gem
+ini-api/docs/rate-limit
+s. To monitor your 
+current usage, head 
+to: https://ai.dev/rate
+-limit. 
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+input_token_count, 
+limit: 0, model: 
+gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+* Quota exceeded for 
+metric: generativelangu
+age.googleapis.com/gene
+rate_content_free_tier_
+requests, limit: 0, 
+model: gemini-2.0-flash
+Please retry in 
+9.827335425s. [links {
+  description: "Learn 
+more about Gemini API 
+quotas"
+  url: "https://ai.goog
+le.dev/gemini-api/docs/
+rate-limits"
+}
+, violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_input_token_co
+unt"
+  quota_id: "GenerateCo
+ntentInputTokensPerMode
+lPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerMinutePerProje
+ctPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "genera
+tivelanguage.googleapis
+.com/generate_content_f
+ree_tier_requests"
+  quota_id: "GenerateRe
+questsPerDayPerProjectP
+erModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: 
+"gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 9
+}
+] | openai=Error code: 
+429 - {'error': 
+{'message': 'You 
+exceeded your current 
+quota, please check 
+your plan and billing 
+details. For more 
+information on this 
+error, read the docs: h
+ttps://platform.openai.
+com/docs/guides/error-c
+odes/api-errors.', 
+'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}} 
+| deepseek=Error code: 
+401 - {'error': 
+{'message': 
+'Authentication Fails, 
+Your api key: ****73f6 
+is invalid', 'type': 'a
+uthentication_error', 
+'param': None, 'code': 
+'invalid_request_error'
+}}
+2026-03-24 
+10:32:15,289 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:32:15] "OPTIONS 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:32:15,558 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:32:15] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:32:19,452 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:32:19] "GET 
+/api/history HTTP/1.1" 
+200 -
+2026-03-24 
+10:43:34,246 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:43:34] "GET 
+/api/health HTTP/1.1" 
+200 -
+2026-03-24 
+10:43:38,025 [WARNING] 
+__main__: Google auth 
+failed: Wrong number 
+of segments in token: b
+'mock_token_for_testing
+'
+2026-03-24 
+10:43:38,127 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:43:38] 
+"[31m[1mPOST 
+/api/auth/google 
+HTTP/1.1[0m" 401 -
+2026-03-24 
+10:43:40,224 [INFO] 
+werkzeug: 127.0.0.1 - 
+- [24/Mar/2026 
+10:43:40] "GET 
+/api/health HTTP/1.1" 
+200 -

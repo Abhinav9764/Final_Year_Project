@@ -1,0 +1,66 @@
+digraph "RAD-ML Pipeline Architecture" {
+	graph [bgcolor="#0d0d1a" fontcolor="#e4e4f0" fontname=Helvetica fontsize=15 label="RAD-ML Pipeline Architecture" nodesep=0.4 pad=0.5 rankdir=TB ranksep=0.6 splines=curved]
+	node [color="#7c6dfa" fillcolor="#18182e" fixedsize=true fontcolor="#e4e4f0" fontname=Helvetica fontsize=11 height=1.4 imagescale=true labelloc=b penwidth=1.5 shape=box style=filled width=1.4]
+	edge [color="#7c6dfa88" fontcolor="#9494bb" fontname=Helvetica fontsize=9 penwidth=1.5]
+	f9d67e950d484f31898db0e7543754bd [label="User
+Prompt" height=2.3 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\start-end.png" shape=none]
+	"00b4d4ae9db44effb6e05310e95166b2" [label="Prompt Parser
+NLP · Intent
+Extraction" height=2.7 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\decision.png" shape=none]
+	subgraph "cluster_Data Collection  (Kaggle · UCI · OpenML)" {
+		graph [bgcolor="#0f1f20" color="#00e8c8" fontcolor="#00e8c8" fontname=Helvetica fontsize=12 label="Data Collection  (Kaggle · UCI · OpenML)" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style="rounded,filled"]
+		"85b5aa2df2834e31bf29abde21562b8a" [label=Kaggle height=1.9 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\database.png" shape=none]
+		ee301a11abd84a81b86bc6917b8b3016 [label="UCI ML
+Repository" height=2.3 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\database.png" shape=none]
+		d3339f9a429040e1a2799924cfe5e43e [label=OpenML height=1.9 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\database.png" shape=none]
+		"0931668f1d774047ba523d7948e80567" [label="Scorer
+4-factor
+Weighting" height=2.7 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\decision.png" shape=none]
+		"318feff0e5c94fc39683b0b494aaa8dd" [label="Dataset Merger
+100 rows" height=2.3 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\merge.png" shape=none]
+	}
+	dcc125485c6f487d8c8d9e38b196aa00 [label="AWS S3
+Dataset Store" height=2.3 image="C:\Python314\Lib\site-packages\resources/generic/storage\storage.png" shape=none]
+	subgraph "cluster_Code Generator  (5 Layers)" {
+		graph [bgcolor="#1f0f1a" color="#f065ad" fontcolor="#f065ad" fontname=Helvetica fontsize=12 label="Code Generator  (5 Layers)" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style="rounded,filled"]
+		"3597890c2454402cadcf4732c41ee40e" [label="Layer 1
+Prompt
+Understanding" height=2.7 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\decision.png" shape=none]
+		"6cf6b1398e5b4741bfe3b77587cb11be" [label="Layer 2
+Architect
+Planner" height=2.7 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\decision.png" shape=none]
+		b37e7e481277487986cf60a0104f17f6 [label="Layer 3
+Code Generator
+(file-by-file)" height=2.7 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\input-output.png" shape=none]
+		"17ecc686ffdc4e9fbf994f0ddf7a4ba3" [label="Layer 4
+Validator
+AST · Tests" height=2.7 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\decision.png" shape=none]
+		"83e9d7d5b933467eba5c96a5965da2d0" [label="Layer 5
+Repair Loop
+LLM Fix" height=2.7 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\merge.png" shape=none]
+	}
+	f53f1d396f5e41a89b22e9f0d8122a03 [label="SageMaker
+Clustering" height=2.3 image="C:\Python314\Lib\site-packages\resources/onprem/compute\server.png" shape=none]
+	"8a6f9604ff27422bbaf8f02968cd90b5" [label="Flask App
+rad-ml-endpoint" height=2.3 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\start-end.png" shape=none]
+	"20e2717697c348219ec11c791d85b0f7" [label="User Gets
+Prediction" height=2.3 image="C:\Python314\Lib\site-packages\resources/programming/flowchart\start-end.png" shape=none]
+	f9d67e950d484f31898db0e7543754bd -> "00b4d4ae9db44effb6e05310e95166b2" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"00b4d4ae9db44effb6e05310e95166b2" -> "85b5aa2df2834e31bf29abde21562b8a" [label=search dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"00b4d4ae9db44effb6e05310e95166b2" -> ee301a11abd84a81b86bc6917b8b3016 [label=search dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"00b4d4ae9db44effb6e05310e95166b2" -> d3339f9a429040e1a2799924cfe5e43e [label=search dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"85b5aa2df2834e31bf29abde21562b8a" -> "0931668f1d774047ba523d7948e80567" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	ee301a11abd84a81b86bc6917b8b3016 -> "0931668f1d774047ba523d7948e80567" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	d3339f9a429040e1a2799924cfe5e43e -> "0931668f1d774047ba523d7948e80567" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"0931668f1d774047ba523d7948e80567" -> "318feff0e5c94fc39683b0b494aaa8dd" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"318feff0e5c94fc39683b0b494aaa8dd" -> dcc125485c6f487d8c8d9e38b196aa00 [label="final CSV" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	dcc125485c6f487d8c8d9e38b196aa00 -> "3597890c2454402cadcf4732c41ee40e" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"3597890c2454402cadcf4732c41ee40e" -> "6cf6b1398e5b4741bfe3b77587cb11be" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"6cf6b1398e5b4741bfe3b77587cb11be" -> b37e7e481277487986cf60a0104f17f6 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b37e7e481277487986cf60a0104f17f6 -> "17ecc686ffdc4e9fbf994f0ddf7a4ba3" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"17ecc686ffdc4e9fbf994f0ddf7a4ba3" -> "83e9d7d5b933467eba5c96a5965da2d0" [label="errors?" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"83e9d7d5b933467eba5c96a5965da2d0" -> "17ecc686ffdc4e9fbf994f0ddf7a4ba3" [label=fixed dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"17ecc686ffdc4e9fbf994f0ddf7a4ba3" -> f53f1d396f5e41a89b22e9f0d8122a03 [label="✓ pass" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f53f1d396f5e41a89b22e9f0d8122a03 -> "8a6f9604ff27422bbaf8f02968cd90b5" [label=endpoint dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"8a6f9604ff27422bbaf8f02968cd90b5" -> "20e2717697c348219ec11c791d85b0f7" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

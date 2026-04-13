@@ -1,0 +1,638 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Core palette */
+  --bg:          #08080c;
+  --bg2:         #0a0a10;
+  --surface:     #12121a;
+  --surface2:    #1a1a24;
+  --card:        #181824;
+  --border:      #2a2a3e;
+  --border2:     #3e3e56;
+
+  /* Accent */
+  --violet:      #a78bfa;
+  --violet-dim:  rgba(167,139,250,0.12);
+  --violet-glow: rgba(167,139,250,0.30);
+  --cyan:        #2dd4bf;
+  --cyan-dim:    rgba(45,212,191,0.12);
+  --pink:        #f472b6;
+  --amber:       #fbbf24;
+
+  /* Text */
+  --text:        #edf2ee;
+  --text2:       #b9c8c1;
+  --text3:       #7f9890;
+
+  /* Status */
+  --success:     #2dd4bf;
+  --warning:     #fbbf24;
+  --error:       #f87171;
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Sizing */
+  --sidebar-w:   280px;
+  --radius:      14px;
+  --radius-sm:   8px;
+}
+
+html { height: 100%; }
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(167,139,250,0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(45,212,191,0.10), transparent 28%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.65;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+button { font-family: inherit; }
+input, textarea { font-family: inherit; }
+
+/* ── Animations ─────────────────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 var(--violet-glow); }
+  70%  { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideOutLeft {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-24px); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--violet-glow); }
+  50% { box-shadow: 0 0 0 8px transparent; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+/* ── Enhanced Form Styling ────────────────────────────────────────────────── */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 11px 14px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+textarea:hover {
+  border-color: var(--violet);
+  background: var(--card);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: var(--violet);
+  background: var(--card);
+  box-shadow: 0 0 0 3px var(--violet-dim), 0 0 12px rgba(124,109,250,0.15);
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+textarea::placeholder {
+  color: var(--text3);
+}
+
+/* ── Enhanced Button Styling ──────────────────────────────────────────────── */
+button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):active {
+  transform: scale(0.96);
+}
+
+/* ── Loading States ───────────────────────────────────────────────────────── */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border);
+  border-top-color: var(--violet);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.pulse {
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* ── Tooltip ──────────────────────────────────────────────────────────────── */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: var(--surface);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  z-index: 1000;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-12px);
+}
+
+/* ── Notification/Toast ───────────────────────────────────────────────────– */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1001;
+  animation: slideUp 0.3s ease, slideDown 0.3s ease 2.7s forwards;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+}
+
+.toast.success {
+  background: rgba(0, 232, 200, 0.1);
+  border-color: rgba(0, 232, 200, 0.3);
+  color: var(--success);
+}
+
+.toast.error {
+  background: rgba(255, 80, 112, 0.1);
+  border-color: rgba(255, 80, 112, 0.3);
+  color: var(--error);
+}
+
+.toast.warning {
+  background: rgba(255, 181, 74, 0.1);
+  border-color: rgba(255, 181, 74, 0.3);
+  color: var(--warning);
+}
+
+.toast.info {
+  background: rgba(124, 109, 250, 0.1);
+  border-color: rgba(124, 109, 250, 0.3);
+  color: var(--violet);
+}
+
+/* ── Card Hover Effect ────────────────────────────────────────────────────── */
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  border-color: var(--violet);
+}
+
+/* ── Loading Skeleton ─────────────────────────────────────────────────────– */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface) 0%, var(--surface2) 50%, var(--surface) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 8px;
+}
+
+/* ── Status Badge ─────────────────────────────────────────────────────────– */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge.running {
+  background: rgba(124, 109, 250, 0.15);
+  color: var(--violet);
+}
+
+.badge.success {
+  background: rgba(0, 232, 200, 0.15);
+  color: var(--success);
+}
+
+.badge.error {
+  background: rgba(255, 80, 112, 0.15);
+  color: var(--error);
+}
+
+.badge.warning {
+  background: rgba(255, 181, 74, 0.15);
+  color: var(--warning);
+}
+
+/* ── Responsive Improvements ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-w: 0px;
+  }
+  
+  body {
+    font-size: 13px;
+  }
+  
+  .toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  
+  .toast {
+    font-size: 12px;
+    padding: 12px 14px;
+  }
+}
+
+/* ── Focus Visible for Accessibility ──────────────────────────────────────– */
+*:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline-offset: 3px;
+}
+
+/* ── Selection Color ──────────────────────────────────────────────────────– */
+::selection {
+  background: var(--violet);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: var(--violet);
+  color: #fff;
+}
+
+/* ── Enhanced Button Variants ──────────────────────────────────────────────– */
+.btn-primary {
+  background: linear-gradient(135deg, var(--violet), #6c5ce7);
+  color: white;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(124, 109, 250, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 109, 250, 0.4);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(124, 109, 250, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: var(--violet);
+  background: var(--violet-dim);
+  color: var(--violet);
+}
+
+.btn-secondary:active:not(:disabled) {
+  background: var(--surface2);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-icon:hover:not(:disabled) {
+  border-color: var(--violet);
+  background: var(--violet-dim);
+  color: var(--violet);
+}
+
+/* ── Input Validation States ───────────────────────────────────────────────– */
+input.input-error,
+textarea.input-error {
+  border-color: var(--error);
+}
+
+input.input-error:focus,
+textarea.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(255, 80, 112, 0.1), 0 0 12px rgba(255, 80, 112, 0.15);
+}
+
+input.input-success,
+textarea.input-success {
+  border-color: var(--success);
+}
+
+input.input-success:focus,
+textarea.input-success:focus {
+  box-shadow: 0 0 0 3px rgba(0, 232, 200, 0.1), 0 0 12px rgba(0, 232, 200, 0.15);
+}
+
+/* ── Form Group Styling ───────────────────────────────────────────────────– */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+.form-label.required::after {
+  content: ' *';
+  color: var(--error);
+}
+
+.form-hint {
+  font-size: 12px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+.form-error {
+  font-size: 12px;
+  color: var(--error);
+  margin-top: 4px;
+  animation: slideInLeft 0.2s ease;
+}
+
+/* ── Loading Indicator ───────────────────────────────────────────────────– */
+.loading-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--violet), var(--cyan));
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: slideInRight 0.4s ease;
+  box-shadow: 0 0 10px var(--violet-glow);
+}
+
+/* ── Hover Effects ───────────────────────────────────────────────────────– */
+a {
+  color: var(--violet);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
+/* ── Success/Error Message Styling ──────────────────────────────────────– */
+.message-box {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid;
+  animation: slideUp 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-box.success {
+  background: rgba(0, 232, 200, 0.1);
+  border-color: rgba(0, 232, 200, 0.3);
+  color: var(--success);
+}
+
+.message-box.error {
+  background: rgba(255, 80, 112, 0.1);
+  border-color: rgba(255, 80, 112, 0.3);
+  color: var(--error);
+}
+
+.message-box.warning {
+  background: rgba(255, 181, 74, 0.1);
+  border-color: rgba(255, 181, 74, 0.3);
+  color: var(--warning);
+}
+
+.message-box.info {
+  background: rgba(124, 109, 250, 0.1);
+  border-color: rgba(124, 109, 250, 0.3);
+  color: var(--violet);
+}
+
+/* ── Progress Circle ───────────────────────────────────────────────────– */
+.progress-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-circle-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(var(--violet), var(--cyan), var(--violet));
+  opacity: 0.3;
+}
+
+.progress-circle-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(var(--violet) 0deg, var(--violet) var(--progress, 0deg), transparent var(--progress, 0deg));
+  animation: spin 2s linear infinite;
+}
+
+.progress-circle-content {
+  position: relative;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  border-radius: 50%;
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+/* ── Transition Effects for Components ──────────────────────────────────– */
+.fade-enter {
+  animation: fadeIn 0.3s ease;
+}
+
+.fade-exit {
+  animation: fadeIn 0.3s ease reverse;
+}
+
+.slide-enter {
+  animation: slideInUp 0.3s ease;
+}
+
+.slide-exit {
+  animation: slideOutLeft 0.3s ease;
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideOutLeft {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(-24px); }
+}
+
+/* ── Smooth Transitions ────────────────────────────────────────────────– */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+button,
+a,
+input,
+textarea {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Glassmorphism Utilities */
+.glass-panel { background: rgba(18, 18, 26, 0.45); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(42, 42, 62, 0.6); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); }
+.neon-pulse { animation: neonPulse 2s infinite; }
+@keyframes neonPulse { 0%, 100% { box-shadow: 0 0 10px rgba(167,139,250,0.3), inset 0 0 10px rgba(167,139,250,0.1); border-color: rgba(167,139,250,0.5); } 50% { box-shadow: 0 0 20px rgba(167,139,250,0.6), inset 0 0 20px rgba(167,139,250,0.2); border-color: var(--violet); } }
+

@@ -1,0 +1,67 @@
+{
+  "test_date": "2026-03-20T20:14:57.702023",
+  "test_status": "FEEDBACK LOOP ACTIVE",
+  "deployment_ready": false,
+  "metrics": {
+    "total_predictions": 30,
+    "successful_predictions": 30,
+    "failed_predictions": 0,
+    "average_confidence": 0.8997449075487767,
+    "min_confidence": 0.7960371593952636,
+    "max_confidence": 0.9735342558778171,
+    "high_confidence_count": 16,
+    "medium_confidence_count": 13,
+    "low_confidence_count": 1,
+    "accuracy_percentage": 89.97449075487766,
+    "success_rate": 100.0
+  },
+  "final_accuracy": 93.47449075487766,
+  "feedback_items_collected": 30,
+  "sample_predictions": [
+    {
+      "id": "pred_1",
+      "input": {
+        "genre": "Animation",
+        "language": "Portuguese"
+      },
+      "confidence": 0.9495457141834679,
+      "feedback": "positive"
+    },
+    {
+      "id": "pred_2",
+      "input": {
+        "genre": "Western",
+        "language": "Hindi"
+      },
+      "confidence": 0.9549783005403008,
+      "feedback": "positive"
+    },
+    {
+      "id": "pred_3",
+      "input": {
+        "genre": "Sci-Fi",
+        "language": "Marathi"
+      },
+      "confidence": 0.9252054685356754,
+      "feedback": "positive"
+    },
+    {
+      "id": "pred_4",
+      "input": {
+        "genre": "Thriller",
+        "language": "Tamil"
+      },
+      "confidence": 0.874900125824302,
+      "feedback": "neutral"
+    },
+    {
+      "id": "pred_5",
+      "input": {
+        "genre": "Sci-Fi",
+        "language": "Japanese"
+      },
+      "confidence": 0.8719788679152113,
+      "feedback": "neutral"
+    }
+  ]
+}
