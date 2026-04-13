@@ -148,6 +148,28 @@ venv.bak/
 .spyderproject
 .spyproject
 
+# Node modules
+node_modules/
+**/node_modules/
+Chatbot_Interface/frontend_v1_backup/
+
+# Logs and temporary files
+logs/
+*.log
+pytest-cache-files-*/
+docs/test_reports/
+
+# Workspace and data files
+workspace/
+data/uploads/
+mova-customer/
+
+# IDE and development
+*.swp
+*.swo
+*~
+.DS_Store
+
 # Rope project settings
 .ropeproject
 
