@@ -288,7 +288,7 @@ jobs:
 
     environment:
       name: production
-      url: http://${{ secrets.DEPLOY_HOST }}:8501
+      url: http://radml-model-endpoint:8501
 
     steps:
       - name: Checkout repository
