@@ -346,39 +346,45 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          # Pass token and actor as env vars so they are available inside the heredoc
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GHCR_ACTOR: ${{ github.actor }}
         run: |
           ssh -i ~/.ssh/deploy_key \
             "${{ secrets.DEPLOY_SSH_USER }}@${{ secrets.DEPLOY_HOST }}" \
-            bash -s << 'REMOTE_SCRIPT'
+            IMAGE_REF="$IMAGE_REF" \
+            ENDPOINT_NAME="$ENDPOINT_NAME" \
+            AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
+            AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
+            AWS_REGION="$AWS_REGION" \
+            GHCR_TOKEN="$GHCR_TOKEN" \
+            GHCR_ACTOR="$GHCR_ACTOR" \
+            bash << 'REMOTE_SCRIPT'
               set -euo pipefail
 
-              # ── Variables injected via the remote environment ──────────────
-              IMAGE_REF="$IMAGE_REF"
-              ENDPOINT_NAME="$ENDPOINT_NAME"
               CONTAINER_NAME="radml-model-endpoint"
               APP_PORT=8501
-              COMPOSE_DIR="$HOME/radml-endpoint"
 
               echo "=== [1/5] Logging in to GHCR ==="
-              echo "${{ secrets.GITHUB_TOKEN }}" | \
-                docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+              echo "${GHCR_TOKEN}" | \
+                docker login ghcr.io -u "${GHCR_ACTOR}" --password-stdin
 
               echo "=== [2/5] Pulling image ==="
-              docker pull "$IMAGE_REF"
+              docker pull "${IMAGE_REF}"
 
               echo "=== [3/5] Stopping existing container (if any) ==="
-              docker stop "$CONTAINER_NAME" 2>/dev/null || true
-              docker rm   "$CONTAINER_NAME" 2>/dev/null || true
+              docker stop "${CONTAINER_NAME}" 2>/dev/null || true
+              docker rm   "${CONTAINER_NAME}" 2>/dev/null || true
 
               echo "=== [4/5] Starting new container ==="
               docker run -d \
-                --name "$CONTAINER_NAME" \
+                --name "${CONTAINER_NAME}" \
                 --restart unless-stopped \
-                -p "$APP_PORT:8501" \
-                -e SAGEMAKER_ENDPOINT="$ENDPOINT_NAME" \
-                -e AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
-                -e AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
-                -e AWS_REGION="$AWS_REGION" \
+                -p "${APP_PORT}:8501" \
+                -e SAGEMAKER_ENDPOINT="${ENDPOINT_NAME}" \
+                -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
+                -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
+                -e AWS_REGION="${AWS_REGION}" \
                 -e AWS_EC2_METADATA_DISABLED=true \
                 -e SAGEMAKER_REMOTE_ENABLED=1 \
                 -e RADML_MOCK_MODE=0 \
@@ -387,12 +393,12 @@ jobs:
                 --health-timeout 10s \
                 --health-retries 3 \
                 --health-start-period 60s \
-                "$IMAGE_REF"
+                "${IMAGE_REF}"
 
               echo "=== [5/5] Pruning stale images ==="
               docker image prune -f --filter "label=org.opencontainers.image.title=RAD-ML Model Endpoint"
 
-              echo "✅ Container started.  Endpoint: http://$(hostname -I | awk '{print $1}'):$APP_PORT"
+              echo "Container started. Endpoint: http://$(hostname -I | awk '{print $1}'):${APP_PORT}"
 REMOTE_SCRIPT
 
       # Wait up to 90 seconds for the Streamlit health endpoint to respond
@@ -424,7 +430,7 @@ REMOTE_SCRIPT
 
       # Notify Slack when the deploy completes (optional — skip if no webhook set)
       - name: Notify Slack on success
-        if: success() && secrets.SLACK_WEBHOOK_URL != ''
+        if: success() && env.SLACK_AVAILABLE == 'true'
         uses: slackapi/slack-github-action@v1
         with:
           payload: |
@@ -442,9 +448,10 @@ REMOTE_SCRIPT
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+          SLACK_AVAILABLE: ${{ secrets.SLACK_WEBHOOK_URL != '' }}
 
       - name: Notify Slack on failure
-        if: failure() && secrets.SLACK_WEBHOOK_URL != ''
+        if: failure() && env.SLACK_AVAILABLE == 'true'
         uses: slackapi/slack-github-action@v1
         with:
           payload: |

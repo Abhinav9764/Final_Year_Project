@@ -140,7 +140,7 @@ jobs:
         if: |
           (steps.app_health.outcome == 'failure' ||
            steps.sm_status.outcome  == 'failure') &&
-          secrets.SLACK_WEBHOOK_URL != ''
+          env.SLACK_AVAILABLE == 'true'
         uses: slackapi/slack-github-action@v1
         with:
           payload: |
@@ -159,3 +159,4 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+          SLACK_AVAILABLE: ${{ secrets.SLACK_WEBHOOK_URL != '' }}
