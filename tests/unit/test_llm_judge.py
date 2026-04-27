@@ -127,7 +127,7 @@ class TestLLMJudgeCodeEvaluation:
     def test_judge_rejects_non_streamlit_code(self, mock_config):
         """Judge should give low score to Flask/wrong framework code."""
         # Create judge with mocked LLM
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             # Return low score for broken code
             mock_llm.generate.return_value = '{"score": 2, "critique": "Uses Flask instead of Streamlit"}'
@@ -143,7 +143,7 @@ class TestLLMJudgeCodeEvaluation:
 
     def test_judge_accepts_valid_streamlit_code(self, mock_config):
         """Judge should give high score to valid Streamlit code."""
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             # Return high score for valid code
             mock_llm.generate.return_value = '{"score": 9, "critique": "Good Streamlit implementation"}'
@@ -159,7 +159,7 @@ class TestLLMJudgeCodeEvaluation:
 
     def test_judge_handles_syntax_errors(self, mock_config):
         """Judge should detect and penalize syntax errors."""
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             mock_llm.generate.return_value = '{"score": 1, "critique": "Code has syntax errors"}'
             mock_client.return_value = mock_llm
@@ -173,7 +173,7 @@ class TestLLMJudgeCodeEvaluation:
 
     def test_judge_detects_incomplete_code(self, mock_config):
         """Judge should detect missing required components."""
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             mock_llm.generate.return_value = '{"score": 4, "critique": "Missing input widgets and prediction logic"}'
             mock_client.return_value = mock_llm
@@ -188,7 +188,7 @@ class TestLLMJudgeCodeEvaluation:
 
     def test_judge_fallback_on_error(self, mock_config):
         """Judge should auto-pass if LLM call fails (graceful degradation)."""
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             mock_llm.generate.side_effect = Exception("API Error")
             mock_client.return_value = mock_llm
@@ -204,7 +204,7 @@ class TestLLMJudgeCodeEvaluation:
 
     def test_judge_handles_invalid_json_response(self, mock_config):
         """Judge should handle malformed JSON from LLM."""
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             mock_llm.generate.return_value = 'Invalid JSON response'
             mock_client.return_value = mock_llm
@@ -230,7 +230,7 @@ class TestLLMJudgePlanEvaluation:
 
     def test_judge_evaluates_plan(self, mock_config):
         """Judge should evaluate architecture plans."""
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             mock_llm.generate.return_value = '{"score": 8, "critique": "Good plan structure"}'
             mock_client.return_value = mock_llm
@@ -250,7 +250,7 @@ class TestLLMJudgePlanEvaluation:
 
     def test_judge_plan_fallback_on_error(self, mock_config):
         """Plan evaluation should auto-pass on error."""
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_llm = MagicMock()
             mock_llm.generate.side_effect = Exception("API Error")
             mock_client.return_value = mock_llm
@@ -271,7 +271,7 @@ class TestLLMJudgeDisabled:
         """Judge should auto-pass when LLM is not available."""
         config = {}  # No LLM config
 
-        with patch('generator.llm_judge.LLMClient') as mock_client:
+        with patch('core.llm_client.LLMClient') as mock_client:
             mock_client.side_effect = ImportError("LLMClient not available")
 
             judge = LLMJudge(config)

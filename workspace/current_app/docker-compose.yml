@@ -1,0 +1,77 @@
+# =============================================================================
+# RAD-ML  ·  Model Endpoint — docker-compose
+# =============================================================================
+# Use this file to:
+#   1. Run the model endpoint locally for manual testing:
+#        docker compose up --build
+#   2. The CI/CD workflow copies this file to the production host and
+#      references the pinned image digest to avoid re-building on the server.
+#
+# Env-file: create a .env file (or export variables) before running.
+#   Required: SAGEMAKER_ENDPOINT, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+#   Optional: AWS_REGION (default us-east-1), RADML_MOCK_MODE (default 0)
+# =============================================================================
+
+version: "3.9"
+
+services:
+  model-endpoint:
+    # In CI/CD the image tag is overridden with the exact digest from the
+    # build job via: IMAGE_REF=ghcr.io/.../model-endpoint@sha256:...
+    image: ${IMAGE_REF:-radml-model-endpoint:latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_DATE: ${BUILD_DATE:-local}
+        GIT_COMMIT: ${GIT_COMMIT:-dev}
+
+    container_name: radml-model-endpoint
+
+    restart: unless-stopped
+
+    ports:
+      - "${APP_PORT:-8501}:8501"
+
+    environment:
+      # ── SageMaker / AWS credentials (injected at runtime, never in image) ──
+      SAGEMAKER_ENDPOINT: ${SAGEMAKER_ENDPOINT:-rad-ml-endpoint}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      AWS_EC2_METADATA_DISABLED: "true"
+      # ── Inference mode flags ────────────────────────────────────────────────
+      SAGEMAKER_REMOTE_ENABLED: ${SAGEMAKER_REMOTE_ENABLED:-1}
+      RADML_MOCK_MODE: ${RADML_MOCK_MODE:-0}
+
+    # Mount a named volume so Streamlit's SQLite session cache persists across
+    # container restarts (avoids users losing their session on redeploy).
+    volumes:
+      - streamlit_cache:/home/appuser/.streamlit
+
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+    # Resource limits — adjust to match your instance size.
+    # ml.m5.large has 8 GB RAM; leave headroom for the SageMaker SDK.
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+          cpus: "1.0"
+        reservations:
+          memory: 256m
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+
+volumes:
+  streamlit_cache:
+    driver: local

@@ -282,3 +282,26 @@ Chatbot_Interface/backend/Code_Generator/RAD-ML/workspace/current_app/
 Code_Generator/RAD-ML/workspace/current_app/
 Code_Generator/RAD-ML/workspace/logs/
 .env.example.local
+
+# ── Docker / CI-CD ────────────────────────────────────────────────────────────
+# Ignore the generated Python source files in the model-endpoint app directory,
+# but explicitly KEEP the Docker and compose files so the CI/CD pipeline can
+# build the image from Git.
+workspace/current_app/*.py
+workspace/current_app/*.yaml
+workspace/current_app/config.yaml
+workspace/current_app/README.md
+workspace/current_app/requirements.txt
+# Except: always track these CI/CD-essential files
+!workspace/current_app/Dockerfile
+!workspace/current_app/docker-compose.yml
+!workspace/current_app/test_app.py
+
+# Docker build artefacts
+.dockerignore
+*.tar
+*.tar.gz
+
+# Docker layer cache (Buildx)
+.buildx-cache/
+
