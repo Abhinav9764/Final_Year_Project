@@ -346,60 +346,55 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          # Pass token and actor as env vars so they are available inside the heredoc
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GHCR_ACTOR: ${{ github.actor }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_SSH_USER }}
         run: |
+          # Write deploy script to a local temp file (avoids heredoc/YAML conflicts)
+          cat > /tmp/deploy_radml.sh << SCRIPT
+          #!/usr/bin/env bash
+          set -euo pipefail
+          CONTAINER_NAME="radml-model-endpoint"
+          APP_PORT=8501
+          echo "=== [1/5] Logging in to GHCR ==="
+          echo "${GHCR_TOKEN}" | docker login ghcr.io -u "${GHCR_ACTOR}" --password-stdin
+          echo "=== [2/5] Pulling image ==="
+          docker pull "${IMAGE_REF}"
+          echo "=== [3/5] Stopping existing container ==="
+          docker stop "${CONTAINER_NAME}" 2>/dev/null || true
+          docker rm   "${CONTAINER_NAME}" 2>/dev/null || true
+          echo "=== [4/5] Starting new container ==="
+          docker run -d \
+            --name "${CONTAINER_NAME}" \
+            --restart unless-stopped \
+            -p "${APP_PORT}:8501" \
+            -e SAGEMAKER_ENDPOINT="${ENDPOINT_NAME}" \
+            -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
+            -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
+            -e AWS_REGION="${AWS_REGION}" \
+            -e AWS_EC2_METADATA_DISABLED=true \
+            -e SAGEMAKER_REMOTE_ENABLED=1 \
+            -e RADML_MOCK_MODE=0 \
+            --health-cmd "curl -sf http://localhost:8501/_stcore/health || exit 1" \
+            --health-interval 30s \
+            --health-timeout 10s \
+            --health-retries 3 \
+            --health-start-period 60s \
+            "${IMAGE_REF}"
+          echo "=== [5/5] Pruning stale images ==="
+          docker image prune -f --filter "label=org.opencontainers.image.title=RAD-ML Model Endpoint"
+          echo "Container started. Port: ${APP_PORT}"
+          SCRIPT
+          chmod +x /tmp/deploy_radml.sh
+          # Upload deploy script to the remote server
+          scp -i ~/.ssh/deploy_key /tmp/deploy_radml.sh \
+            "${DEPLOY_USER}@${DEPLOY_HOST}:/tmp/deploy_radml.sh"
+          # Execute the script on the remote server with all env vars forwarded
           ssh -i ~/.ssh/deploy_key \
-            "${{ secrets.DEPLOY_SSH_USER }}@${{ secrets.DEPLOY_HOST }}" \
-            IMAGE_REF="$IMAGE_REF" \
-            ENDPOINT_NAME="$ENDPOINT_NAME" \
-            AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
-            AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
-            AWS_REGION="$AWS_REGION" \
-            GHCR_TOKEN="$GHCR_TOKEN" \
-            GHCR_ACTOR="$GHCR_ACTOR" \
-            bash << 'REMOTE_SCRIPT'
-              set -euo pipefail
+            -o SendEnv="IMAGE_REF ENDPOINT_NAME AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_REGION GHCR_TOKEN GHCR_ACTOR" \
+            "${DEPLOY_USER}@${DEPLOY_HOST}" "bash /tmp/deploy_radml.sh; rm -f /tmp/deploy_radml.sh"
 
-              CONTAINER_NAME="radml-model-endpoint"
-              APP_PORT=8501
-
-              echo "=== [1/5] Logging in to GHCR ==="
-              echo "${GHCR_TOKEN}" | \
-                docker login ghcr.io -u "${GHCR_ACTOR}" --password-stdin
-
-              echo "=== [2/5] Pulling image ==="
-              docker pull "${IMAGE_REF}"
-
-              echo "=== [3/5] Stopping existing container (if any) ==="
-              docker stop "${CONTAINER_NAME}" 2>/dev/null || true
-              docker rm   "${CONTAINER_NAME}" 2>/dev/null || true
-
-              echo "=== [4/5] Starting new container ==="
-              docker run -d \
-                --name "${CONTAINER_NAME}" \
-                --restart unless-stopped \
-                -p "${APP_PORT}:8501" \
-                -e SAGEMAKER_ENDPOINT="${ENDPOINT_NAME}" \
-                -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
-                -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
-                -e AWS_REGION="${AWS_REGION}" \
-                -e AWS_EC2_METADATA_DISABLED=true \
-                -e SAGEMAKER_REMOTE_ENABLED=1 \
-                -e RADML_MOCK_MODE=0 \
-                --health-cmd "curl -sf http://localhost:8501/_stcore/health || exit 1" \
-                --health-interval 30s \
-                --health-timeout 10s \
-                --health-retries 3 \
-                --health-start-period 60s \
-                "${IMAGE_REF}"
-
-              echo "=== [5/5] Pruning stale images ==="
-              docker image prune -f --filter "label=org.opencontainers.image.title=RAD-ML Model Endpoint"
-
-              echo "Container started. Endpoint: http://$(hostname -I | awk '{print $1}'):${APP_PORT}"
-REMOTE_SCRIPT
 
       # Wait up to 90 seconds for the Streamlit health endpoint to respond
       - name: Wait for container health
