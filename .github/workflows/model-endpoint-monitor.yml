@@ -1,0 +1,161 @@
+# =============================================================================
+# RAD-ML  ·  Model Endpoint — Scheduled Health Monitor
+# =============================================================================
+# Runs every 30 minutes independently of the CI/CD pipeline.
+# Checks:
+#   1. Streamlit app HTTP health endpoint
+#   2. SageMaker endpoint InService status (via boto3)
+#   3. Smoke-test of the Streamlit UI root
+# =============================================================================
+
+name: RAD-ML Endpoint Health Monitor
+
+on:
+  schedule:
+    # Every 30 minutes (UTC)
+    - cron: "*/30 * * * *"
+
+  # Allow manual trigger for on-demand health checks
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    name: 📊 Endpoint Health Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install monitoring tools
+        run: pip install requests boto3
+
+      # ── 1. App HTTP health ──────────────────────────────────────────────────
+      - name: Check Streamlit app health
+        id: app_health
+        continue-on-error: true
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            "http://${{ secrets.DEPLOY_HOST }}:8501/_stcore/health" \
+            --connect-timeout 10 --max-time 20)
+
+          echo "http_status=$STATUS" >> "$GITHUB_OUTPUT"
+
+          if [ "$STATUS" = "200" ]; then
+            echo "✅ App health: HTTP $STATUS"
+          else
+            echo "❌ App health: HTTP $STATUS"
+            exit 1
+          fi
+
+      # ── 2. SageMaker endpoint status ────────────────────────────────────────
+      - name: Check SageMaker endpoint status
+        id: sm_status
+        continue-on-error: true
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+        run: |
+          python - << 'PYEOF'
+          import os, sys, boto3
+
+          endpoint_name = "${{ secrets.SAGEMAKER_ENDPOINT }}"
+          if not endpoint_name:
+              print("⚠️  SAGEMAKER_ENDPOINT secret not set — skipping.")
+              sys.exit(0)
+
+          try:
+              sm = boto3.client("sagemaker",
+                                region_name=os.environ.get("AWS_DEFAULT_REGION", "us-east-1"))
+              resp   = sm.describe_endpoint(EndpointName=endpoint_name)
+              status = resp.get("EndpointStatus", "UNKNOWN")
+              ok     = (status == "InService")
+              print(f"{'✅' if ok else '❌'}  SageMaker: {endpoint_name} → {status}")
+              sys.exit(0 if ok else 1)
+          except Exception as exc:
+              print(f"⚠️  SageMaker check error: {exc}")
+              sys.exit(1)
+          PYEOF
+
+      # ── 3. Response-time probe ───────────────────────────────────────────────
+      - name: Response time probe
+        id: latency
+        continue-on-error: true
+        run: |
+          python - << 'PYEOF'
+          import time, requests, sys
+
+          url  = "http://${{ secrets.DEPLOY_HOST }}:8501/_stcore/health"
+          WARN_MS  = 3000
+          ERROR_MS = 8000
+
+          try:
+              t0   = time.monotonic()
+              resp = requests.get(url, timeout=15)
+              ms   = int((time.monotonic() - t0) * 1000)
+              print(f"Latency: {ms}ms  |  HTTP {resp.status_code}")
+
+              if ms > ERROR_MS:
+                  print(f"❌ Response too slow ({ms}ms > {ERROR_MS}ms)")
+                  sys.exit(1)
+              if ms > WARN_MS:
+                  print(f"⚠️  Response slow ({ms}ms > {WARN_MS}ms threshold)")
+              else:
+                  print(f"✅ Response within acceptable latency.")
+          except Exception as exc:
+              print(f"❌ Latency probe failed: {exc}")
+              sys.exit(1)
+          PYEOF
+
+      # ── 4. GitHub Step Summary ──────────────────────────────────────────────
+      - name: Write monitoring summary
+        if: always()
+        run: |
+          APP_STATUS="${{ steps.app_health.outcome }}"
+          SM_STATUS="${{ steps.sm_status.outcome }}"
+          LATENCY_STATUS="${{ steps.latency.outcome }}"
+
+          icon() { [ "$1" = "success" ] && echo "✅" || echo "❌"; }
+
+          cat >> "$GITHUB_STEP_SUMMARY" << EOF
+          ## 📊 RAD-ML Endpoint Health — $(date -u '+%Y-%m-%d %H:%M UTC')
+
+          | Check | Result |
+          |-------|--------|
+          | Streamlit App Health | $(icon $APP_STATUS) $APP_STATUS |
+          | SageMaker Endpoint | $(icon $SM_STATUS) $SM_STATUS |
+          | Response Latency | $(icon $LATENCY_STATUS) $LATENCY_STATUS |
+
+          **Endpoint URL:** http://${{ secrets.DEPLOY_HOST }}:8501
+          EOF
+
+      # ── 5. Slack alert on failure ───────────────────────────────────────────
+      - name: Alert Slack on unhealthy endpoint
+        if: |
+          (steps.app_health.outcome == 'failure' ||
+           steps.sm_status.outcome  == 'failure') &&
+          secrets.SLACK_WEBHOOK_URL != ''
+        uses: slackapi/slack-github-action@v1
+        with:
+          payload: |
+            {
+              "text": "🚨 *RAD-ML Model Endpoint health check FAILED*",
+              "attachments": [{
+                "color": "danger",
+                "fields": [
+                  {"title": "App Health",         "value": "${{ steps.app_health.outcome }}", "short": true},
+                  {"title": "SageMaker Status",   "value": "${{ steps.sm_status.outcome  }}", "short": true},
+                  {"title": "Endpoint URL",       "value": "http://${{ secrets.DEPLOY_HOST }}:8501"},
+                  {"title": "Actions Run",        "value": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}
+                ]
+              }]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK

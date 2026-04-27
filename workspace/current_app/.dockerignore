@@ -1,0 +1,40 @@
+# ============================================================
+# .dockerignore — RAD-ML Model Endpoint image
+# ============================================================
+# Keep the Docker build context small: only ship what app.py
+# and config.yaml need at runtime.
+
+# ── Test files (only needed in CI, not in production image) ──
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+coverage*.xml
+
+# ── Dev / IDE artefacts ───────────────────────────────────────
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+
+# ── Docker files (avoid recursive context) ───────────────────
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# ── Logs & temp data ─────────────────────────────────────────
+logs/
+*.log
+
+# ── Credentials (must NEVER enter the image) ─────────────────
+.env
+*.env
+*_credentials*
+kaggle.json
+*_kaggle.json
