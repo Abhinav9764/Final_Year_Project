@@ -12,7 +12,7 @@ from core.environment import Environment, ACTION_DDG, ACTION_KAGGLE, ACTION_REFI
 def _make_env(ddg_results=None, kaggle_results=None):
     """Build an Environment with fully mocked dependencies."""
     ddg = MagicMock()
-    ddg.search.return_value = ddg_results or [
+    ddg.search.return_value = ddg_results if ddg_results is not None else [
         {
             "title": "Battery tech article",
             "url": "http://example.com",
@@ -25,7 +25,7 @@ def _make_env(ddg_results=None, kaggle_results=None):
     ]
 
     kaggle = MagicMock()
-    kaggle.search_datasets.return_value = kaggle_results or [
+    kaggle.search_datasets.return_value = kaggle_results if kaggle_results is not None else [
         {
             "ref": "user/ev-battery-dataset",
             "title": "Electric Vehicle Battery Dataset",
